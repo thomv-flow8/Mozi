@@ -101,6 +101,6 @@ Reviewwidget:
 - Negen te kleine stockfoto's zijn vervangen door gegenereerd beeld van 1600 px breed.
   Zie `docs/beeld-generatie.md` voor welke, de afspraken, en wat nog echte foto's nodig heeft.
   De oude foto's staan in `assets/stock/vervangen/`.
-- **Illustratie**: `node tools/teken-porie.js` tekent "gezonde porie naast verstopte porie"
-  in dezelfde lijn als de huidlagen bij SkinPen. Nog niet ingebouwd; preview via
-  `preview/porie.html` en `preview/acne-vergelijk.html`.
+- **Tekeningen**: `tools/illustraties.js` bevat vier doorsneden (porie, haarzakje, licht,
+  wratje) in dezelfde lijn als de huidlagen bij SkinPen. Ze zijn beeldtypes in de generator
+  en in het CMS. Bekijken: `node tools/illustraties.js` → `preview/illustraties.html`.

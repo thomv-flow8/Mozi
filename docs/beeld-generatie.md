@@ -43,14 +43,30 @@ goedkeuring van Emine.
 - Steelwratjes in close-up (`huidverhevenheden-close.jpg`) — krijgt geen model goed
 - `laser.jpg` op Laser bij vaatjes & pigment — toont nu apparatuur
 
-## Illustratie in plaats van foto
+## Tekeningen in plaats van foto's
 
-De uitleg bij Acnetherapie ("Wat is acne") gebruikt nu een tekening in plaats van een foto:
-`node tools/teken-porie.js` — gezonde porie naast verstopte porie, in dezelfde lijn als de
-huidlagen bij SkinPen. In het CMS is dat het beeldtype **porie**. De oude `acne-close.jpg`
-staat in `assets/stock/vervangen/`.
+Vier uitlegblokken gebruiken een tekening. Ze staan in `tools/illustraties.js` en delen
+dezelfde huidlagen, tinten en lijndikte, zodat ze als één set lezen. Bekijken:
+`node tools/illustraties.js` → `preview/illustraties.html`.
 
-Hetzelfde idee is herbruikbaar voor rosacea (verwijd vaatje) en huidverhevenheden.
+| type | pagina | wat het laat zien |
+|---|---|---|
+| `porie` | Acnetherapie, Wat is acne | gezonde porie naast een verstopte porie |
+| `haarzakje` | Laserontharing, De behandeling | het pigment in de haar neemt het licht op; een leeg zakje reageert niet |
+| `licht` | LED-therapie, De techniek | hoe diep blauw en rood licht komen |
+| `wratje` | Huidverhevenheden, Wat is het | steelwratje naast een ouderdomswratje |
+| `vaatje` | Laser bij vaatjes & pigment, De behandeling | het licht sluit het vaatje en laat het pigment uiteenvallen |
+| `nagel` | Schimmelnagels, De behandeling | licht gaat door de nagelplaat, crème niet |
+
+In het CMS zijn dit beeldtypes, naast foto, kaart en huidlagen. De vervangen foto's staan in
+`assets/stock/vervangen/`.
+
+**Let op bij het tekenen:** tekst in de tekening krimpt mee met de tekening. Op een smal
+scherm kwam 13 eenheden op 7,8 px uit. Daarom staan de lettergroottes in `mozi.css` onder
+`.ill`, met een grotere maat onder 560 px en een kort bijschrift in plaats van het lange —
+anders lopen de twee bijschriften tegen elkaar aan.
+
+Daarmee staat de Clarity II-foto nog op één pagina (Huidverbetering) in plaats van vier.
 
 ## Opdrachten
 

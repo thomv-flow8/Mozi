@@ -233,9 +233,7 @@
             "Rond de ogen kunnen xanthelasma en syringomen voorkomen. Rode vaatjes (spider naevi) zitten vaak rond de neus, wangen, hals of decolleté."
           ],
           "visual": {
-            "type": "foto",
-            "src": "../assets/web/huidverhevenheden-close.jpg",
-            "alt": "Huid met steelwratjes"
+            "type": "wratje"
           }
         },
         {
@@ -846,10 +844,7 @@
             "Met de IntelliTrak-technologie worden alle haren snel en effectief behandeld."
           ],
           "visual": {
-            "type": "foto",
-            "src": "../assets/web/clarity-ii.png",
-            "alt": "Clarity II-laser van Lutronic",
-            "pas": "heel"
+            "type": "haarzakje"
           }
         }
       ],
@@ -954,10 +949,7 @@
             "Je kiest het gebied: van één plek tot een combinatie van gelaat, hals en decolleté."
           ],
           "visual": {
-            "type": "foto",
-            "src": "../assets/web/clarity-ii.png",
-            "alt": "Clarity II-laser van Lutronic",
-            "pas": "heel"
+            "type": "vaatje"
           }
         }
       ],
@@ -1041,9 +1033,7 @@
             "De gepatenteerde Power Wave Cycle zorgt dat de huid niet aan het licht went, zodat het resultaat na meerdere behandelingen alleen maar beter wordt."
           ],
           "visual": {
-            "type": "foto",
-            "src": "../assets/web/lumi8-apparaat.jpg",
-            "alt": "Lumi8 LED-apparaat"
+            "type": "licht"
           }
         }
       ],
@@ -1151,10 +1141,7 @@
             "Het aangetaste deel groeit uit en maakt plaats voor een gezonde nagel. Teennagels groeien ongeveer één millimeter per maand, dus er zijn meerdere behandelingen en wat geduld nodig."
           ],
           "visual": {
-            "type": "foto",
-            "src": "../assets/web/clarity-ii.png",
-            "alt": "Clarity II-laser van Lutronic",
-            "pas": "heel"
+            "type": "nagel"
           }
         }
       ],
