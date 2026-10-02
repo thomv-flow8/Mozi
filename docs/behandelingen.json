@@ -2,6 +2,395 @@
   "_bron": "Teksten gebaseerd op huidzorgmozi.nl (opgehaald 1 oktober 2026), herschreven voor leesbaarheid. Geen nieuwe medische claims toegevoegd. Ontbrekende gegevens staan in 'aanvullen' voor Emine.",
   "behandelingen": [
     {
+      "slug": "acne",
+      "titel": "Acnetherapie",
+      "kort": "acnetherapie",
+      "titelHtml": "Acne<em>therapie</em>",
+      "categorie": "Huidproblemen",
+      "omschrijving": "Acnetherapie bij Huidzorg Mozi in Gorinchem: dieptereiniging, peelings, licht- en lasertherapie, en behandeling van acnelittekens. Gratis intake.",
+      "intro": "Geen standaardbehandeling, maar een plan voor jouw huid. Flinke ontstekingen vragen om een andere aanpak dan mee-eters; daarom kijken we eerst goed wat er speelt.",
+      "beeld": "../assets/web/acne.jpg",
+      "feiten": [
+        {
+          "waarde": "85%",
+          "label": "heeft acne tussen 12 en 24 jaar"
+        },
+        {
+          "waarde": "Op maat",
+          "label": "geen standaardbehandeling"
+        },
+        {
+          "waarde": "Gezicht & lichaam",
+          "label": "ook hals, borst en rug"
+        },
+        {
+          "waarde": "€ 75",
+          "label": "vanaf"
+        }
+      ],
+      "secties": [
+        {
+          "id": "wat",
+          "eyebrow": "Wat is acne",
+          "kop": "Verstopte poriën, <em>ontstoken</em> huid",
+          "tekst": [
+            "We spreken van acne als poriën met talg, bacteriën en vetzuren verstopt zijn. Die talgophopingen veroorzaken ontstekingen in de omliggende huid: rode bultjes, puistjes en onderhuidse ontstekingen.",
+            "Acne komt niet alleen in het gezicht voor, maar ook op de hals, borst, rug, schouders en armen. Na de tienerjaren neemt het sterk af, maar bij een deel van de mensen blijft het een rol spelen. Vaak brengt het onzekerheid met zich mee."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/acne-close.jpg",
+            "alt": "Huid met acne"
+          }
+        },
+        {
+          "id": "hoe",
+          "eyebrow": "De behandeling",
+          "kop": "Ontstekingen onder <em>controle</em>",
+          "tekst": [
+            "De behandeling kan onder andere bestaan uit het manueel reinigen van de huid, chemische peelings, rood/blauw lichttherapie en licht- of lasertherapie.",
+            "Acnelittekens pakken we aan met chemische peelings, microneedling of lasertherapie. Vaak is een combinatie nodig voor het gewenste resultaat, en we geven altijd advies voor de verzorging thuis."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/led-rood.jpg",
+            "alt": "Lichttherapie"
+          }
+        }
+      ],
+      "geschiktBij": [
+        "Acne vulgaris",
+        "Mee-eters (comedonen)",
+        "Acne bij volwassenen (acne tarda)",
+        "Krabacne",
+        "Acne door wrijving of druk",
+        "Acnelittekens"
+      ],
+      "tarieven": "acne",
+      "tarievenExtra": "Voor acnelittekens zetten we ook SkinPen microneedling en peelings in.",
+      "vragen": [
+        {
+          "v": "Helpt één behandeling tegen acne?",
+          "a": "Er bestaat geen standaardbehandeling. Vaak is een combinatie van behandelingen nodig om tot het gewenste resultaat te komen. Tijdens de gratis intake maken we een plan."
+        },
+        {
+          "v": "Kunnen jullie ook acnelittekens behandelen?",
+          "a": "Ja. Acnelittekens kunnen worden aangepakt met chemische peelings, microneedling of lasertherapie. De methode hangt af van de diepte van de littekens en je huidtype."
+        },
+        {
+          "v": "Wat kan ik zelf thuis doen?",
+          "a": "Een goede dagelijkse verzorging met kwalitatieve producten is belangrijk. De huidtherapeut geeft advies en helpt je met de verzorging thuis."
+        }
+      ],
+      "gerelateerd": [
+        "peelings",
+        "skinpen",
+        "led"
+      ]
+    },
+    {
+      "slug": "rosacea",
+      "titel": "Rosacea & couperose",
+      "kort": "de behandeling",
+      "titelHtml": "Rosacea &amp; <em>couperose</em>",
+      "categorie": "Huidproblemen",
+      "omschrijving": "Rosacea en couperose behandelen bij Huidzorg Mozi in Gorinchem, met Clearlight IPL, laser en milde peelings. Gratis intake.",
+      "intro": "Rosacea is een hardnekkige aandoening, maar gelukkig goed te behandelen. Dat weten we uit persoonlijke ervaring. De behandeling is gericht op het weer rustig krijgen van de huid.",
+      "beeld": "../assets/web/rosacea.jpg",
+      "logo": "../assets/logos/clearlight-ipl-transparant.png",
+      "logoTekst": "Clearlight IPL voor vaatjes en roodheid",
+      "feiten": [
+        {
+          "waarde": "30+",
+          "label": "meestal vanaf 30 jaar"
+        },
+        {
+          "waarde": "IPL",
+          "label": "Clearlight, voor vaatjes en roodheid"
+        },
+        {
+          "waarde": "Eigen ervaring",
+          "label": "Emine heeft zelf rosacea"
+        },
+        {
+          "waarde": "€ 125",
+          "label": "vanaf"
+        }
+      ],
+      "secties": [
+        {
+          "id": "wat",
+          "eyebrow": "Wat is het",
+          "kop": "Rood als een <em>roos</em>",
+          "tekst": [
+            "Rosacea betekent letterlijk 'rood als een roos'. De belangrijkste kenmerken zijn roodheid, kleine uitgezette bloedvaatjes (couperose), bultjes en puistjes. Het lijkt op acne, maar komt op latere leeftijd voor.",
+            "Couperose is een onschuldig verschijnsel waarbij rode of blauwe bloedvaatjes in het gezicht zichtbaar zijn. Warmte, zonlicht, cosmetica en sommige medicijnen kunnen de klachten verergeren."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/rosacea.jpg",
+            "alt": "Huid met roodheid"
+          }
+        },
+        {
+          "id": "hoe",
+          "eyebrow": "De behandeling",
+          "kop": "De huid weer <em>rustig</em>",
+          "tekst": [
+            "We richten ons op het uitdoven van de ontsteking en het herstellen van de huidbarrière. Vaatjes behandelen we met coagulatie of laser; voor de gevoelige huid zetten we producten en milde peelings met melkzuur en amandelzuur in.",
+            "Met de krachtige IPL Clearlight zien we de roodheid vervagen en de ontstekingen afnemen: de vaatjes krimpen en de huid oogt rustiger."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/laser.jpg",
+            "alt": "Laserbehandeling"
+          }
+        }
+      ],
+      "geschiktBij": [
+        "Rosacea",
+        "Couperose",
+        "Roodheid in het gezicht",
+        "Zichtbare vaatjes",
+        "Gevoelige huid"
+      ],
+      "waarom": {
+        "kop": "Waarom <em>Mozi</em>",
+        "punten": [
+          {
+            "titel": "Uit eigen ervaring",
+            "tekst": "Emine kreeg rond haar dertigste zelf rosacea en weet hoe het voelt."
+          },
+          {
+            "titel": "Krachtige IPL",
+            "tekst": "We gebruiken de Clearlight IPL voor vaatjes en roodheid in het gelaat."
+          },
+          {
+            "titel": "Mild waar het moet",
+            "tekst": "Niet elke peeling is geschikt voor een rosacea-huid; we kiezen bewust voor milde varianten."
+          }
+        ]
+      },
+      "tarieven": "huidverbetering",
+      "tarievenExtra": "Voor zichtbare vaatjes per gebied zie ook laser bij vaatjes & pigment.",
+      "vragen": [
+        {
+          "v": "Is rosacea te genezen?",
+          "a": "Rosacea is hardnekkig en heeft de neiging terug te komen, maar is goed te behandelen. We richten ons op een rustige huid en een sterke huidbarrière."
+        },
+        {
+          "v": "Welke peeling is geschikt bij rosacea?",
+          "a": "Omdat de rosacea-huid zeer gevoelig is, kan niet elke peeling worden toegepast. Milde peelings met melkzuur en amandelzuur hebben een positieve werking."
+        },
+        {
+          "v": "Wat kan rosacea verergeren?",
+          "a": "Onder andere warmte, zonlicht, cosmetica, huidverzorgingsproducten en sommige geneesmiddelen. Alcohol en sterk gekruid eten kunnen de roodheid tijdelijk verergeren."
+        }
+      ],
+      "gerelateerd": [
+        "laser",
+        "huidverbetering",
+        "led"
+      ]
+    },
+    {
+      "slug": "huidverhevenheden",
+      "titel": "Huidverhevenheden",
+      "kort": "de behandeling",
+      "titelHtml": "Huid<em>verhevenheden</em>",
+      "categorie": "Huidproblemen",
+      "omschrijving": "Steelwratjes, ouderdomswratjes en rode vaatjes verwijderen bij Huidzorg Mozi in Gorinchem, met electrocoagulatie of cryotherapie.",
+      "intro": "Bultjes, wratjes of kleurverschillen waardoor je huid er ouder of vlekkerig uitziet? Stoor je je eraan, dan laat je ze eenvoudig weghalen door onze huidtherapeuten.",
+      "beeld": "../assets/web/huidverhevenheden.jpg",
+      "feiten": [
+        {
+          "waarde": "Goedaardig",
+          "label": "onschuldige aangroeisels"
+        },
+        {
+          "waarde": "Electro of cryo",
+          "label": "behandelmethode"
+        },
+        {
+          "waarde": "10–45 min",
+          "label": "per behandeling"
+        },
+        {
+          "waarde": "€ 50",
+          "label": "vanaf"
+        }
+      ],
+      "secties": [
+        {
+          "id": "wat",
+          "eyebrow": "Wat is het",
+          "kop": "Bultjes, wratjes en <em>vaatjes</em>",
+          "tekst": [
+            "Elke huid heeft voelbare bultjes, aanhangsels of verdikkingen, en hoe ouder we worden hoe meer. Denk aan steelwratjes (fibromen), ouderdomswratten (verruca seborrhoica), talgklierhyperplasie en verdikte moedervlekken.",
+            "Rond de ogen kunnen xanthelasma en syringomen voorkomen. Rode vaatjes (spider naevi) zitten vaak rond de neus, wangen, hals of decolleté."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/huidverhevenheden-close.jpg",
+            "alt": "Huid met steelwratjes"
+          }
+        },
+        {
+          "id": "hoe",
+          "eyebrow": "De behandeling",
+          "kop": "Gericht <em>verwijderd</em>",
+          "tekst": [
+            "Steelwratjes en andere verhevenheden verwijderen we met electrocoagulatie of cryotherapie. Rode vaatjes behandelen we met electrocoagulatie of IPL.",
+            "Je betaalt per behandeltijd, van 10 tot 45 minuten, afhankelijk van hoeveel plekjes er behandeld worden."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/behandeling-apparaat.jpg",
+            "alt": "Behandeling in de praktijk"
+          }
+        }
+      ],
+      "geschiktBij": [
+        "Steelwratjes (fibromen)",
+        "Ouderdomswratjes",
+        "Talgklierhyperplasie",
+        "Rode vaatjes (spider naevi)",
+        "Xanthelasma",
+        "Syringomen"
+      ],
+      "tarieven": "electro",
+      "vragen": [
+        {
+          "v": "Zijn huidverhevenheden gevaarlijk?",
+          "a": "De genoemde verhevenheden, zoals steelwratjes en ouderdomswratten, zijn goedaardig. Ze worden vaak verwijderd omdat ze storend zijn."
+        },
+        {
+          "v": "Hoe wordt de prijs bepaald?",
+          "a": "Je betaalt per behandeltijd: van 10 minuten (€ 50) tot 45 minuten (€ 100), afhankelijk van het aantal plekjes."
+        },
+        {
+          "v": "Waar komen steelwratjes vaak voor?",
+          "a": "Vooral in plooien: in de hals, rond de oogleden, op de romp, onder de borsten, in de liezen en de oksels."
+        }
+      ],
+      "gerelateerd": [
+        "laser",
+        "rosacea",
+        "productadvies"
+      ]
+    },
+    {
+      "slug": "peelings",
+      "titel": "Medische peelings",
+      "kort": "een peeling",
+      "titelHtml": "Medische <em>peelings</em>",
+      "categorie": "Huidverbetering & verjonging",
+      "omschrijving": "Medische peelings van Dermaceutic, Theraderm en Renophase bij Huidzorg Mozi in Gorinchem, voor pigment, acnelittekens, lijntjes en een gladdere huid.",
+      "intro": "Een medische peeling laat het bovenste, 'dode' huidlaagje versneld afschilferen. Zo ontstaat een vernieuwde, gladdere huid. Al na één behandeling merk je verschil.",
+      "beeld": "../assets/web/peeling.jpg",
+      "logo": "../assets/logos/dermaceutic.png",
+      "logoTekst": "Peelings van Dermaceutic, Theraderm en Renophase",
+      "feiten": [
+        {
+          "waarde": "15–60 min",
+          "label": "per behandeling"
+        },
+        {
+          "waarde": "3 merken",
+          "label": "Dermaceutic, Theraderm, Renophase"
+        },
+        {
+          "waarde": "Op maat",
+          "label": "sterkte en diepte"
+        },
+        {
+          "waarde": "€ 90",
+          "label": "vanaf"
+        }
+      ],
+      "secties": [
+        {
+          "id": "wat",
+          "eyebrow": "Wat is het",
+          "kop": "Een <em>vernieuwde</em> huid",
+          "tekst": [
+            "Een peeling kan zorgen voor een minimale tot zware afschilfering. Dat hangt af van de sterkte en diepte van de peeling, de voorbereiding en de conditie van de huid.",
+            "Er zijn peelings voor (acne)littekens, hyperpigmentatie, melasma, een gevoelige huid, rosacea en fijne lijntjes. Welke peeling we kiezen hangt af van je huid en de gewenste hersteltijd."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/peeling-masker.jpg",
+            "alt": "Peelingbehandeling"
+          }
+        },
+        {
+          "id": "hoe",
+          "eyebrow": "Onze peelings",
+          "kop": "Van feestpeeling tot <em>TCA</em>",
+          "tekst": [
+            "De Mask Peel ('feestpeeling', 15 minuten) geeft direct een glow zonder vervelling. De Milk Peel en Crystal Peel (30 minuten) werken op fijne lijntjes, een doffe teint, pigment en milde acne.",
+            "De Cosmo Peel met TCA (45 minuten, 3–7 dagen herstel) verbetert lijntjes, rimpels en acnelittekens. De Mela Lightening (60 minuten) pakt melasma aan en kan ook in de zomer."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/mela-lightening.jpg",
+            "alt": "Theraderm Mela peel"
+          }
+        }
+      ],
+      "geschiktBij": [
+        "(Acne)littekens",
+        "Pigmentvlekken",
+        "Melasma",
+        "Fijne lijntjes en rimpels",
+        "Doffe teint",
+        "Milde acne",
+        "Gevoelige huid"
+      ],
+      "verloop": {
+        "kop": "Na de <em>peeling</em>",
+        "stappen": [
+          {
+            "wanneer": "Voorbereiden",
+            "tekst": "Voor de sterkere peelings bereid je de huid vooraf voor met de juiste producten. Dat leggen we uit tijdens het consult."
+          },
+          {
+            "wanneer": "Mask Peel",
+            "tekst": "Geen zichtbaar herstel: je kunt dezelfde dag nog naar een feestje."
+          },
+          {
+            "wanneer": "Milk & Crystal",
+            "tekst": "Minimale downtime."
+          },
+          {
+            "wanneer": "Cosmo Peel",
+            "tekst": "3 tot 7 dagen herstel, met tijdelijk roodheid, zwelling of schilfering."
+          }
+        ]
+      },
+      "tarieven": "peelings",
+      "tarievenExtra": "Peelings zijn ook te combineren met microneedling in onze combinatiebehandelingen.",
+      "vragen": [
+        {
+          "v": "Welke peeling past bij mij?",
+          "a": "Dat hangt af van je huidaandoening, huidconditie en de gewenste hersteltijd. Daarom maken we elke behandeling op maat; tijdens de gratis intake bespreken we de mogelijkheden."
+        },
+        {
+          "v": "Kan ik in de zomer een peeling laten doen?",
+          "a": "Sommige wel. De Mela Lightening en de organische peelings van Theraderm kunnen ook in zonnige periodes worden uitgevoerd."
+        },
+        {
+          "v": "Moet ik mijn huid voorbereiden?",
+          "a": "Voor onder andere de Milk Peel en Cosmo Peel bereid je de huid vooraf voor met de juiste producten. Dat leggen we uit tijdens het consult."
+        }
+      ],
+      "gerelateerd": [
+        "combinatie",
+        "skinpen",
+        "huidverbetering"
+      ]
+    },
+    {
       "slug": "skinpen",
       "titel": "SkinPen microneedling",
       "titelHtml": "SkinPen <em>microneedling</em>",
@@ -11,10 +400,22 @@
       "beeld": "../assets/web/skinpen.jpg",
       "logo": "../assets/logos/skinpen.png",
       "feiten": [
-        { "waarde": "3–6", "label": "behandelingen" },
-        { "waarde": "4 weken", "label": "tussen sessies" },
-        { "waarde": "Kort", "label": "herstel" },
-        { "waarde": "€ 210", "label": "vanaf, hele gelaat" }
+        {
+          "waarde": "3–6",
+          "label": "behandelingen"
+        },
+        {
+          "waarde": "4 weken",
+          "label": "tussen sessies"
+        },
+        {
+          "waarde": "Kort",
+          "label": "herstel"
+        },
+        {
+          "waarde": "€ 210",
+          "label": "vanaf, hele gelaat"
+        }
       ],
       "secties": [
         {
@@ -25,7 +426,11 @@
             "SkinPen Collageen Inductie Therapie (CIT) vernieuwt de huid in de diepte, zonder oppervlakkige schade aan te richten en met minimale downtime.",
             "SkinPen is het eerste FDA-goedgekeurde medische microneedlingsysteem ter wereld, en het enige systeem dat FDA-goedgekeurd is voor het veilig en effectief behandelen van acnelittekens. Daarnaast verstevigt en egaliseert het de huid, en worden fijne lijntjes en poriën verfijnd."
           ],
-          "visual": { "type": "foto", "src": "../assets/web/skinpen.jpg", "alt": "SkinPen-apparaat" }
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/skinpen.jpg",
+            "alt": "SkinPen-apparaat"
+          }
         },
         {
           "id": "hoe",
@@ -35,54 +440,931 @@
             "Hele kleine, steriele naaldjes komen vibrerend op de huid terecht en maken minuscule microkanaaltjes.",
             "Dat activeert het natuurlijke herstelproces diep in de huid: er wordt nieuw collageen (type 3) en elastine aangemaakt. De huid wordt steviger en voller, de teint egaler, frisser en stralender."
           ],
-          "visual": { "type": "huidlagen" }
+          "visual": {
+            "type": "huidlagen"
+          }
         }
       ],
-      "geschiktBij": ["(Acne)littekens", "Fijne lijntjes", "Pigmentvlekjes", "Doffe huid", "Grove huidstructuur", "Striae", "Vergrote poriën", "Verslapte huid"],
+      "geschiktBij": [
+        "(Acne)littekens",
+        "Fijne lijntjes",
+        "Pigmentvlekjes",
+        "Doffe huid",
+        "Grove huidstructuur",
+        "Striae",
+        "Vergrote poriën",
+        "Verslapte huid"
+      ],
       "waarom": {
         "kop": "Waarom <em>SkinPen</em>",
         "punten": [
-          { "titel": "Ingestelde naalddiepte", "tekst": "De diepte wordt op de naald zelf ingesteld en gaat nooit dieper of oppervlakkiger dan bedoeld." },
-          { "titel": "Zuivere microkanaaltjes", "tekst": "Het enige microneedlingsysteem waarmee bewezen zuivere microkanaaltjes worden gemaakt." },
-          { "titel": "FDA-goedgekeurd", "tekst": "Als eerste medisch microneedlingsysteem goedgekeurd, ook voor de behandeling van acnelittekens." }
+          {
+            "titel": "Ingestelde naalddiepte",
+            "tekst": "De diepte wordt op de naald zelf ingesteld en gaat nooit dieper of oppervlakkiger dan bedoeld."
+          },
+          {
+            "titel": "Zuivere microkanaaltjes",
+            "tekst": "Het enige microneedlingsysteem waarmee bewezen zuivere microkanaaltjes worden gemaakt."
+          },
+          {
+            "titel": "FDA-goedgekeurd",
+            "tekst": "Als eerste medisch microneedlingsysteem goedgekeurd, ook voor de behandeling van acnelittekens."
+          }
         ]
       },
       "verloop": {
         "kop": "Na de <em>behandeling</em>",
         "stappen": [
-          { "wanneer": "Direct", "tekst": "De huid ziet er wat roder uit en voelt warm of prikkelend aan, afhankelijk van het gebied en de intensiteit." },
-          { "wanneer": "Na enkele uren", "tekst": "Het warme, prikkelende gevoel neemt af. De herstelperiode is kort." },
-          { "wanneer": "Thuis", "tekst": "Je krijgt 2 nazorgproducten mee om het herstel te bevorderen. Die zijn bij de prijs inbegrepen." },
-          { "wanneer": "Traject", "tekst": "Voor een optimaal resultaat zijn 3 tot 6 behandelingen nodig, met 4 weken tussen de sessies." }
+          {
+            "wanneer": "Direct",
+            "tekst": "De huid ziet er wat roder uit en voelt warm of prikkelend aan, afhankelijk van het gebied en de intensiteit."
+          },
+          {
+            "wanneer": "Na enkele uren",
+            "tekst": "Het warme, prikkelende gevoel neemt af. De herstelperiode is kort."
+          },
+          {
+            "wanneer": "Thuis",
+            "tekst": "Je krijgt 2 nazorgproducten mee om het herstel te bevorderen. Die zijn bij de prijs inbegrepen."
+          },
+          {
+            "wanneer": "Traject",
+            "tekst": "Voor een optimaal resultaat zijn 3 tot 6 behandelingen nodig, met 4 weken tussen de sessies."
+          }
         ]
       },
       "resultaten": [
-        { "naam": "Acnelittekens", "voor": "../assets/resultaten/skinpen-2-voor.jpg", "na": "../assets/resultaten/skinpen-2-na.jpg",
-          "info": [["Behandeling", "SkinPen microneedling"], ["Sessies", "2"], ["Cliënt", "Man, 27 jaar"]],
-          "bron": "Klinische foto's van SkinPen / Bellus Medical (Cathy A. Presnick, Melbourne, VS)." },
-        { "naam": "Acne", "voor": "../assets/resultaten/skinpen-4-voor.jpg", "na": "../assets/resultaten/skinpen-4-na.jpg",
-          "info": [["Behandeling", "SkinPen microneedling"], ["Sessies", "6"], ["Cliënt", "Vrouw"]],
-          "bron": "Klinische foto's van SkinPen / Bellus Medical (Cathy A. Presnick, Melbourne, VS)." },
-        { "naam": "Huidveroudering", "voor": "../assets/resultaten/skinpen-7-1-voor.jpg", "na": "../assets/resultaten/skinpen-7-1-na.jpg",
-          "info": [["Behandeling", "SkinPen microneedling"], ["Sessies", "3"], ["Cliënt", "Vrouw, 45 jaar"]],
-          "bron": "Klinische foto's van SkinPen / Bellus Medical (Elizabeth Steigner, Orange, VS)." }
+        {
+          "naam": "Acnelittekens",
+          "voor": "../assets/resultaten/skinpen-2-voor.jpg",
+          "na": "../assets/resultaten/skinpen-2-na.jpg",
+          "info": [
+            [
+              "Behandeling",
+              "SkinPen microneedling"
+            ],
+            [
+              "Sessies",
+              "2"
+            ],
+            [
+              "Cliënt",
+              "Man, 27 jaar"
+            ]
+          ],
+          "bron": "Klinische foto's van SkinPen / Bellus Medical (Cathy A. Presnick, Melbourne, VS)."
+        },
+        {
+          "naam": "Acne",
+          "voor": "../assets/resultaten/skinpen-4-voor.jpg",
+          "na": "../assets/resultaten/skinpen-4-na.jpg",
+          "info": [
+            [
+              "Behandeling",
+              "SkinPen microneedling"
+            ],
+            [
+              "Sessies",
+              "6"
+            ],
+            [
+              "Cliënt",
+              "Vrouw"
+            ]
+          ],
+          "bron": "Klinische foto's van SkinPen / Bellus Medical (Cathy A. Presnick, Melbourne, VS)."
+        },
+        {
+          "naam": "Huidveroudering",
+          "voor": "../assets/resultaten/skinpen-7-1-voor.jpg",
+          "na": "../assets/resultaten/skinpen-7-1-na.jpg",
+          "info": [
+            [
+              "Behandeling",
+              "SkinPen microneedling"
+            ],
+            [
+              "Sessies",
+              "3"
+            ],
+            [
+              "Cliënt",
+              "Vrouw, 45 jaar"
+            ]
+          ],
+          "bron": "Klinische foto's van SkinPen / Bellus Medical (Elizabeth Steigner, Orange, VS)."
+        }
       ],
       "tarieven": "skinpen",
       "tarievenExtra": "Microneedling zit ook in onze combinatiebehandelingen, zoals de Firm Facial en Cosmo Glow.",
       "vragen": [
-        { "v": "Hoeveel behandelingen heb ik nodig?", "a": "Voor een optimaal resultaat zijn 3 tot 6 behandelingen nodig, met een interval van 4 weken. Tijdens de gratis intake bespreken we wat voor jouw huid realistisch is." },
-        { "v": "Wat kan ik verwachten na de behandeling?", "a": "De huid ziet er na de behandeling wat roder uit en kan warm of prikkelend aanvoelen. Dat neemt na enkele uren af; de herstelperiode is kort. Je krijgt 2 nazorgproducten mee, die bij de prijs zijn inbegrepen." },
-        { "v": "Waarvoor kan SkinPen worden ingezet?", "a": "Onder andere bij (acne)littekens, fijne lijntjes, pigmentvlekjes, een doffe huid, een grove huidstructuur, striae, vergrote poriën en een verslapte huid." },
-        { "v": "Is SkinPen veilig?", "a": "SkinPen is het eerste FDA-goedgekeurde medische microneedlingsysteem. De naalddiepte wordt op de naald zelf ingesteld, zodat er nooit dieper of oppervlakkiger wordt behandeld dan bedoeld." },
-        { "v": "Kan ik eerst advies krijgen?", "a": "Ja. We beginnen altijd met een gratis intakegesprek van 30 minuten, waarin we je huid bekijken en samen een behandelplan maken." }
+        {
+          "v": "Hoeveel behandelingen heb ik nodig?",
+          "a": "Voor een optimaal resultaat zijn 3 tot 6 behandelingen nodig, met een interval van 4 weken. Tijdens de gratis intake bespreken we wat voor jouw huid realistisch is."
+        },
+        {
+          "v": "Wat kan ik verwachten na de behandeling?",
+          "a": "De huid ziet er na de behandeling wat roder uit en kan warm of prikkelend aanvoelen. Dat neemt na enkele uren af; de herstelperiode is kort. Je krijgt 2 nazorgproducten mee, die bij de prijs zijn inbegrepen."
+        },
+        {
+          "v": "Waarvoor kan SkinPen worden ingezet?",
+          "a": "Onder andere bij (acne)littekens, fijne lijntjes, pigmentvlekjes, een doffe huid, een grove huidstructuur, striae, vergrote poriën en een verslapte huid."
+        },
+        {
+          "v": "Is SkinPen veilig?",
+          "a": "SkinPen is het eerste FDA-goedgekeurde medische microneedlingsysteem. De naalddiepte wordt op de naald zelf ingesteld, zodat er nooit dieper of oppervlakkiger wordt behandeld dan bedoeld."
+        },
+        {
+          "v": "Kan ik eerst advies krijgen?",
+          "a": "Ja. We beginnen altijd met een gratis intakegesprek van 30 minuten, waarin we je huid bekijken en samen een behandelplan maken."
+        }
       ],
-      "gerelateerd": ["combinatie", "peelings", "acne"],
-      "aanvullen": ["Duur van een behandeling (minuten)", "Of er verdoving wordt gebruikt", "Eigen voor/na-foto's (met schriftelijke toestemming)"]
+      "gerelateerd": [
+        "combinatie",
+        "peelings",
+        "acne"
+      ],
+      "aanvullen": [
+        "Duur van een behandeling (minuten)",
+        "Of er verdoving wordt gebruikt",
+        "Eigen voor/na-foto's (met schriftelijke toestemming)"
+      ]
+    },
+    {
+      "slug": "combinatie",
+      "titel": "Combinatiebehandelingen",
+      "kort": "een combinatie",
+      "titelHtml": "Combinatie<em>behandelingen</em>",
+      "categorie": "Huidverbetering & verjonging",
+      "omschrijving": "Combinatiebehandelingen bij Huidzorg Mozi in Gorinchem: Firm Facial, Glow Facial, Cosmo Glow en meer. Peeling en microneedling in één behandeling.",
+      "intro": "De meeste behandelingen zijn met elkaar te combineren en geven samen meer resultaat. In één behandeling brengen we peeling en microneedling samen.",
+      "beeld": "../assets/web/masker.jpg",
+      "feiten": [
+        {
+          "waarde": "2 in 1",
+          "label": "peeling + microneedling"
+        },
+        {
+          "waarde": "7",
+          "label": "combinaties"
+        },
+        {
+          "waarde": "Collageen",
+          "label": "stimulatie"
+        },
+        {
+          "waarde": "€ 150",
+          "label": "vanaf"
+        }
+      ],
+      "secties": [
+        {
+          "id": "wat",
+          "eyebrow": "Wat is het",
+          "kop": "Samen <em>sterker</em>",
+          "tekst": [
+            "Bij de Firm Facial combineren we een TCA-peeling met microneedling. De peeling lost de bovenste huidlaag op, waardoor de huidcellen eronder worden aangezet tot vernieuwing. Microneedling stimuleert daarnaast de aanmaak van collageen en elastine.",
+            "Door de technieken te combineren krijgt de huid een enorme boost, bij huidveroudering, acnelittekens, een grove huidstructuur en pigmentvlekken."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/masker.jpg",
+            "alt": "Combinatiebehandeling"
+          }
+        },
+        {
+          "id": "hoe",
+          "eyebrow": "Onze combinaties",
+          "kop": "Voor elke huid een <em>glow</em>",
+          "tekst": [
+            "De Glow Facial brengt hoog geconcentreerde vitamine C in de huid voor een gehydrateerde, stralende huid. De Cosmo Glow combineert TCA 12% met hyaluron van Emmagen voor hydratatie en minder fijne lijntjes.",
+            "De Frisse blik-peeling richt zich op lijntjes, uitdroging en donkere kringen rond de ogen. Voor de gevoelige huid is er de Detox Facial."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/skinpen.jpg",
+            "alt": "Microneedling"
+          }
+        }
+      ],
+      "geschiktBij": [
+        "Huidveroudering",
+        "Acnelittekens",
+        "Grove huidstructuur",
+        "Pigmentvlekken",
+        "Uitdroging",
+        "Donkere kringen",
+        "Gevoelige huid"
+      ],
+      "verloop": {
+        "kop": "Voor het beste <em>resultaat</em>",
+        "stappen": [
+          {
+            "wanneer": "Intake",
+            "tekst": "We bepalen samen welke combinatie past bij jouw huid en wensen."
+          },
+          {
+            "wanneer": "Behandeling",
+            "tekst": "Peeling en microneedling in één afspraak."
+          },
+          {
+            "wanneer": "Frisse blik",
+            "tekst": "Advies: 3 behandelingen met een interval van 7 weken."
+          },
+          {
+            "wanneer": "Thuis",
+            "tekst": "Je krijgt advies voor de verzorging thuis."
+          }
+        ]
+      },
+      "tarieven": "combinatie",
+      "vragen": [
+        {
+          "v": "Waarom combineren?",
+          "a": "Vaak is een combinatie van behandelingen nodig om tot het gewenste resultaat te komen. Peeling en microneedling versterken elkaars werking."
+        },
+        {
+          "v": "Welke combinatie is geschikt voor een gevoelige huid?",
+          "a": "De Detox Facial, met Pumpkin peel, hyaluronzuur en microneedling, is gericht op herstel van de gevoelige huid."
+        },
+        {
+          "v": "Hoe vaak moet ik komen?",
+          "a": "Dat verschilt per combinatie. Voor de Frisse blik-peeling is het advies 3 behandelingen met een interval van 7 weken."
+        }
+      ],
+      "gerelateerd": [
+        "skinpen",
+        "peelings",
+        "huidverbetering"
+      ]
+    },
+    {
+      "slug": "huidverbetering",
+      "titel": "Huidverbetering",
+      "kort": "huidverbetering",
+      "titelHtml": "Huid<em>verbetering</em>",
+      "categorie": "Huidverbetering & verjonging",
+      "omschrijving": "Huidverbetering en huidverjonging bij Huidzorg Mozi in Gorinchem: Innerlift, Clear en Toning voor collageen, roodheid en pigment.",
+      "intro": "Collageen stimuleren, roodheid verminderen en verspreid pigment egaliseren: met Innerlift, Clear en Toning werken we gericht aan een egale, stralende huid.",
+      "beeld": "../assets/web/behandeling-apparaat.jpg",
+      "logo": "../assets/logos/clarity-ii.webp",
+      "logoTekst": "Clarity II-laser",
+      "feiten": [
+        {
+          "waarde": "Innerlift",
+          "label": "collageen stimuleren"
+        },
+        {
+          "waarde": "Clear",
+          "label": "roodheid verminderen"
+        },
+        {
+          "waarde": "Toning",
+          "label": "pigment verminderen"
+        },
+        {
+          "waarde": "€ 150",
+          "label": "vanaf"
+        }
+      ],
+      "secties": [
+        {
+          "id": "wat",
+          "eyebrow": "Wat is het",
+          "kop": "Drie doelen, één <em>huid</em>",
+          "tekst": [
+            "Innerlift stimuleert de aanmaak van collageen. Clear vermindert roodheid. Toning vermindert verspreid pigment. Samen vormen ze een complete aanpak voor een egale huid.",
+            "De Clarity II-laser kan helpen bij het verminderen van fijne lijntjes en andere tekenen van veroudering, bij pigmentvlekken en bij het verbeteren van de huidtextuur."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/behandeling-apparaat.jpg",
+            "alt": "Behandeling"
+          }
+        },
+        {
+          "id": "hoe",
+          "eyebrow": "Combineren",
+          "kop": "Nog meer <em>effect</em>",
+          "tekst": [
+            "Kies je voor alle drie, dan combineren we Innerlift, Clear en Pigment in één traject. Een peeling of LED-therapie kun je toevoegen voor extra resultaat.",
+            "Bij rosacea kiezen we voor een combinatie van peeling en LED-therapie, gericht op een rustige huid."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/led-apparaat.jpg",
+            "alt": "LED-therapie"
+          }
+        }
+      ],
+      "geschiktBij": [
+        "Fijne lijntjes",
+        "Huidveroudering",
+        "Roodheid",
+        "Pigmentvlekken",
+        "Onregelmatige huidtextuur"
+      ],
+      "tarieven": "huidverbetering",
+      "vragen": [
+        {
+          "v": "Wat is het verschil tussen Innerlift, Clear en Toning?",
+          "a": "Innerlift stimuleert de collageenaanmaak, Clear vermindert roodheid en Toning vermindert verspreid pigment."
+        },
+        {
+          "v": "Kan ik behandelingen combineren?",
+          "a": "Ja. De combinatie Innerlift/Clear/Pigment pakt collageen, roodheid en pigment in één traject aan. Een peeling of LED-therapie kun je toevoegen."
+        },
+        {
+          "v": "Is dit geschikt bij rosacea?",
+          "a": "Voor rosacea hebben we een aparte behandeling met peeling en LED-therapie. Tijdens de intake kijken we wat het beste past."
+        }
+      ],
+      "gerelateerd": [
+        "laser",
+        "led",
+        "peelings"
+      ]
+    },
+    {
+      "slug": "ontharen",
+      "titel": "Laserontharing",
+      "kort": "laserontharing",
+      "titelHtml": "Laser<em>ontharing</em>",
+      "categorie": "Laser & licht",
+      "omschrijving": "Laserontharing met de Clarity II bij Huidzorg Mozi in Gorinchem: de krachtigste ontharingslaser, geschikt voor alle huidtinten.",
+      "intro": "Op zoek naar een definitieve oplossing voor ongewenste haargroei? We gebruiken de krachtigste ontharingslaser op de markt: de Clarity II.",
+      "beeld": "../assets/web/ontharen.jpg",
+      "logo": "../assets/logos/clarity-ii.webp",
+      "logoTekst": "Clarity II met IntelliTrak-technologie",
+      "feiten": [
+        {
+          "waarde": "2 lasers",
+          "label": "Nd:YAG en Alexandrite"
+        },
+        {
+          "waarde": "Alle huidtinten",
+          "label": "ook dunnere haren"
+        },
+        {
+          "waarde": "Vrijwel pijnloos",
+          "label": "door de koeling"
+        },
+        {
+          "waarde": "€ 30",
+          "label": "vanaf"
+        }
+      ],
+      "secties": [
+        {
+          "id": "wat",
+          "eyebrow": "Wat is het",
+          "kop": "Definitief <em>glad</em>",
+          "tekst": [
+            "De Clarity II combineert Nd:YAG- en Alexandrite-technologie. Daardoor kunnen we alle huidtinten veilig behandelen, en zelfs de dunnere haren.",
+            "De juiste combinatie van energie en behandeltijd zorgt voor de best haalbare resultaten in een aantal sessies."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/huidtinten.jpg",
+            "alt": "Verschillende huidtinten"
+          }
+        },
+        {
+          "id": "hoe",
+          "eyebrow": "De behandeling",
+          "kop": "Snel en <em>veilig</em>",
+          "tekst": [
+            "De laser meet constant de temperatuur van de huid, wat bijdraagt aan een veilige behandeling. De koeling maakt de behandeling vrijwel pijnloos.",
+            "Met de IntelliTrak-technologie worden alle haren snel en effectief behandeld."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/clarity-apparaat.jpg",
+            "alt": "Clarity II-laser"
+          }
+        }
+      ],
+      "geschiktBij": [
+        "Gezicht",
+        "Oksels",
+        "Armen",
+        "Benen",
+        "Bikinilijn",
+        "Rug en borst",
+        "Alle huidtinten"
+      ],
+      "waarom": {
+        "kop": "Waarom de <em>Clarity II</em>",
+        "punten": [
+          {
+            "titel": "Krachtigste laser",
+            "tekst": "Momenteel de krachtigste ontharingslaser op de markt."
+          },
+          {
+            "titel": "Voor alle huidtypen",
+            "tekst": "Lichte en gekleurde huidtypen worden veilig en effectief behandeld."
+          },
+          {
+            "titel": "Constante meting",
+            "tekst": "De huidtemperatuur wordt continu gemeten voor een veilige behandeling."
+          }
+        ]
+      },
+      "tarieven": "ontharing",
+      "vragen": [
+        {
+          "v": "Is laserontharing geschikt voor mijn huidtint?",
+          "a": "Dankzij de combinatie van Nd:YAG en Alexandrite kunnen zowel lichte als gekleurde huidtypen veilig en effectief worden behandeld."
+        },
+        {
+          "v": "Doet het pijn?",
+          "a": "De koeling van de laser maakt de behandeling vrijwel pijnloos."
+        },
+        {
+          "v": "Hoeveel sessies heb ik nodig?",
+          "a": "De best haalbare resultaten bereik je in een aantal sessies. Tijdens de intake bespreken we wat je kunt verwachten."
+        }
+      ],
+      "gerelateerd": [
+        "laser",
+        "schimmelnagels",
+        "huidverhevenheden"
+      ]
+    },
+    {
+      "slug": "laser",
+      "titel": "Laser bij vaatjes & pigment",
+      "kort": "laserbehandeling",
+      "titelHtml": "Laser bij vaatjes <em>&amp; pigment</em>",
+      "categorie": "Laser & licht",
+      "omschrijving": "Laserbehandeling van roodheid, vaatjes en pigmentvlekken bij Huidzorg Mozi in Gorinchem, van één plek tot het hele gelaat.",
+      "intro": "Roodheid, zichtbare vaatjes en pigmentvlekken gericht behandeld, van één plek tot gelaat, hals en decolleté.",
+      "beeld": "../assets/web/laser.jpg",
+      "logo": "../assets/logos/clarity-ii.webp",
+      "logoTekst": "Clarity II en Clearlight IPL",
+      "feiten": [
+        {
+          "waarde": "1 plek",
+          "label": "tot het hele gelaat"
+        },
+        {
+          "waarde": "Gelaat, hals",
+          "label": "decolleté en handen"
+        },
+        {
+          "waarde": "Laser & IPL",
+          "label": "Clarity II en Clearlight"
+        },
+        {
+          "waarde": "€ 75",
+          "label": "vanaf"
+        }
+      ],
+      "secties": [
+        {
+          "id": "wat",
+          "eyebrow": "Wat is het",
+          "kop": "Rust en <em>egaliteit</em>",
+          "tekst": [
+            "Roodheid die continu in het gezicht aanwezig is en steeds opvallender wordt, kan als storend worden ervaren. Vaak is het een uiting van vaatafwijkingen, een ontstekingsreactie of te veel zon.",
+            "Pigmentvlekken ontstaan vooral waar de zon gemakkelijk bijkomt: gezicht, decolleté, handen en schouders. Het onderscheid tussen oppervlakkig en dieper pigment bepaalt de beste aanpak."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/laser.jpg",
+            "alt": "Laserbehandeling"
+          }
+        },
+        {
+          "id": "hoe",
+          "eyebrow": "De behandeling",
+          "kop": "Gericht per <em>gebied</em>",
+          "tekst": [
+            "De Clarity II-laser behandelt ongewenste bloedvaatjes, couperose en hyperpigmentatie zoals ouderdoms- en zonnevlekken. Met de IPL Clearlight behandelen we vaatjes en roodheid in het gelaat.",
+            "Je kiest het gebied: van één plek tot een combinatie van gelaat, hals en decolleté."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/clarity-apparaat.jpg",
+            "alt": "Clarity II-laser"
+          }
+        }
+      ],
+      "geschiktBij": [
+        "Couperose",
+        "Zichtbare vaatjes",
+        "Roodheid",
+        "Pigmentvlekken",
+        "Ouderdomsvlekken",
+        "Zonnevlekken"
+      ],
+      "tarieven": "laser",
+      "vragen": [
+        {
+          "v": "Welke gebieden kunnen worden behandeld?",
+          "a": "Van één plek tot wangen, hele gelaat, hals, decolleté en handen, of combinaties daarvan."
+        },
+        {
+          "v": "Werkt het bij elke pigmentvlek?",
+          "a": "Het onderscheid tussen oppervlakkige en dieper gelegen pigmentvlekken bepaalt de beste behandeling. Ook je huidskleur en de locatie spelen mee; dat beoordelen we tijdens de intake."
+        },
+        {
+          "v": "Wat is het verschil met de rosacea-behandeling?",
+          "a": "Hier behandelen we gericht per gebied. Bij rosacea richten we ons daarnaast op het rustig krijgen van de huid met milde peelings en producten."
+        }
+      ],
+      "gerelateerd": [
+        "rosacea",
+        "huidverbetering",
+        "ontharen"
+      ]
+    },
+    {
+      "slug": "led",
+      "titel": "LED-therapie Lumi8",
+      "kort": "LED-therapie",
+      "titelHtml": "LED-therapie <em>Lumi8</em>",
+      "categorie": "Laser & licht",
+      "omschrijving": "LED-therapie met de Lumi8 bij Huidzorg Mozi in Gorinchem: medisch gecertificeerd licht dat de huid verjongt, herstelt en kalmeert.",
+      "intro": "Medisch gecertificeerd LED-licht dat de huid verjongt, herstelt en kalmeert. Geschikt voor alle huidtypen en goed te combineren met andere behandelingen.",
+      "beeld": "../assets/web/led-rood.jpg",
+      "feiten": [
+        {
+          "waarde": "8",
+          "label": "programma's"
+        },
+        {
+          "waarde": "1300+",
+          "label": "LED's"
+        },
+        {
+          "waarde": "Geen herstel",
+          "label": "niet-invasief"
+        },
+        {
+          "waarde": "€ 25",
+          "label": "toevoeging aan een behandeling"
+        }
+      ],
+      "secties": [
+        {
+          "id": "wat",
+          "eyebrow": "Wat is het",
+          "kop": "Licht als <em>celenergie</em>",
+          "tekst": [
+            "LED-licht dringt de huidcellen binnen en wordt omgezet in celenergie. Dat zorgt voor nieuw collageen en elastine, een betere doorbloeding en minder ontstekingen.",
+            "De behandeling is niet-invasief en werkt zonder warmte en zonder UVA- of UVB-straling: aangenaam, veilig en zonder herstelperiode."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/led-apparaat.jpg",
+            "alt": "Lumi8 LED-apparaat"
+          }
+        },
+        {
+          "id": "hoe",
+          "eyebrow": "De techniek",
+          "kop": "Rood, geel en <em>infrarood</em>",
+          "tekst": [
+            "De Lumi8 heeft acht programma's met meer dan 1300 LED's: geel licht (590 nm) voor verjonging en versteviging, rood licht (630 nm) voor herstel, pigment, rosacea en acne, en bijna-infrarood (830 nm).",
+            "De gepatenteerde Power Wave Cycle zorgt dat de huid niet aan het licht went, zodat het resultaat na meerdere behandelingen alleen maar beter wordt."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/lumi8.jpg",
+            "alt": "Lumi8 LED-therapie"
+          }
+        }
+      ],
+      "geschiktBij": [
+        "Onzuiverheden en acne",
+        "Roodheid en rosacea",
+        "Fijne lijntjes",
+        "Pigmentvlekken",
+        "Huidverjonging",
+        "Wond- en huidherstel",
+        "Vergrote poriën"
+      ],
+      "tarieven": null,
+      "tarievenRijen": [
+        {
+          "naam": "LED-therapie toevoegen",
+          "info": "Aan een peeling of huidverbeteringsbehandeling",
+          "prijs": "€ 25"
+        },
+        {
+          "naam": "Dieptereiniging gelaat met LED",
+          "info": "Acnetherapie",
+          "prijs": "€ 75"
+        },
+        {
+          "naam": "Rosacea-behandeling",
+          "info": "Peeling + LED-therapie",
+          "prijs": "€ 125"
+        }
+      ],
+      "vragen": [
+        {
+          "v": "Is LED-therapie veilig?",
+          "a": "De Lumi8 is CE medisch goedgekeurd en FDA approved, en geschikt voor alle huidtypes. De behandeling werkt zonder warmte en zonder schadelijke UV-straling."
+        },
+        {
+          "v": "Heb ik hersteltijd nodig?",
+          "a": "Nee. LED-therapie is niet-invasief en heeft geen herstelperiode."
+        },
+        {
+          "v": "Kan ik LED combineren met andere behandelingen?",
+          "a": "Ja, dat is juist de kracht: LED kun je toevoegen aan onder andere peelings, acnetherapie en de rosacea-behandeling."
+        }
+      ],
+      "gerelateerd": [
+        "acne",
+        "rosacea",
+        "huidverbetering"
+      ]
+    },
+    {
+      "slug": "schimmelnagels",
+      "titel": "Schimmelnagels",
+      "kort": "de laserbehandeling",
+      "titelHtml": "Schimmel<em>nagels</em>",
+      "categorie": "Laser & licht",
+      "omschrijving": "Schimmelnagels behandelen met de Clarity II-laser bij Huidzorg Mozi in Gorinchem. Pakt de schimmel bij de kern aan.",
+      "intro": "Crèmes, nagellak en huismiddeltjes dringen niet door de nagel heen. Een behandeling met onze Clarity II-laser pakt het probleem wél bij de kern aan.",
+      "beeld": "../assets/web/schimmelnagels.jpg",
+      "logo": "../assets/logos/clarity-ii.webp",
+      "logoTekst": "Clarity II-laser",
+      "feiten": [
+        {
+          "waarde": "Clarity II",
+          "label": "laser"
+        },
+        {
+          "waarde": "Niet pijnlijk",
+          "label": "de nagel wordt wel warm"
+        },
+        {
+          "waarde": "1 mm",
+          "label": "nagelgroei per maand"
+        },
+        {
+          "waarde": "Op aanvraag",
+          "label": "prijs"
+        }
+      ],
+      "secties": [
+        {
+          "id": "wat",
+          "eyebrow": "Wat is het",
+          "kop": "Een hardnekkig <em>probleem</em>",
+          "tekst": [
+            "Schimmelnagels, ook wel kalknagels genoemd, zijn een veelvoorkomend huidprobleem. De teen- of vingernagels worden dikker en krijgen een gele, groene of bruine kleur.",
+            "Middeltjes van buitenaf dringen niet door de nagel heen en hebben daardoor vaak weinig resultaat."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/schimmelnagels.jpg",
+            "alt": "Voeten"
+          }
+        },
+        {
+          "id": "hoe",
+          "eyebrow": "De behandeling",
+          "kop": "Laser tot in de <em>kern</em>",
+          "tekst": [
+            "De laser verhit de nagel en vernietigt de schimmels, zonder de nagel, het nagelbed of de omliggende huid te beschadigen. De celstructuur van de schimmel raakt blijvend beschadigd, zodat de infectie stopt.",
+            "Het aangetaste deel groeit uit en maakt plaats voor een gezonde nagel. Teennagels groeien ongeveer één millimeter per maand, dus er zijn meerdere behandelingen en wat geduld nodig."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/clarity-apparaat.jpg",
+            "alt": "Clarity II-laser"
+          }
+        }
+      ],
+      "geschiktBij": [
+        "Schimmelnagels (kalknagels)",
+        "Verdikte nagels",
+        "Verkleurde nagels"
+      ],
+      "waarom": {
+        "kop": "Waarom de <em>Clarity II</em>",
+        "punten": [
+          {
+            "titel": "Gericht",
+            "tekst": "De laser richt zich specifiek op de schimmel in de nagel en het nagelbed."
+          },
+          {
+            "titel": "Diepe doordringing",
+            "tekst": "Dankzij de krachtige laserenergie dringt de behandeling diep door in de nagel."
+          },
+          {
+            "titel": "Geen medicatie",
+            "tekst": "Een alternatief voor orale medicatie of crèmes."
+          }
+        ]
+      },
+      "tarieven": null,
+      "tarievenRijen": [
+        {
+          "naam": "Laserbehandeling schimmelnagels",
+          "info": "Prijs afhankelijk van het aantal nagels",
+          "prijs": "op aanvraag"
+        }
+      ],
+      "vragen": [
+        {
+          "v": "Doet de laserbehandeling pijn?",
+          "a": "De behandeling is niet pijnlijk. De nagel wordt wel merkbaar warm."
+        },
+        {
+          "v": "Hoeveel behandelingen zijn nodig?",
+          "a": "Er zijn meerdere behandelingen nodig voor een goed resultaat. Omdat teennagels ongeveer één millimeter per maand groeien, duurt het even voordat de nagel er weer helemaal gezond uitziet."
+        },
+        {
+          "v": "Wat kost de behandeling?",
+          "a": "De prijs is op aanvraag. Tijdens de gratis intake bekijken we je nagels en krijg je een voorstel."
+        }
+      ],
+      "gerelateerd": [
+        "ontharen",
+        "laser",
+        "huidverhevenheden"
+      ]
+    },
+    {
+      "slug": "productadvies",
+      "titel": "Huidanalyse & productadvies",
+      "kort": "productadvies",
+      "titelHtml": "Huidanalyse &amp; <em>productadvies</em>",
+      "categorie": "Advies",
+      "omschrijving": "Huidanalyse en persoonlijk productadvies bij Huidzorg Mozi in Gorinchem, met Dermaceutic, Renophase en Theraderm. Kosten vervallen bij aankoop.",
+      "intro": "We kijken goed naar je huid en bepalen welke verzorging jouw huid nodig heeft. De kosten van het consult vervallen bij aankoop van producten.",
+      "beeld": "../assets/web/homecare.jpg",
+      "logo": "../assets/logos/dermaceutic.png",
+      "logoTekst": "Dermaceutic, Renophase en Theraderm",
+      "feiten": [
+        {
+          "waarde": "€ 25",
+          "label": "vervalt bij aankoop"
+        },
+        {
+          "waarde": "3 merken",
+          "label": "Dermaceutic, Renophase, Theraderm"
+        },
+        {
+          "waarde": "Persoonlijk",
+          "label": "verzorgingsplan"
+        },
+        {
+          "waarde": "Gratis",
+          "label": "intake van 30 minuten"
+        }
+      ],
+      "secties": [
+        {
+          "id": "wat",
+          "eyebrow": "Onze merken",
+          "kop": "De juiste <em>match</em>",
+          "tekst": [
+            "Dermaceutic is een van de bekendste namen in chemische peelings en medische huidproducten, ontwikkeld met dermatologen en cosmetisch artsen. Het werkt met een stappenplan, zodat je een persoonlijk verzorgingsplan krijgt.",
+            "Renophase gebruiken we vooral bij de gevoelige huid: het helpt de huid zichzelf te herstellen, op huideigen kracht en tempo. Theraderm is een Zuid-Koreaans merk met organische producten, ook voor de getinte en donkere huid."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/homecare.jpg",
+            "alt": "Dermaceutic homecare"
+          }
+        },
+        {
+          "id": "hoe",
+          "eyebrow": "Het consult",
+          "kop": "Advies dat <em>werkt</em>",
+          "tekst": [
+            "Tijdens het consult analyseren we je huid en bespreken we je huidige verzorging. Je krijgt een advies met producten die passen bij jouw huid en eventuele behandelingen.",
+            "Een goede verzorging thuis is net zo belangrijk als de behandeling in de praktijk."
+          ],
+          "visual": {
+            "type": "foto",
+            "src": "../assets/web/crystalpeel.jpg",
+            "alt": "Dermaceutic producten"
+          }
+        }
+      ],
+      "geschiktBij": [
+        "Acne",
+        "Rosacea",
+        "Pigment",
+        "Gevoelige huid",
+        "Huidverjonging",
+        "Voorbereiding op peelings"
+      ],
+      "tarieven": "intake",
+      "vragen": [
+        {
+          "v": "Wat kost een productadvies?",
+          "a": "Een huidanalyse met productadvies kost € 25. Deze kosten vervallen bij afname van producten."
+        },
+        {
+          "v": "Welk merk past bij mij?",
+          "a": "Dat hangt af van je huid. Renophase gebruiken we vooral bij de gevoelige huid, Theraderm is geschikt voor de getinte en donkere huid, en Dermaceutic werkt met een stappenplan per huidprobleem."
+        },
+        {
+          "v": "Kan ik de producten ook online bestellen?",
+          "a": "Straks kun je de producten ook in onze webshop bestellen, of ophalen in de praktijk."
+        }
+      ],
+      "gerelateerd": [
+        "peelings",
+        "acne",
+        "rosacea"
+      ]
     }
   ],
   "kaarten": {
-    "combinatie": { "titel": "Combinatiebehandelingen", "tekst": "Peeling en microneedling samen, voor een enorme boost.", "beeld": "../assets/web/masker.jpg", "prijs": "vanaf <b>€ 150</b>", "cat": "Verjonging" },
-    "peelings": { "titel": "Medische peelings", "tekst": "Een vernieuwde, gladdere huid, volledig op maat.", "beeld": "../assets/web/peeling.jpg", "prijs": "vanaf <b>€ 90</b>", "cat": "Verjonging" },
-    "acne": { "titel": "Acnetherapie", "tekst": "Dieptereiniging, peelings en lichttherapie.", "beeld": "../assets/web/acne.jpg", "prijs": "vanaf <b>€ 75</b>", "cat": "Huidproblemen" }
+    "acne": {
+      "titel": "Acnetherapie",
+      "tekst": "Dieptereiniging, peelings en lichttherapie.",
+      "beeld": "../assets/web/acne.jpg",
+      "prijs": "vanaf <b>€ 75</b>",
+      "cat": "Huidproblemen"
+    },
+    "rosacea": {
+      "titel": "Rosacea & couperose",
+      "tekst": "Je huid weer rustig, met IPL en milde peelings.",
+      "beeld": "../assets/web/rosacea.jpg",
+      "prijs": "vanaf <b>€ 125</b>",
+      "cat": "Huidproblemen"
+    },
+    "huidverhevenheden": {
+      "titel": "Huidverhevenheden",
+      "tekst": "Steelwratjes en vaatjes veilig verwijderd.",
+      "beeld": "../assets/web/huidverhevenheden.jpg",
+      "prijs": "vanaf <b>€ 50</b>",
+      "cat": "Huidproblemen"
+    },
+    "schimmelnagels": {
+      "titel": "Schimmelnagels",
+      "tekst": "De Clarity II-laser pakt de schimmel bij de kern aan.",
+      "beeld": "../assets/web/schimmelnagels.jpg",
+      "prijs": "<b>op aanvraag</b>",
+      "cat": "Laser & licht"
+    },
+    "peelings": {
+      "titel": "Medische peelings",
+      "tekst": "Een vernieuwde, gladdere huid, volledig op maat.",
+      "beeld": "../assets/web/peeling.jpg",
+      "prijs": "vanaf <b>€ 90</b>",
+      "cat": "Verjonging"
+    },
+    "skinpen": {
+      "titel": "SkinPen microneedling",
+      "tekst": "Voor littekens, lijntjes en een stevigere huid.",
+      "beeld": "../assets/web/skinpen.jpg",
+      "prijs": "vanaf <b>€ 210</b>",
+      "cat": "Verjonging"
+    },
+    "combinatie": {
+      "titel": "Combinatiebehandelingen",
+      "tekst": "Peeling en microneedling samen, voor een enorme boost.",
+      "beeld": "../assets/web/masker.jpg",
+      "prijs": "vanaf <b>€ 150</b>",
+      "cat": "Verjonging"
+    },
+    "huidverbetering": {
+      "titel": "Huidverbetering",
+      "tekst": "Innerlift, Clear en Toning.",
+      "beeld": "../assets/web/behandeling-apparaat.jpg",
+      "prijs": "vanaf <b>€ 150</b>",
+      "cat": "Verjonging"
+    },
+    "ontharen": {
+      "titel": "Laserontharing",
+      "tekst": "Clarity II, voor alle huidtinten.",
+      "beeld": "../assets/web/ontharen.jpg",
+      "prijs": "vanaf <b>€ 30</b>",
+      "cat": "Laser & licht"
+    },
+    "laser": {
+      "titel": "Laser bij vaatjes & pigment",
+      "tekst": "Roodheid, vaatjes en pigmentvlekken per gebied.",
+      "beeld": "../assets/web/laser.jpg",
+      "prijs": "vanaf <b>€ 75</b>",
+      "cat": "Laser & licht"
+    },
+    "led": {
+      "titel": "LED-therapie Lumi8",
+      "tekst": "Licht dat de huid verjongt, herstelt en kalmeert.",
+      "beeld": "../assets/web/led-rood.jpg",
+      "prijs": "vanaf <b>€ 25</b>",
+      "cat": "Laser & licht"
+    },
+    "productadvies": {
+      "titel": "Huidanalyse & productadvies",
+      "tekst": "De verzorging die jouw huid nodig heeft.",
+      "beeld": "../assets/web/homecare.jpg",
+      "prijs": "<b>€ 25</b>",
+      "cat": "Advies"
+    }
   }
 }

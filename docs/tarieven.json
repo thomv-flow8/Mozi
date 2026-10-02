@@ -1,95 +1,437 @@
 {
   "_bron": "huidzorgmozi.nl/tarieven, opgehaald 1 oktober 2026. Intake gecorrigeerd naar 30 minuten (Thomas). Alle tarieven per behandeling.",
   "groepen": [
-    { "id": "intake", "naam": "Intake & advies", "intro": "Altijd de eerste stap.", "rijen": [
-      { "naam": "Intakegesprek", "info": "30 minuten, vrijblijvend", "prijs": "gratis" },
-      { "naam": "Huidanalyse / productadvies", "info": "Deze kosten vervallen bij afname van producten", "prijs": "€ 25" }
-    ]},
-    { "id": "acne", "naam": "Acnetherapie", "intro": "Dieptereiniging, peeling, laser en LED.", "rijen": [
-      { "naam": "Dieptereiniging gelaat", "info": "met LED", "prijs": "€ 75" },
-      { "naam": "Dieptereiniging + peeling", "info": "", "prijs": "vanaf € 100" },
-      { "naam": "Lasertherapie + peeling", "info": "", "prijs": "€ 200" },
-      { "naam": "Lasertherapie diep + peeling + LED", "info": "", "prijs": "€ 225" }
-    ]},
-    { "id": "skinpen", "naam": "SkinPen microneedling", "pagina": "behandeling-skinpen.html", "intro": "Huidverjonging, huidverbetering en littekens.", "rijen": [
-      { "naam": "Hele gelaat", "info": "", "prijs": "€ 210" },
-      { "naam": "Hele gelaat + hals", "info": "", "prijs": "€ 235" },
-      { "naam": "Kuur van 3 behandelingen gelaat", "info": "", "prijs": "€ 570" },
-      { "naam": "Kuur van 6 behandelingen gelaat", "info": "", "prijs": "€ 1.050" },
-      { "naam": "Nabehandeling met masker", "info": "", "prijs": "€ 20 extra" },
-      { "naam": "Lichaam", "info": "", "prijs": "op aanvraag" }
-    ]},
-    { "id": "huidverbetering", "naam": "Huidverbetering & verjonging", "intro": "Rosacea, collageen, roodheid en pigment.", "rijen": [
-      { "naam": "Rosacea-behandeling", "info": "Peeling + LED-therapie", "prijs": "€ 125" },
-      { "naam": "Innerlift", "info": "Collageenaanmaak stimuleren", "prijs": "€ 160" },
-      { "naam": "Clear", "info": "Roodheid verminderen", "prijs": "€ 150" },
-      { "naam": "Toning", "info": "Verspreid pigment verminderen", "prijs": "€ 150" },
-      { "naam": "Innerlift / Clear / Pigment", "info": "Combinatie van 3 behandelingen: collageen, roodheid en pigment", "prijs": "€ 300" },
-      { "naam": "Peeling toevoegen", "info": "", "prijs": "€ 50" },
-      { "naam": "LED-therapie toevoegen", "info": "", "prijs": "€ 25" }
-    ]},
-    { "id": "laser", "naam": "Laser: roodheid, vaten & pigment", "intro": "Gericht per gebied.", "rijen": [
-      { "naam": "1 plek", "info": "", "prijs": "€ 75" },
-      { "naam": "Wangen", "info": "", "prijs": "€ 150" },
-      { "naam": "Hele gelaat", "info": "", "prijs": "€ 175" },
-      { "naam": "Hals", "info": "", "prijs": "€ 150" },
-      { "naam": "Decolleté", "info": "", "prijs": "€ 175" },
-      { "naam": "Handen", "info": "", "prijs": "€ 150" },
-      { "naam": "Gelaat + hals", "info": "", "prijs": "€ 275" },
-      { "naam": "Gelaat + hals + decolleté", "info": "", "prijs": "€ 325" },
-      { "naam": "Hals + decolleté", "info": "", "prijs": "€ 275" },
-      { "naam": "Overig en combinaties", "info": "", "prijs": "op aanvraag" }
-    ]},
-    { "id": "peelings", "naam": "Medische peelings", "intro": "Dermaceutic, Theraderm en Renophase.", "rijen": [
-      { "naam": "Milk Peel Dermaceutic", "info": "Milde acne, PIH, fijne lijntjes en voorbereiding op diepere peelings", "prijs": "€ 90" },
-      { "naam": "Crystal Peel Dermaceutic", "info": "PIH, pigment, fijne lijntjes en onregelmatige teint", "prijs": "€ 100" },
-      { "naam": "TCA Peel 12% / 15% / 18%", "info": "Huidverbetering, acnelittekens, pigmentatie, lijntjes", "prijs": "€ 150" },
-      { "naam": "Pumpkin Peel", "info": "", "prijs": "€ 150" },
-      { "naam": "Mela Lightening Peel", "info": "Melasma, pigmentaanpak", "prijs": "€ 200" },
-      { "naam": "Organische peelings", "info": "Theraderm, geschikt voor alle huidtypen", "prijs": "op aanvraag" }
-    ]},
-    { "id": "combinatie", "naam": "Combinatiebehandelingen", "intro": "Peeling en microneedling in één behandeling.", "rijen": [
-      { "naam": "Rond de ogen ophelderen", "info": "Hyaluron + microneedling", "prijs": "€ 150" },
-      { "naam": "Firm Facial", "info": "Huidverjonging: TCA + microneedling + retinol", "prijs": "€ 200" },
-      { "naam": "Cosmo Glow", "info": "Huidverjonging, grove poriën: TCA, hyaluron + microneedling", "prijs": "€ 200" },
-      { "naam": "Glow Facial", "info": "Pigmentaanpak: microneedling + vitamine C", "prijs": "€ 195" },
-      { "naam": "Glow On Facial", "info": "Versterkt de huidbarrière tegen zonschade: mandelic, vitamine C en hyaluronzuur met microneedling", "prijs": "€ 200" },
-      { "naam": "Reveal & Protect Facial", "info": "Vermindert pigment en beschermt tegen nieuwe aanmaak: mandelic/azelaine peel, tranexaminezuur met microneedling + retinol", "prijs": "€ 200" },
-      { "naam": "Detox Facial", "info": "Voor de gevoelige huid, herstel: Pumpkin peel, hyaluronzuur + microneedling", "prijs": "€ 175" },
-      { "naam": "LED-therapie toevoegen", "info": "", "prijs": "€ 25 extra" }
-    ]},
-    { "id": "electro", "naam": "Electrocoagulatie / cryotherapie", "intro": "Steelwratjes, vaatjes en huidverhevenheden.", "rijen": [
-      { "naam": "10 minuten", "info": "", "prijs": "€ 50" },
-      { "naam": "20 minuten", "info": "", "prijs": "€ 65" },
-      { "naam": "30 minuten", "info": "", "prijs": "€ 80" },
-      { "naam": "45 minuten", "info": "", "prijs": "€ 100" }
-    ]},
-    { "id": "ontharing", "naam": "Laserontharing", "intro": "Clarity II, voor alle huidtinten.", "rijen": [
-      { "naam": "Bovenlip", "info": "", "prijs": "€ 60" },
-      { "naam": "Kin", "info": "", "prijs": "€ 60" },
-      { "naam": "Bovenlip + kin", "info": "", "prijs": "€ 100" },
-      { "naam": "Tussen de wenkbrauwen", "info": "", "prijs": "€ 30" },
-      { "naam": "Bakkebaarden", "info": "", "prijs": "€ 75" },
-      { "naam": "Hals", "info": "", "prijs": "€ 75" },
-      { "naam": "Hele gezicht", "info": "", "prijs": "€ 165" },
-      { "naam": "Hele gezicht + hals", "info": "", "prijs": "€ 195" },
-      { "naam": "Baardlijn jukbeen", "info": "", "prijs": "€ 60" },
-      { "naam": "Baardlijn hals", "info": "", "prijs": "€ 75" },
-      { "naam": "Oren", "info": "", "prijs": "€ 30" },
-      { "naam": "Oksels", "info": "", "prijs": "€ 70" },
-      { "naam": "Boven- of onderarmen", "info": "", "prijs": "€ 125" },
-      { "naam": "Hele armen", "info": "", "prijs": "€ 195" },
-      { "naam": "Hele rug", "info": "", "prijs": "€ 225" },
-      { "naam": "Onderbenen incl. knie", "info": "", "prijs": "€ 175" },
-      { "naam": "Bovenbenen", "info": "", "prijs": "€ 175" },
-      { "naam": "Onder- en bovenbenen", "info": "", "prijs": "€ 275" },
-      { "naam": "Voeten", "info": "", "prijs": "€ 60" },
-      { "naam": "Bikinilijn", "info": "", "prijs": "€ 100" },
-      { "naam": "Bikinilijn uitgebreid", "info": "", "prijs": "€ 150" },
-      { "naam": "Borst (man)", "info": "", "prijs": "€ 175" },
-      { "naam": "Buik", "info": "", "prijs": "€ 175" },
-      { "naam": "Navelstreepje", "info": "", "prijs": "€ 50" },
-      { "naam": "Overig en combinaties", "info": "", "prijs": "op aanvraag" }
-    ]}
+    {
+      "id": "intake",
+      "naam": "Intake & advies",
+      "pagina": "behandeling-productadvies.html",
+      "intro": "Altijd de eerste stap.",
+      "rijen": [
+        {
+          "naam": "Intakegesprek",
+          "info": "30 minuten, vrijblijvend",
+          "prijs": "gratis"
+        },
+        {
+          "naam": "Huidanalyse / productadvies",
+          "info": "Deze kosten vervallen bij afname van producten",
+          "prijs": "€ 25"
+        }
+      ]
+    },
+    {
+      "id": "acne",
+      "naam": "Acnetherapie",
+      "pagina": "behandeling-acne.html",
+      "intro": "Dieptereiniging, peeling, laser en LED.",
+      "rijen": [
+        {
+          "naam": "Dieptereiniging gelaat",
+          "info": "met LED",
+          "prijs": "€ 75"
+        },
+        {
+          "naam": "Dieptereiniging + peeling",
+          "info": "",
+          "prijs": "vanaf € 100"
+        },
+        {
+          "naam": "Lasertherapie + peeling",
+          "info": "",
+          "prijs": "€ 200"
+        },
+        {
+          "naam": "Lasertherapie diep + peeling + LED",
+          "info": "",
+          "prijs": "€ 225"
+        }
+      ]
+    },
+    {
+      "id": "skinpen",
+      "naam": "SkinPen microneedling",
+      "pagina": "behandeling-skinpen.html",
+      "intro": "Huidverjonging, huidverbetering en littekens.",
+      "rijen": [
+        {
+          "naam": "Hele gelaat",
+          "info": "",
+          "prijs": "€ 210"
+        },
+        {
+          "naam": "Hele gelaat + hals",
+          "info": "",
+          "prijs": "€ 235"
+        },
+        {
+          "naam": "Kuur van 3 behandelingen gelaat",
+          "info": "",
+          "prijs": "€ 570"
+        },
+        {
+          "naam": "Kuur van 6 behandelingen gelaat",
+          "info": "",
+          "prijs": "€ 1.050"
+        },
+        {
+          "naam": "Nabehandeling met masker",
+          "info": "",
+          "prijs": "€ 20 extra"
+        },
+        {
+          "naam": "Lichaam",
+          "info": "",
+          "prijs": "op aanvraag"
+        }
+      ]
+    },
+    {
+      "id": "huidverbetering",
+      "naam": "Huidverbetering & verjonging",
+      "pagina": "behandeling-huidverbetering.html",
+      "intro": "Rosacea, collageen, roodheid en pigment.",
+      "rijen": [
+        {
+          "naam": "Rosacea-behandeling",
+          "info": "Peeling + LED-therapie",
+          "prijs": "€ 125"
+        },
+        {
+          "naam": "Innerlift",
+          "info": "Collageenaanmaak stimuleren",
+          "prijs": "€ 160"
+        },
+        {
+          "naam": "Clear",
+          "info": "Roodheid verminderen",
+          "prijs": "€ 150"
+        },
+        {
+          "naam": "Toning",
+          "info": "Verspreid pigment verminderen",
+          "prijs": "€ 150"
+        },
+        {
+          "naam": "Innerlift / Clear / Pigment",
+          "info": "Combinatie van 3 behandelingen: collageen, roodheid en pigment",
+          "prijs": "€ 300"
+        },
+        {
+          "naam": "Peeling toevoegen",
+          "info": "",
+          "prijs": "€ 50"
+        },
+        {
+          "naam": "LED-therapie toevoegen",
+          "info": "",
+          "prijs": "€ 25"
+        }
+      ]
+    },
+    {
+      "id": "laser",
+      "naam": "Laser: roodheid, vaten & pigment",
+      "pagina": "behandeling-laser.html",
+      "intro": "Gericht per gebied.",
+      "rijen": [
+        {
+          "naam": "1 plek",
+          "info": "",
+          "prijs": "€ 75"
+        },
+        {
+          "naam": "Wangen",
+          "info": "",
+          "prijs": "€ 150"
+        },
+        {
+          "naam": "Hele gelaat",
+          "info": "",
+          "prijs": "€ 175"
+        },
+        {
+          "naam": "Hals",
+          "info": "",
+          "prijs": "€ 150"
+        },
+        {
+          "naam": "Decolleté",
+          "info": "",
+          "prijs": "€ 175"
+        },
+        {
+          "naam": "Handen",
+          "info": "",
+          "prijs": "€ 150"
+        },
+        {
+          "naam": "Gelaat + hals",
+          "info": "",
+          "prijs": "€ 275"
+        },
+        {
+          "naam": "Gelaat + hals + decolleté",
+          "info": "",
+          "prijs": "€ 325"
+        },
+        {
+          "naam": "Hals + decolleté",
+          "info": "",
+          "prijs": "€ 275"
+        },
+        {
+          "naam": "Overig en combinaties",
+          "info": "",
+          "prijs": "op aanvraag"
+        }
+      ]
+    },
+    {
+      "id": "peelings",
+      "naam": "Medische peelings",
+      "pagina": "behandeling-peelings.html",
+      "intro": "Dermaceutic, Theraderm en Renophase.",
+      "rijen": [
+        {
+          "naam": "Milk Peel Dermaceutic",
+          "info": "Milde acne, PIH, fijne lijntjes en voorbereiding op diepere peelings",
+          "prijs": "€ 90"
+        },
+        {
+          "naam": "Crystal Peel Dermaceutic",
+          "info": "PIH, pigment, fijne lijntjes en onregelmatige teint",
+          "prijs": "€ 100"
+        },
+        {
+          "naam": "TCA Peel 12% / 15% / 18%",
+          "info": "Huidverbetering, acnelittekens, pigmentatie, lijntjes",
+          "prijs": "€ 150"
+        },
+        {
+          "naam": "Pumpkin Peel",
+          "info": "",
+          "prijs": "€ 150"
+        },
+        {
+          "naam": "Mela Lightening Peel",
+          "info": "Melasma, pigmentaanpak",
+          "prijs": "€ 200"
+        },
+        {
+          "naam": "Organische peelings",
+          "info": "Theraderm, geschikt voor alle huidtypen",
+          "prijs": "op aanvraag"
+        }
+      ]
+    },
+    {
+      "id": "combinatie",
+      "naam": "Combinatiebehandelingen",
+      "pagina": "behandeling-combinatie.html",
+      "intro": "Peeling en microneedling in één behandeling.",
+      "rijen": [
+        {
+          "naam": "Rond de ogen ophelderen",
+          "info": "Hyaluron + microneedling",
+          "prijs": "€ 150"
+        },
+        {
+          "naam": "Firm Facial",
+          "info": "Huidverjonging: TCA + microneedling + retinol",
+          "prijs": "€ 200"
+        },
+        {
+          "naam": "Cosmo Glow",
+          "info": "Huidverjonging, grove poriën: TCA, hyaluron + microneedling",
+          "prijs": "€ 200"
+        },
+        {
+          "naam": "Glow Facial",
+          "info": "Pigmentaanpak: microneedling + vitamine C",
+          "prijs": "€ 195"
+        },
+        {
+          "naam": "Glow On Facial",
+          "info": "Versterkt de huidbarrière tegen zonschade: mandelic, vitamine C en hyaluronzuur met microneedling",
+          "prijs": "€ 200"
+        },
+        {
+          "naam": "Reveal & Protect Facial",
+          "info": "Vermindert pigment en beschermt tegen nieuwe aanmaak: mandelic/azelaine peel, tranexaminezuur met microneedling + retinol",
+          "prijs": "€ 200"
+        },
+        {
+          "naam": "Detox Facial",
+          "info": "Voor de gevoelige huid, herstel: Pumpkin peel, hyaluronzuur + microneedling",
+          "prijs": "€ 175"
+        },
+        {
+          "naam": "LED-therapie toevoegen",
+          "info": "",
+          "prijs": "€ 25 extra"
+        }
+      ]
+    },
+    {
+      "id": "electro",
+      "naam": "Electrocoagulatie / cryotherapie",
+      "pagina": "behandeling-huidverhevenheden.html",
+      "intro": "Steelwratjes, vaatjes en huidverhevenheden.",
+      "rijen": [
+        {
+          "naam": "10 minuten",
+          "info": "",
+          "prijs": "€ 50"
+        },
+        {
+          "naam": "20 minuten",
+          "info": "",
+          "prijs": "€ 65"
+        },
+        {
+          "naam": "30 minuten",
+          "info": "",
+          "prijs": "€ 80"
+        },
+        {
+          "naam": "45 minuten",
+          "info": "",
+          "prijs": "€ 100"
+        }
+      ]
+    },
+    {
+      "id": "ontharing",
+      "naam": "Laserontharing",
+      "pagina": "behandeling-ontharen.html",
+      "intro": "Clarity II, voor alle huidtinten.",
+      "rijen": [
+        {
+          "naam": "Bovenlip",
+          "info": "",
+          "prijs": "€ 60"
+        },
+        {
+          "naam": "Kin",
+          "info": "",
+          "prijs": "€ 60"
+        },
+        {
+          "naam": "Bovenlip + kin",
+          "info": "",
+          "prijs": "€ 100"
+        },
+        {
+          "naam": "Tussen de wenkbrauwen",
+          "info": "",
+          "prijs": "€ 30"
+        },
+        {
+          "naam": "Bakkebaarden",
+          "info": "",
+          "prijs": "€ 75"
+        },
+        {
+          "naam": "Hals",
+          "info": "",
+          "prijs": "€ 75"
+        },
+        {
+          "naam": "Hele gezicht",
+          "info": "",
+          "prijs": "€ 165"
+        },
+        {
+          "naam": "Hele gezicht + hals",
+          "info": "",
+          "prijs": "€ 195"
+        },
+        {
+          "naam": "Baardlijn jukbeen",
+          "info": "",
+          "prijs": "€ 60"
+        },
+        {
+          "naam": "Baardlijn hals",
+          "info": "",
+          "prijs": "€ 75"
+        },
+        {
+          "naam": "Oren",
+          "info": "",
+          "prijs": "€ 30"
+        },
+        {
+          "naam": "Oksels",
+          "info": "",
+          "prijs": "€ 70"
+        },
+        {
+          "naam": "Boven- of onderarmen",
+          "info": "",
+          "prijs": "€ 125"
+        },
+        {
+          "naam": "Hele armen",
+          "info": "",
+          "prijs": "€ 195"
+        },
+        {
+          "naam": "Hele rug",
+          "info": "",
+          "prijs": "€ 225"
+        },
+        {
+          "naam": "Onderbenen incl. knie",
+          "info": "",
+          "prijs": "€ 175"
+        },
+        {
+          "naam": "Bovenbenen",
+          "info": "",
+          "prijs": "€ 175"
+        },
+        {
+          "naam": "Onder- en bovenbenen",
+          "info": "",
+          "prijs": "€ 275"
+        },
+        {
+          "naam": "Voeten",
+          "info": "",
+          "prijs": "€ 60"
+        },
+        {
+          "naam": "Bikinilijn",
+          "info": "",
+          "prijs": "€ 100"
+        },
+        {
+          "naam": "Bikinilijn uitgebreid",
+          "info": "",
+          "prijs": "€ 150"
+        },
+        {
+          "naam": "Borst (man)",
+          "info": "",
+          "prijs": "€ 175"
+        },
+        {
+          "naam": "Buik",
+          "info": "",
+          "prijs": "€ 175"
+        },
+        {
+          "naam": "Navelstreepje",
+          "info": "",
+          "prijs": "€ 50"
+        },
+        {
+          "naam": "Overig en combinaties",
+          "info": "",
+          "prijs": "op aanvraag"
+        }
+      ]
+    }
   ]
 }

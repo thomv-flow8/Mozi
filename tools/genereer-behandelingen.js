@@ -49,12 +49,27 @@ function kaart(slug) {
       </a>`;
 }
 
+// Algemeen verloop (klopt voor elke behandeling); per behandeling te vervangen door een eigen verloop.
+const STANDAARD_VERLOOP = {
+  kop: 'Zo <em>verloopt</em> het',
+  stappen: [
+    { wanneer: 'Intake', tekst: 'Een gratis gesprek van 30 minuten. We bekijken je huid en bespreken je wensen, en wat realistisch is.' },
+    { wanneer: 'Plan', tekst: 'Je krijgt een behandelplan op maat, vaak een combinatie van behandelingen voor het beste resultaat.' },
+    { wanneer: 'Behandeling', tekst: 'De huidtherapeut voert de behandeling uit en legt vooraf uit wat je kunt verwachten.' },
+    { wanneer: 'Thuis', tekst: 'Je krijgt advies voor de verzorging thuis, met producten die bij jouw huid passen.' }
+  ]
+};
+
 function bouw(b) {
-  const groep = tarieven.groepen.find(g => g.id === b.tarieven);
-  if (!groep) throw new Error('Tarievengroep niet gevonden: ' + b.tarieven);
+  const kort = b.kort || b.titel.split(' ')[0];
+  const verloop = b.verloop || STANDAARD_VERLOOP;
+  const groep = b.tarieven ? tarieven.groepen.find(g => g.id === b.tarieven) : null;
+  if (b.tarieven && !groep) throw new Error('Tarievengroep niet gevonden: ' + b.tarieven);
+  const prijsRijen = groep ? rijenHtml(groep) : rijenHtml({ rijen: b.tarievenRijen || [{ naam: b.titel, info: '', prijs: 'op aanvraag' }] });
+  const prijsLink = groep ? 'tarieven.html#' + groep.id : 'tarieven.html';
   const sub = [
     ['uitleg', 'Uitleg'], ['geschikt', 'Geschikt bij'], b.resultaten && b.resultaten.length ? ['resultaten', 'Resultaten'] : null,
-    ['verloop', 'Na de behandeling'], ['tarieven', 'Tarieven'], ['vragen', 'Vragen']
+    ['verloop', b.verloop ? 'Na de behandeling' : 'Verloop'], ['tarieven', 'Tarieven'], ['vragen', 'Vragen']
   ].filter(Boolean);
 
   const secties = b.secties.map((s, i) => `
@@ -132,20 +147,21 @@ function bouw(b) {
 </section>
 
 <section class="section section-alt" id="geschikt">
-  <div class="wrap t-split">
+  <div class="wrap${b.waarom ? ' t-split' : ''}">
     <div class="reveal">
       <p class="eyebrow">Geschikt bij</p>
-      <h2>Waar ${esc(b.titel.split(' ')[0])} <em>helpt</em></h2>
+      <h2>Waar ${esc(kort)} <em>helpt</em></h2>
       <div class="chips-static">
         ${b.geschiktBij.map(c => `<span>${ico('check')}${esc(c)}</span>`).join('\n        ')}
       </div>
     </div>
-    <div class="reveal d1">
+    ${b.waarom ? `<div class="reveal d1">
       <h3 style="margin-bottom:18px">${b.waarom.kop}</h3>
       <div class="why-grid">
         ${b.waarom.punten.map(p => `<div class="why">${ico('shield')}<div><b>${esc(p.titel)}</b><p>${esc(p.tekst)}</p></div></div>`).join('\n        ')}
       </div>
-    </div>
+      ${b.logo ? `<div class="why-logo"><img src="${b.logo}" alt="">${esc(b.logoTekst || '')}</div>` : ''}
+    </div>` : ''}
   </div>
 </section>
 ${resultaten}
@@ -153,10 +169,10 @@ ${resultaten}
   <div class="wrap t-split">
     <div class="reveal">
       <p class="eyebrow">Verloop</p>
-      <h2>${b.verloop.kop}</h2>
+      <h2>${verloop.kop}</h2>
     </div>
     <ol class="timeline reveal d1">
-      ${b.verloop.stappen.map(s => `<li><b>${esc(s.wanneer)}</b><p>${esc(s.tekst)}</p></li>`).join('\n      ')}
+      ${verloop.stappen.map(s => `<li><b>${esc(s.wanneer)}</b><p>${esc(s.tekst)}</p></li>`).join('\n      ')}
     </ol>
   </div>
 </section>
@@ -165,16 +181,16 @@ ${resultaten}
   <div class="wrap t-split" style="align-items:start">
     <div class="reveal">
       <p class="eyebrow">Tarieven</p>
-      <h2>Wat kost <em>${esc(b.titel.split(' ')[0])}</em>?</h2>
+      <h2>Wat kost <em>${esc(kort)}</em>?</h2>
       <p class="lead" style="margin-top:20px">Alle tarieven zijn per behandeling. Het intakegesprek van 30 minuten is gratis.</p>
     </div>
     <div class="t-price reveal d1">
       <div class="rows">
-${rijenHtml(groep)}
+${prijsRijen}
       </div>
       <div class="t-price-foot">
         <p>${esc(b.tarievenExtra || '')}</p>
-        <a class="link-arrow" href="tarieven.html#${groep.id}">Alle tarieven ${ico('arrow')}</a>
+        <a class="link-arrow" href="${prijsLink}">Alle tarieven ${ico('arrow')}</a>
       </div>
     </div>
   </div>
@@ -196,7 +212,7 @@ ${rijenHtml(groep)}
   <div class="wrap">
     <div class="cta-band reveal">
       <div>
-        <h2>Benieuwd wat <em>${esc(b.titel.split(' ')[0])}</em> voor jou doet?</h2>
+        <h2>Benieuwd wat <em>${esc(kort)}</em> voor jou doet?</h2>
         <p>Plan een gratis intakegesprek van 30 minuten. We bekijken je huid en maken samen een behandelplan.</p>
       </div>
       <a class="btn btn-gold" href="#" data-book>${ico('cal')}Plan een gratis intake</a>
