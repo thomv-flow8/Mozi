@@ -9,6 +9,30 @@ const gebouwd = new Set(data.behandelingen.map(b => b.slug));
 // Koppen: *woord* wordt schuingedrukt (zo hoeft niemand HTML te typen in het CMS).
 const em = s => esc(s).replace(/\*(.+?)\*/g, '<em>$1</em>');
 
+// Icoon bij een label van "Geschikt bij", op trefwoord (ook voor labels die later via het CMS bijkomen).
+const ICOON_REGELS = [
+  [/litteken/i, 'h-litteken'],
+  [/vaatje|couperose|spider|naevi/i, 'h-vaatjes'],
+  [/rosacea|roodheid/i, 'h-roodheid'],
+  [/mee-eter|comedon|onzuiver|acne/i, 'h-acne'],
+  [/pigment|melasma|vlek/i, 'h-pigment'],
+  [/lijntje|rimpel|veroudering|verslapt/i, 'h-lijntjes'],
+  [/porie|poriën|structuur|textuur/i, 'h-porien'],
+  [/dof|teint|verjong/i, 'h-glans'],
+  [/gevoelig/i, 'h-gevoelig'],
+  [/uitdroging|droog/i, 'h-druppel'],
+  [/kringen|ogen/i, 'h-oog'],
+  [/wrat|fibroom|fibromen|hyperplasie|xanthelasma|syringom/i, 'h-bultje'],
+  [/nagel/i, 'h-nagel'],
+  [/striae/i, 'h-striae'],
+  [/herstel|wond/i, 'h-herstel'],
+  [/huidtint/i, 'h-tinten'],
+  [/gezicht/i, 'h-gezicht'],
+  [/oksel|arm|been|benen|bikini|rug|borst/i, 'h-lichaam'],
+  [/peeling|voorbereid/i, 'h-flesje']
+];
+const icoonVoor = label => (ICOON_REGELS.find(([re]) => re.test(label)) || [null, 'check'])[1];
+
 const ico = (naam, extra) => `<svg class="ico"${extra ? ' ' + extra : ''}><use href="#i-${naam}"/></svg>`;
 
 // Illustratie: huidlagen, microkanaaltjes en nieuw collageen (animeert zodra in beeld).
@@ -184,7 +208,7 @@ function bouw(b) {
       <p class="lead reveal d1">Herken je een van deze klachten? Tijdens de gratis intake van 30 minuten bekijken we wat jouw huid nodig heeft.</p>
     </div>
     <div class="fit-grid">
-      ${b.geschiktBij.map((c, i) => `<div class="fit reveal d${i % 4}"><span class="n">${String(i + 1).padStart(2, '0')}</span><b>${esc(c)}</b></div>`).join('\n      ')}
+      ${b.geschiktBij.map((c, i) => `<div class="fit reveal d${i % 4}"><div class="fit-top"><span class="fit-ico">${ico(icoonVoor(c))}</span><span class="n">${String(i + 1).padStart(2, '0')}</span></div><b>${esc(c)}</b></div>`).join('\n      ')}
     </div>
     ${b.waarom ? `<div class="why-row">
       <div class="why-head reveal">
