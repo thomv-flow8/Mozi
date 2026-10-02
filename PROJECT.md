@@ -74,3 +74,11 @@ Reviewwidget:
 - **Kleurenvergelijking**: schakelaar Ivoor/Wit in de previewbalk; "Wit" volgt de kleuren van dermaceutic.com
   (wit, zand #F5EBDF, bijna-zwart #1D1D1D).
 - **Logo's** zonder witte achtergrond: `node`-vrij via `swift tools/wit-naar-transparant.swift in out.png`.
+
+## Online en beheer (2 oktober 2026)
+- **Live (tijdelijk adres):** https://thomv-flow8.github.io/Mozi/ — GitHub Pages, bron "GitHub Actions".
+- **Bouwen:** `node tools/bouw-site.js` → `_site/` (niet in git). De workflow `.github/workflows/site.yml`
+  draait bij elke push naar main, elke nacht om 04:00 UTC (verse reviews) en handmatig.
+- **Beheer:** Pages CMS (`.pages.yml`) bewerkt `docs/tarieven.json` en `docs/behandelingen.json`.
+  In koppen: `*woord*` wordt schuingedrukt. Lege velden uit het CMS worden in de generator genegeerd.
+- **Nog niet via het CMS:** de homepage-teksten en de kaarten op de homepage (staan nog in `preview/index.html`).
