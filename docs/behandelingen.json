@@ -1358,7 +1358,7 @@
     "led": {
       "titel": "LED-therapie Lumi8",
       "tekst": "Licht dat de huid verjongt, herstelt en kalmeert.",
-      "beeld": "../assets/web/led-rood.jpg",
+      "beeld": "../assets/web/lumi8-behandeling.jpg",
       "prijs": "vanaf <b>€ 25</b>",
       "cat": "Laser & licht"
     },
