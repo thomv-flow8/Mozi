@@ -669,3 +669,19 @@ footer .wordmark small,footer .wordmark b{color:var(--on-dark)}
 .concept{display:inline-block;margin-top:18px;font-size:13.5px;background:var(--sand);color:var(--ink);padding:8px 14px;border-radius:var(--r-pill)}
 .foot-bottom a{color:inherit;text-decoration:none}
 .foot-bottom a:hover{text-decoration:underline}
+
+/* ---------- Waarom Mozi: logo-duo en klokring ---------- */
+.pcard.tile .duo{display:flex;align-items:center;gap:18px}
+.pcard.tile .duo img{max-height:46px;max-width:none;width:auto;filter:grayscale(1)}
+.klok-tegel{text-decoration:none;color:var(--ink);gap:12px;transition:background .3s}
+.klok-tegel:hover{background:var(--surface-2)}
+.pcard.tile .klok{position:relative;width:96px;height:96px;display:block;flex:none}
+.klok svg{width:100%;height:100%;transform:rotate(-90deg)}
+.klok circle{fill:none;stroke-width:5}
+.klok-bg{stroke:var(--line)}
+.klok-ring{stroke:var(--ink);stroke-linecap:round;stroke-dasharray:327;stroke-dashoffset:327;transition:stroke-dashoffset 1.8s var(--ease) .3s}
+.klok-tegel.play .klok-ring{stroke-dashoffset:163.5} /* 30 van de 60 minuten */
+.pcard.tile .klok-getal{position:absolute;inset:0;display:flex;align-items:baseline;justify-content:center;padding-top:30px;font-family:var(--font-display);font-size:38px;line-height:1;color:var(--ink)}
+.pcard.tile .klok-getal small{font-family:var(--font-label);font-size:10px;letter-spacing:.18em;text-transform:uppercase;margin-left:3px}
+.klok-tegel u{text-underline-offset:3px}
+@media (prefers-reduced-motion:reduce){.klok-ring{stroke-dashoffset:163.5}}

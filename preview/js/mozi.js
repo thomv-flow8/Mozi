@@ -261,7 +261,7 @@
     t.insertAdjacentHTML('beforeend', kopie);
     // Tweede helft is decoratief herhaald: verberg voor schermlezers.
     var kids = Array.prototype.slice.call(t.children);
-    kids.slice(kids.length / 2).forEach(function(k){ k.setAttribute('aria-hidden', 'true'); $$('a,button', k).forEach(function(a){ a.tabIndex = -1; }); });
+    kids.slice(kids.length / 2).forEach(function(k){ k.setAttribute('aria-hidden', 'true'); $$('a,button', k).forEach(function(a){ a.tabIndex = -1; }); if (k.hasAttribute('data-play')) observe(k); });
   });
   var proof = $('.proof'), motionBtn = $('#motionBtn');
   if (proof && motionBtn){
