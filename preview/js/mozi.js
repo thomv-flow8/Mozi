@@ -125,8 +125,15 @@
       f.title = v.frameTitel;
       f.allow = 'geolocation';
       f.src = v.url();
-      // De inhoud tekent zich pas kort na het load-event; laat de lader nog even staan.
-      f.addEventListener('load', function(){ setTimeout(function(){ lader.remove(); }, 2200); });
+      // Het eerste load-event komt van het lege startvenster (about:blank); dat negeren we.
+      // Pas als het venster van Salonized is (cross-origin, dus niet uitleesbaar) telt het, en
+      // ook dan tekent de agenda zich nog even na. Uiterlijk na 15 seconden verdwijnt de lader.
+      var weg = function(){ if (lader.parentNode) lader.remove(); };
+      f.addEventListener('load', function(){
+        try { if (f.contentWindow.location.href) return; } catch (err) { /* externe pagina geladen */ }
+        setTimeout(weg, 2200);
+      });
+      setTimeout(weg, 15000);
       frameWrap.appendChild(f);
       frames[soort] = f;
     }
