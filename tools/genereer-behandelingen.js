@@ -68,7 +68,7 @@ function visual(v) {
         <ul>${(v.punten || []).filter(Boolean).map(p => `<li>${ico('check')}<span>${esc(p)}</span></li>`).join('')}</ul>
       </div>`;
   if (!v || !v.src) return '';
-  return `<div class="t-visual reveal d1"><img src="${v.src}" alt="${esc(v.alt || '')}" loading="lazy"></div>`;
+  return `<div class="t-visual reveal d1${v.pas === 'heel' ? ' t-visual--heel' : ''}"><img src="${v.src}" alt="${esc(v.alt || '')}" loading="lazy"></div>`;
 }
 
 function kaart(slug) {

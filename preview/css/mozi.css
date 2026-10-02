@@ -685,3 +685,7 @@ footer .wordmark small,footer .wordmark b{color:var(--on-dark)}
 .pcard.tile .klok-getal small{font-family:var(--font-label);font-size:10px;letter-spacing:.18em;text-transform:uppercase;margin-left:3px}
 .klok-tegel u{text-underline-offset:3px}
 @media (prefers-reduced-motion:reduce){.klok-ring{stroke-dashoffset:163.5}}
+
+/* Uitgesneden apparaat/product in zijn geheel tonen, op een zandvlak */
+.t-visual--heel{background:var(--sand);display:grid;place-items:center;padding:clamp(20px,3vw,36px)}
+.t-visual--heel > img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 20px 30px rgba(0,0,0,.12))}

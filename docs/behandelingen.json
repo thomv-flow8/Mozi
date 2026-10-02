@@ -747,8 +747,9 @@
           ],
           "visual": {
             "type": "foto",
-            "src": "../assets/web/clarity-apparaat.jpg",
-            "alt": "Clarity II-laser"
+            "src": "../assets/web/clarity-ii.png",
+            "alt": "Clarity II-laser van Lutronic",
+            "pas": "heel"
           }
         },
         {
@@ -802,7 +803,7 @@
       "categorie": "Laser & licht",
       "omschrijving": "Laserontharing met de Clarity II bij Huidzorg Mozi in Gorinchem: de krachtigste ontharingslaser, geschikt voor alle huidtinten.",
       "intro": "Op zoek naar een definitieve oplossing voor ongewenste haargroei? We gebruiken de krachtigste ontharingslaser op de markt: de Clarity II.",
-      "beeld": "../assets/web/ontharen.jpg",
+      "beeld": "../assets/web/clarity-handstuk.jpg",
       "logo": "../assets/logos/clarity-ii.webp",
       "logoTekst": "Clarity II met IntelliTrak-technologie",
       "feiten": [
@@ -848,8 +849,9 @@
           ],
           "visual": {
             "type": "foto",
-            "src": "../assets/web/clarity-apparaat.jpg",
-            "alt": "Clarity II-laser"
+            "src": "../assets/web/clarity-ii.png",
+            "alt": "Clarity II-laser van Lutronic",
+            "pas": "heel"
           }
         }
       ],
@@ -954,8 +956,9 @@
           ],
           "visual": {
             "type": "foto",
-            "src": "../assets/web/clarity-apparaat.jpg",
-            "alt": "Clarity II-laser"
+            "src": "../assets/web/clarity-ii.png",
+            "alt": "Clarity II-laser van Lutronic",
+            "pas": "heel"
           }
         }
       ],
@@ -1040,8 +1043,8 @@
           ],
           "visual": {
             "type": "foto",
-            "src": "../assets/web/lumi8.jpg",
-            "alt": "Lumi8 LED-therapie"
+            "src": "../assets/web/lumi8-apparaat.jpg",
+            "alt": "Lumi8 LED-apparaat"
           }
         }
       ],
@@ -1150,8 +1153,9 @@
           ],
           "visual": {
             "type": "foto",
-            "src": "../assets/web/clarity-apparaat.jpg",
-            "alt": "Clarity II-laser"
+            "src": "../assets/web/clarity-ii.png",
+            "alt": "Clarity II-laser van Lutronic",
+            "pas": "heel"
           }
         }
       ],
@@ -1213,7 +1217,7 @@
       "categorie": "Advies",
       "omschrijving": "Huidanalyse en persoonlijk productadvies bij Huidzorg Mozi in Gorinchem, met Dermaceutic, Renophase en Theraderm. Kosten vervallen bij aankoop.",
       "intro": "We kijken goed naar je huid en bepalen welke verzorging jouw huid nodig heeft. De kosten van het consult vervallen bij aankoop van producten.",
-      "beeld": "../assets/web/homecare.jpg",
+      "beeld": "../assets/web/dermaceutic-assortiment.jpg",
       "logo": "../assets/logos/dermaceutic.png",
       "logoTekst": "Dermaceutic, Renophase en Theraderm",
       "feiten": [
@@ -1354,7 +1358,7 @@
     "ontharen": {
       "titel": "Laserontharing",
       "tekst": "Clarity II, voor alle huidtinten.",
-      "beeld": "../assets/web/ontharen.jpg",
+      "beeld": "../assets/web/clarity-handstuk.jpg",
       "prijs": "vanaf <b>€ 30</b>",
       "cat": "Laser & licht"
     },
@@ -1375,7 +1379,7 @@
     "productadvies": {
       "titel": "Huidanalyse & productadvies",
       "tekst": "De verzorging die jouw huid nodig heeft.",
-      "beeld": "../assets/web/homecare.jpg",
+      "beeld": "../assets/web/dermaceutic-assortiment.jpg",
       "prijs": "<b>€ 25</b>",
       "cat": "Advies"
     }
