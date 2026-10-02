@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portret vergelijken — Huidzorg Mozi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/mozi.css">
+<style>
+  .vgl{display:grid;gap:28px;padding:40px var(--gutter) 80px;max-width:1500px;margin:0 auto}
+  @media (min-width:900px){.vgl{grid-template-columns:repeat(3,1fr)}}
+  .vgl h2{font-size:28px;margin:0 0 6px}
+  .vgl p{margin:0 0 18px;font-size:14px}
+  .vgl .portrait{margin:0;max-width:none}
+</style>
+</head>
+<body>
+<div class="preview-note">Vergelijking portretfoto — kader blijft gelijk · <a href="./">terug naar home</a></div>
+<div class="vgl">
+  <div>
+    <h2>A · Huidig</h2>
+    <p>Oorspronkelijke uitsnede: veel lege ruimte boven het hoofd.</p>
+    <div class="portrait">
+      <div class="squares" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <img src="../assets/bewerkt/eigenaresse-vrijstaand.png" alt="">
+      <div class="portrait-tag"><span class="dot"><svg class="ico"><use href="#i-shield"/></svg></span><div><b>Emine Elmaci-van Rossen</b><span>Huidtherapeut &amp; eigenaar</span></div></div>
+    </div>
+  </div>
+  <div>
+    <h2>B · Groter</h2>
+    <p>Strakke uitsnede, ruim beeldvullend. Naamkaartje blijft onderin.</p>
+    <div class="portrait">
+      <div class="squares" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <img src="../assets/bewerkt/eigenaresse-portret.png" alt="" style="height:94%">
+      <div class="portrait-tag"><span class="dot"><svg class="ico"><use href="#i-shield"/></svg></span><div><b>Emine Elmaci-van Rossen</b><span>Huidtherapeut &amp; eigenaar</span></div></div>
+    </div>
+  </div>
+  <div>
+    <h2>C · Groter, naam eronder</h2>
+    <p>Als B, maar de foto helemaal vrij; naam en functie als onderschrift onder het kader.</p>
+    <div class="portrait">
+      <div class="squares" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <img src="../assets/bewerkt/eigenaresse-portret.png" alt="" style="height:96%">
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;margin-top:16px"><span class="portrait-tag" style="position:static;padding:0;background:none;border:0;box-shadow:none;backdrop-filter:none"><span class="dot"><svg class="ico"><use href="#i-shield"/></svg></span><div><b>Emine Elmaci-van Rossen</b><span>Huidtherapeut &amp; eigenaar</span></div></span></div>
+  </div>
+</div>
+<script src="js/mozi.js"></script>
+</body>
+</html>

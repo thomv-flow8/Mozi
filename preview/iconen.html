@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iconen — Huidzorg Mozi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/mozi.css">
+</head>
+<body>
+<div class="preview-note">Overzicht huid-iconen (voor "Geschikt bij") · <a href="./">terug naar home</a></div>
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">Iconenset</p><h2>Huid-<em>iconen</em></h2></div>
+    <div class="fit-grid" id="lijst"></div>
+  </div>
+</section>
+<script src="js/mozi.js"></script>
+<script>
+  // Toont elk icoon uit de set met de trefwoorden waarop het gekozen wordt.
+  var lijst = [
+    ['h-acne','Acne, mee-eters, onzuiverheden'], ['h-litteken','Littekens'], ['h-pigment','Pigment, melasma, vlekken'],
+    ['h-vaatjes','Vaatjes, couperose'], ['h-roodheid','Roodheid, rosacea'], ['h-lijntjes','Lijntjes, rimpels, veroudering'],
+    ['h-porien','Poriën, huidstructuur'], ['h-glans','Doffe huid, verjonging'], ['h-gevoelig','Gevoelige huid'],
+    ['h-druppel','Uitdroging'], ['h-oog','Donkere kringen'], ['h-bultje','Steelwratjes, verhevenheden'],
+    ['h-nagel','Nagels'], ['h-striae','Striae'], ['h-herstel','Wond- en huidherstel'], ['h-tinten','Alle huidtinten'],
+    ['h-gezicht','Gezicht'], ['h-lichaam','Lichaamszones'], ['h-flesje','Voorbereiding peelings']
+  ];
+  document.getElementById('lijst').innerHTML = lijst.map(function(x, i){
+    return '<div class="fit in"><div class="fit-top"><span class="fit-ico"><svg class="ico"><use href="#i-' + x[0] + '"/></svg></span><span class="n">' + String(i + 1).padStart(2, '0') + '</span></div><b>' + x[1] + '</b></div>';
+  }).join('');
+</script>
+</body>
+</html>
