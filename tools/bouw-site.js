@@ -24,6 +24,7 @@ const paginas = fs.readdirSync(path.join(root, 'preview'))
   .filter(f => ['index.html', 'tarieven.html', 'over-mozi.html', 'privacy.html', 'cookies.html', 'algemene-voorwaarden.html'].includes(f) || /^behandeling-[a-z0-9-]+\.html$/.test(f));
 kopieer('preview/css', 'css');
 kopieer('preview/js', 'js');
+kopieer('preview/fonts', 'fonts');
 for (const map of ['web', 'logos', 'resultaten', 'bewerkt']) kopieer('assets/' + map, 'assets/' + map);
 fs.mkdirSync(path.join(uit, 'data'));
 kopieer('docs/reviews.json', 'data/reviews.json');

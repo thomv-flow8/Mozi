@@ -1,5 +1,5 @@
 {
-  "_toelichting": "OPZET. [[…]] = in te vullen door Emine en juridisch te laten controleren. Alleen de feiten over de website (gebruikte diensten, cookies) zijn al ingevuld; die zijn gecontroleerd op 2 oktober 2026.",
+  "_toelichting": "OPZET. [[…]] = in te vullen door Emine en juridisch te laten controleren. Alleen de feiten over de website (gebruikte diensten, cookies) zijn al ingevuld; die zijn gecontroleerd op 2 oktober 2026; lettertypes sindsdien zelf gehost.",
   "paginas": [
     {
       "slug": "privacy",
@@ -20,7 +20,7 @@
         ]},
         { "kop": "Diensten van derden op deze website", "tekst": [
           "Online afspraken en reviews: Salonized. De agenda en het reviewoverzicht worden pas geladen als je op 'Afspraak maken' of 'Lees alle reviews' klikt. Gegevens die je daar invult, worden door Salonized verwerkt. [[Verwijzing naar de verwerkersovereenkomst en privacyverklaring van Salonized.]]",
-          "Lettertypes: deze website laadt lettertypes van Google Fonts. Daarbij wordt je IP-adres aan Google doorgegeven. [[Controleren; eventueel lettertypes zelf hosten, dan vervalt dit.]]",
+          "Lettertypes: de lettertypes worden vanaf deze website zelf geladen; er gaan daarbij geen gegevens naar derden.",
           "Hosting: de website wordt gehost via GitHub Pages. [[Controleren welke gegevens de hostingpartij vastlegt.]]",
           "Webshop: [[Shopify, zodra de webshop live is.]]"
         ]},
@@ -45,7 +45,7 @@
         ]},
         { "kop": "Diensten van derden", "tekst": [
           "Afspraken en reviews (Salonized): pas als je op 'Afspraak maken' of 'Lees alle reviews' klikt, wordt de omgeving van Salonized geladen. Salonized kan dan eigen cookies plaatsen. [[Controleren welke cookies dit zijn.]]",
-          "Lettertypes (Google Fonts): plaatst geen cookies, maar je IP-adres wordt aan Google doorgegeven.",
+          "Lettertypes: worden vanaf deze website zelf geladen, zonder cookies en zonder gegevens naar derden.",
           "Webshop: [[cookies van Shopify, zodra de webshop live is.]]"
         ]},
         { "kop": "Cookiemelding", "tekst": [
