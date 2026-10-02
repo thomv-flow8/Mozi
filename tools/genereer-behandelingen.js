@@ -10,7 +10,7 @@ const ico = (naam, extra) => `<svg class="ico"${extra ? ' ' + extra : ''}><use h
 
 // Illustratie: huidlagen, microkanaaltjes en nieuw collageen (animeert zodra in beeld).
 const huidlagen = `<svg class="skin" viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Doorsnede van de huid: microneedles maken kanaaltjes, waarna nieuw collageen ontstaat">
-  <rect width="600" height="420" fill="#F5F5F3"/>
+  <rect width="600" height="420" fill="#F9F7F6"/>
   <path d="M0,126 C100,114 200,138 300,124 S500,112 600,128 L600,178 C480,170 380,186 300,178 S120,170 0,180 Z" fill="#E7C9B4"/>
   <path d="M0,180 C120,170 220,186 300,178 S480,170 600,178 L600,334 L0,334 Z" fill="#F1DACB"/>
   <rect y="334" width="600" height="86" fill="#F7E8DD"/>
