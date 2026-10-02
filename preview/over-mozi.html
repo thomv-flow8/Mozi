@@ -185,7 +185,7 @@
       </div>
       <div><h4>Behandelingen</h4><ul><li><a href="behandeling-peelings.html">Medische peelings</a></li><li><a href="behandeling-skinpen.html">SkinPen</a></li><li><a href="behandeling-ontharen.html">Laserontharing</a></li><li><a href="behandeling-rosacea.html">Rosacea &amp; couperose</a></li><li><a href="behandeling-acne.html">Acnetherapie</a></li><li><a href="./#behandelingen">Alle behandelingen</a></li></ul></div>
       <div><h4>Praktijk</h4><ul><li><a href="over-mozi.html">Over Mozi</a></li><li><a href="tarieven.html">Tarieven</a></li><li><a href="./#resultaten">Resultaten</a></li><li><a href="./#contact">Contact</a></li></ul></div>
-      <div><h4>Webshop</h4><ul><li><a href="#">Dermaceutic</a></li><li><a href="#">Renophase</a></li><li><a href="#">Theraderm</a></li><li><a href="#">Verzending &amp; retour</a></li></ul></div>
+      <div><h4>Webshop</h4><ul><!-- merkenvoet --><li><a href="#">Dermaceutic</a></li><li><a href="#">Dermasence</a></li><li><a href="#">Renophase</a></li><li><a href="#">Theraderm</a></li><!-- /merkenvoet --><li><a href="#">Verzending &amp; retour</a></li></ul></div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 Huidzorg Mozi</span>
@@ -207,6 +207,23 @@
     </div>
     <div class="book-frame"><div class="book-loading"><i></i>Agenda laden…</div></div>
     <div class="book-fallback">Laadt de agenda niet? <a href="#" target="_blank" rel="noopener">Open de online agenda</a></div>
+  </div>
+</div>
+
+<!-- Productvenster: omschrijving van één product -->
+<div class="book-modal prod-modal" id="prodModal" role="dialog" aria-modal="true" aria-labelledby="prodTitle" aria-hidden="true">
+  <div class="backdrop" data-prod-close></div>
+  <div class="book-sheet">
+    <div class="book-top">
+      <span class="grip" aria-hidden="true"></span>
+      <div><b id="prodTitle">Product</b><span id="prodSub"></span></div>
+      <button class="icon-btn book-close" type="button" data-prod-close aria-label="Sluiten"><svg class="ico"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="prod-body" id="prodBody"></div>
+    <div class="prod-foot">
+      <div><span class="prod-prijs" id="prodPrijs"></span><small>Verkrijgbaar in de praktijk · webshop volgt</small></div>
+      <a class="btn btn-primary" href="behandeling-productadvies.html"><svg class="ico"><use href="#i-chat"/></svg>Productadvies</a>
+    </div>
   </div>
 </div>
 

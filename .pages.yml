@@ -39,6 +39,44 @@ content:
               - { name: zones, label: Zones op de lichaamskaart (laserontharing), type: string, list: true, hidden: true }
               - { name: keuze, label: Keuze i.p.v. combinatie, type: boolean, hidden: true }
 
+  # ---------------------------------------------------------------- Producten
+  - name: producten
+    label: Merken & producten
+    description: De merken en de producten in het webshopblok op de homepage.
+    type: file
+    path: docs/producten.json
+    fields:
+      - { name: _bron, label: Bron, type: string, hidden: true }
+      - name: merken
+        label: Merken
+        type: object
+        list:
+          collapsible: { collapsed: true, summary: "{naam}" }
+        fields:
+          - { name: id, label: ID, type: string, hidden: true }
+          - { name: naam, label: Naam, type: string, required: true }
+          - { name: logo, label: Logo, type: image }
+          - { name: hoog, label: Logo hoger tonen (vierkant logo), type: boolean }
+          - { name: tekst, label: Eén zin over het merk, type: string }
+      - name: producten
+        label: Producten
+        type: object
+        list:
+          collapsible: { collapsed: true, summary: "{merk} {naam} — {prijs}" }
+        fields:
+          - { name: id, label: ID, type: string, hidden: true }
+          - { name: merk, label: Merk, type: string, required: true }
+          - { name: naam, label: Naam, type: string, required: true }
+          - { name: ondertitel, label: Soort product, type: string, description: "Bijv. Reinigingsschuim of Nachtverzorging" }
+          - { name: inhoud, label: Inhoud, type: string, description: "Bijv. 200 ml" }
+          - { name: prijs, label: Prijs, type: string, description: "Bijv. € 16,30" }
+          - { name: tag, label: Label op de foto, type: string, description: "Bijv. Bij acne of Anti-aging" }
+          - { name: beeld, label: Productfoto, type: image, description: "Liefst uitgesneden, zonder achtergrond" }
+          - { name: kort, label: Korte omschrijving, type: text }
+          - { name: punten, label: Eigenschappen, type: string, list: true }
+          - { name: huidtype, label: Voor welke huid, type: string }
+          - { name: gebruik, label: Gebruik, type: text }
+
   # ---------------------------------------------------------------- Behandelingen
   - name: behandelingen
     label: Behandelingen

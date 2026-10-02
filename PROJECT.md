@@ -82,3 +82,17 @@ Reviewwidget:
 - **Beheer:** Pages CMS (`.pages.yml`) bewerkt `docs/tarieven.json` en `docs/behandelingen.json`.
   In koppen: `*woord*` wordt schuingedrukt. Lege velden uit het CMS worden in de generator genegeerd.
 - **Nog niet via het CMS:** de homepage-teksten en de kaarten op de homepage (staan nog in `preview/index.html`).
+
+## Producten en merken (2 oktober 2026)
+- **Eén bron:** `docs/producten.json` (merken + producten). `node tools/genereer-producten.js` zet ze in
+  `preview/index.html` tussen de markeringen `<!-- merken -->`, `<!-- merklogos -->`, `<!-- merkenvoet -->`
+  en `<!-- producten -->`. Dit script draait als eerste in `tools/bouw-site.js`, want de andere generatoren
+  nemen kop en voet uit index.html over.
+- **Dermasence** toegevoegd als vierde merk, met drie producten (Mousse, Seborra serum, Hyalusome Night).
+  Een klik op een product opent een venster met omschrijving, eigenschappen, huidtype en gebruik.
+- **Prijzen** zijn overgenomen van een andere praktijkwebshop en moeten door Emine worden bevestigd.
+- **Beeld vrijmaken:** `swift tools/achtergrond-weg.swift <in> <uit.png> [drempel]` haalt alleen de
+  achtergrond weg die aan de rand vastzit, dus een wit flesje blijft heel (anders dan
+  `wit-naar-transparant.swift`, dat voor logo's is). `swift tools/bijsnijden.swift <in> <uit> [maxBreedte]`
+  snijdt de doorzichtige rand weg.
+- **Nog te doen:** webshop koppelen (zie hieronder), productfoto's van de leverancier in hoge resolutie.

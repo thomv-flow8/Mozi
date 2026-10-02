@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<div class="preview-note">Ontwerpvoorstel v2 — webshopproducten zijn voorbeelden · <a href="v1/">bekijk v1</a></div>
+<div class="preview-note">Ontwerpvoorstel v2 — prijzen van de producten nog te bevestigen · <a href="v1/">bekijk v1</a></div>
 
 <div class="announce">Gratis intakegesprek van 30 minuten · <a href="#" data-book>Plan direct online</a></div>
 
@@ -267,11 +267,14 @@
   </div>
   <div class="marquee logo-row" aria-label="Merken en apparatuur">
     <div class="marquee-track">
+      <!-- merklogos -->
       <img src="../assets/logos/dermaceutic.png" alt="Dermaceutic" loading="lazy">
-      <img src="../assets/logos/skinpen.png" alt="SkinPen" loading="lazy">
+      <img src="../assets/logos/dermasence.png" alt="Dermasence" loading="lazy">
       <img class="tall" src="../assets/logos/renophase.png" alt="Renophase" loading="lazy">
-      <img src="../assets/logos/clarity-ii.webp" alt="Clarity II" loading="lazy">
       <img src="../assets/logos/theraderm.png" alt="Theraderm" loading="lazy">
+    <!-- /merklogos -->
+      <img src="../assets/logos/skinpen.png" alt="SkinPen" loading="lazy">
+      <img src="../assets/logos/clarity-ii.webp" alt="Clarity II" loading="lazy">
       <img src="../assets/logos/clearlight-ipl-transparant.png" alt="Clearlight IPL" loading="lazy">
     </div>
   </div>
@@ -413,17 +416,75 @@
       <p class="lead reveal d1">De merken waarmee we in de praktijk werken. Twijfel je wat bij je huid past? Vraag een productadvies aan, de kosten vervallen bij aankoop.</p>
     </div>
     <div class="brand-tiles">
+      <!-- merken -->
       <a class="brand-tile reveal" href="#"><img src="../assets/logos/dermaceutic.png" alt="Dermaceutic"><p>Medische huidverzorging, ontwikkeld met dermatologen.</p><span class="link-arrow">Bekijk assortiment <svg class="ico"><use href="#i-arrow"/></svg></span></a>
-      <a class="brand-tile reveal d1" href="#"><img class="tall" src="../assets/logos/renophase.png" alt="Renophase"><p>Herstel op huideigen kracht, voor de gevoelige huid.</p><span class="link-arrow">Bekijk assortiment <svg class="ico"><use href="#i-arrow"/></svg></span></a>
-      <a class="brand-tile reveal d2" href="#"><img src="../assets/logos/theraderm.png" alt="Theraderm"><p>Organische verzorging, ook voor de getinte en donkere huid.</p><span class="link-arrow">Bekijk assortiment <svg class="ico"><use href="#i-arrow"/></svg></span></a>
+      <a class="brand-tile reveal d1" href="#"><img src="../assets/logos/dermasence.png" alt="Dermasence"><p>Duitse medische huidverzorging, vegan en dermatologisch getest.</p><span class="link-arrow">Bekijk assortiment <svg class="ico"><use href="#i-arrow"/></svg></span></a>
+      <a class="brand-tile reveal d2" href="#"><img class="tall" src="../assets/logos/renophase.png" alt="Renophase"><p>Herstel op huideigen kracht, voor de gevoelige huid.</p><span class="link-arrow">Bekijk assortiment <svg class="ico"><use href="#i-arrow"/></svg></span></a>
+      <a class="brand-tile reveal d3" href="#"><img src="../assets/logos/theraderm.png" alt="Theraderm"><p>Organische verzorging, ook voor de getinte en donkere huid.</p><span class="link-arrow">Bekijk assortiment <svg class="ico"><use href="#i-arrow"/></svg></span></a>
+    <!-- /merken -->
     </div>
     <div class="shop-grid" id="shopGrid"></div>
-    <script type="application/json" id="shopData">[
-      {"merk":"Dermaceutic","naam":"Milder Cleanser","prijs":"€ 32,50","tag":"Bestseller","vorm":"tube"},
-      {"merk":"Renophase","naam":"Regenererend serum","prijs":"€ 64,00","tag":"Gevoelige huid","vorm":"pipet"},
-      {"merk":"Dermaceutic","naam":"Sun Ceutic SPF 50+","prijs":"€ 39,95","tag":"Dagelijks","vorm":"pomp"},
-      {"merk":"Theraderm","naam":"Herstellende crème","prijs":"€ 48,00","tag":"Nieuw","vorm":"pot"}
-    ]</script>
+    <!-- producten -->
+      <script type="application/json" id="shopData">[
+        {
+          "id": "dermasence-mousse",
+          "merk": "Dermasence",
+          "naam": "Mousse",
+          "ondertitel": "Reinigingsschuim",
+          "inhoud": "200 ml",
+          "prijs": "€ 16,30",
+          "tag": "Onzuivere huid",
+          "beeld": "../assets/web/dermasence-mousse.png",
+          "kort": "Zacht reinigingsschuim met glycolzuur en een salicylzuurderivaat. Reinigt tot diep in de poriën en brengt de zuurmantel van de huid weer in balans.",
+          "punten": [
+            "Reinigt poriëndiep en verfijnt het huidbeeld",
+            "Herstelt de beschermende zuurmantel",
+            "Fijne voorbereiding op een fruitzuurbehandeling",
+            "Vegan, zonder drijfgas, dermatologisch getest"
+          ],
+          "huidtype": "Vette en onzuivere huid",
+          "gebruik": "Twee keer per dag op de gezichtshuid aanbrengen, licht inmasseren en afspoelen met lauwwarm water."
+        },
+        {
+          "id": "dermasence-seborra-serum",
+          "merk": "Dermasence",
+          "naam": "Seborra Skin Clarifying Serum",
+          "ondertitel": "Huidverhelderend serum",
+          "inhoud": "30 ml",
+          "prijs": "€ 23,20",
+          "tag": "Bij acne",
+          "beeld": "../assets/web/dermasence-seborra-serum.png",
+          "kort": "Licht serum met salicylzuur, milde fruitzuren en niacinamide. Pakt verstopte poriën en puistjes aan en remt de talgproductie, zonder de huid uit te drogen.",
+          "punten": [
+            "Verfijnt het huidbeeld en reguleert talg",
+            "Maakt plekjes na een puistje minder zichtbaar",
+            "Plantaardige extracten kalmeren roodheid",
+            "Lichte, verkoelende textuur die snel intrekt"
+          ],
+          "huidtype": "Vette, onzuivere en acnegevoelige huid, vanaf 12 jaar",
+          "gebruik": "Na het reinigen en het gezichtswater aanbrengen op de huid."
+        },
+        {
+          "id": "dermasence-hyalusome-night",
+          "merk": "Dermasence",
+          "naam": "Hyalusome Night",
+          "ondertitel": "Nachtverzorging",
+          "inhoud": "50 ml",
+          "prijs": "€ 29,00",
+          "tag": "Anti-aging",
+          "beeld": "../assets/web/dermasence-hyalusome-night.png",
+          "kort": "Rijke nachtverzorging met hyaluronzuur en teunisbloemolie. Hydrateert tot in de diepere huidlagen en ondersteunt het herstel van de huid tijdens de nacht.",
+          "punten": [
+            "Hydrateert met hyaluronzuur en Aqualin®",
+            "Panthenol en antioxidanten ondersteunen het herstel",
+            "Teunisbloem- en jojoba-olie versterken de huidbarrière",
+            "Kan ook als masker worden gebruikt"
+          ],
+          "huidtype": "Droge en normale huid, en bij huidveroudering",
+          "gebruik": "'s Avonds na het reinigen een hoeveelheid ter grootte van een hazelnoot aanbrengen op gezicht, hals en decolleté. Als masker: één keer per week dik aanbrengen en 10 tot 15 minuten laten intrekken."
+        }
+      ]</script>
+    <!-- /producten -->
     <div class="shop-foot reveal">
       <div class="usp">
         <span><svg class="ico"><use href="#i-truck"/></svg>Gratis verzending vanaf € 50</span>
@@ -485,7 +546,7 @@
       </div>
       <div><h4>Behandelingen</h4><ul><li><a href="behandeling-peelings.html">Medische peelings</a></li><li><a href="behandeling-skinpen.html">SkinPen</a></li><li><a href="behandeling-ontharen.html">Laserontharing</a></li><li><a href="behandeling-rosacea.html">Rosacea &amp; couperose</a></li><li><a href="behandeling-acne.html">Acnetherapie</a></li><li><a href="#behandelingen">Alle behandelingen</a></li></ul></div>
       <div><h4>Praktijk</h4><ul><li><a href="over-mozi.html">Over Mozi</a></li><li><a href="tarieven.html">Tarieven</a></li><li><a href="#resultaten">Resultaten</a></li><li><a href="#contact">Contact</a></li></ul></div>
-      <div><h4>Webshop</h4><ul><li><a href="#">Dermaceutic</a></li><li><a href="#">Renophase</a></li><li><a href="#">Theraderm</a></li><li><a href="#">Verzending &amp; retour</a></li></ul></div>
+      <div><h4>Webshop</h4><ul><!-- merkenvoet --><li><a href="#">Dermaceutic</a></li><li><a href="#">Dermasence</a></li><li><a href="#">Renophase</a></li><li><a href="#">Theraderm</a></li><!-- /merkenvoet --><li><a href="#">Verzending &amp; retour</a></li></ul></div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 Huidzorg Mozi</span>
@@ -507,6 +568,23 @@
     </div>
     <div class="book-frame"><div class="book-loading"><i></i>Agenda laden…</div></div>
     <div class="book-fallback">Laadt de agenda niet? <a href="#" target="_blank" rel="noopener">Open de online agenda</a></div>
+  </div>
+</div>
+
+<!-- Productvenster: omschrijving van één product -->
+<div class="book-modal prod-modal" id="prodModal" role="dialog" aria-modal="true" aria-labelledby="prodTitle" aria-hidden="true">
+  <div class="backdrop" data-prod-close></div>
+  <div class="book-sheet">
+    <div class="book-top">
+      <span class="grip" aria-hidden="true"></span>
+      <div><b id="prodTitle">Product</b><span id="prodSub"></span></div>
+      <button class="icon-btn book-close" type="button" data-prod-close aria-label="Sluiten"><svg class="ico"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="prod-body" id="prodBody"></div>
+    <div class="prod-foot">
+      <div><span class="prod-prijs" id="prodPrijs"></span><small>Verkrijgbaar in de praktijk · webshop volgt</small></div>
+      <a class="btn btn-primary" href="behandeling-productadvies.html"><svg class="ico"><use href="#i-chat"/></svg>Productadvies</a>
+    </div>
   </div>
 </div>
 

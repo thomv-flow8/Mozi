@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Huidanalyse &amp; productadvies — Huidzorg Mozi</title>
-<meta name="description" content="Huidanalyse en persoonlijk productadvies bij Huidzorg Mozi in Gorinchem, met Dermaceutic, Renophase en Theraderm. Kosten vervallen bij aankoop.">
+<meta name="description" content="Huidanalyse en persoonlijk productadvies bij Huidzorg Mozi in Gorinchem, met Dermaceutic, Dermasence, Renophase en Theraderm. Kosten vervallen bij aankoop.">
 <link rel="stylesheet" href="fonts/fonts.css">
 <link rel="stylesheet" href="css/mozi.css">
 </head>
@@ -77,7 +77,7 @@
     </div>
     <div class="t-facts reveal">
       <div><b>€ 25</b><span>vervalt bij aankoop</span></div>
-      <div><b>3 merken</b><span>Dermaceutic, Renophase, Theraderm</span></div>
+      <div><b>4 merken</b><span>medische huidverzorging</span></div>
       <div><b>Persoonlijk</b><span>verzorgingsplan</span></div>
       <div><b>Gratis</b><span>intake van 30 minuten</span></div>
     </div>
@@ -99,7 +99,7 @@
         <p class="eyebrow">Onze merken</p>
         <h2>De juiste <em>match</em></h2>
         <p>Dermaceutic is een van de bekendste namen in chemische peelings en medische huidproducten, ontwikkeld met dermatologen en cosmetisch artsen. Het werkt met een stappenplan, zodat je een persoonlijk verzorgingsplan krijgt.</p>
-        <p>Renophase gebruiken we vooral bij de gevoelige huid: het helpt de huid zichzelf te herstellen, op huideigen kracht en tempo. Theraderm is een Zuid-Koreaans merk met organische producten, ook voor de getinte en donkere huid.</p>
+        <p>Dermasence komt uit Duitsland en werkt met goed verdragen, vegan formules per huidtype, van reiniging tot nachtverzorging. Renophase gebruiken we vooral bij de gevoelige huid: het helpt de huid zichzelf te herstellen, op huideigen kracht en tempo. Theraderm is een Zuid-Koreaans merk met organische producten, ook voor de getinte en donkere huid.</p>
       </div>
       <div class="t-visual reveal d1"><img src="../assets/web/maskpeel.jpg" alt="Dermaceutic Mask Peel" loading="lazy"></div>
     </div>
@@ -180,7 +180,7 @@
     </div>
     <div class="reveal d1">
       <details class="faq" open><summary>Wat kost een productadvies?<span class="chev"><svg class="ico"><use href="#i-chev"/></svg></span></summary><p>Een huidanalyse met productadvies kost € 25. Deze kosten vervallen bij afname van producten.</p></details>
-      <details class="faq"><summary>Welk merk past bij mij?<span class="chev"><svg class="ico"><use href="#i-chev"/></svg></span></summary><p>Dat hangt af van je huid. Renophase gebruiken we vooral bij de gevoelige huid, Theraderm is geschikt voor de getinte en donkere huid, en Dermaceutic werkt met een stappenplan per huidprobleem.</p></details>
+      <details class="faq"><summary>Welk merk past bij mij?<span class="chev"><svg class="ico"><use href="#i-chev"/></svg></span></summary><p>Dat hangt af van je huid. Renophase gebruiken we vooral bij de gevoelige huid, Theraderm is geschikt voor de getinte en donkere huid, Dermasence heeft lijnen per huidtype zoals de onzuivere of de droge huid, en Dermaceutic werkt met een stappenplan per huidprobleem.</p></details>
       <details class="faq"><summary>Kan ik de producten ook online bestellen?<span class="chev"><svg class="ico"><use href="#i-chev"/></svg></span></summary><p>Straks kun je de producten ook in onze webshop bestellen, of ophalen in de praktijk.</p></details>
     </div>
   </div>
@@ -240,7 +240,7 @@
       </div>
       <div><h4>Behandelingen</h4><ul><li><a href="behandeling-peelings.html">Medische peelings</a></li><li><a href="behandeling-skinpen.html">SkinPen</a></li><li><a href="behandeling-ontharen.html">Laserontharing</a></li><li><a href="behandeling-rosacea.html">Rosacea &amp; couperose</a></li><li><a href="behandeling-acne.html">Acnetherapie</a></li><li><a href="./#behandelingen">Alle behandelingen</a></li></ul></div>
       <div><h4>Praktijk</h4><ul><li><a href="over-mozi.html">Over Mozi</a></li><li><a href="tarieven.html">Tarieven</a></li><li><a href="./#resultaten">Resultaten</a></li><li><a href="./#contact">Contact</a></li></ul></div>
-      <div><h4>Webshop</h4><ul><li><a href="#">Dermaceutic</a></li><li><a href="#">Renophase</a></li><li><a href="#">Theraderm</a></li><li><a href="#">Verzending &amp; retour</a></li></ul></div>
+      <div><h4>Webshop</h4><ul><!-- merkenvoet --><li><a href="#">Dermaceutic</a></li><li><a href="#">Dermasence</a></li><li><a href="#">Renophase</a></li><li><a href="#">Theraderm</a></li><!-- /merkenvoet --><li><a href="#">Verzending &amp; retour</a></li></ul></div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 Huidzorg Mozi</span>
@@ -262,6 +262,23 @@
     </div>
     <div class="book-frame"><div class="book-loading"><i></i>Agenda laden…</div></div>
     <div class="book-fallback">Laadt de agenda niet? <a href="#" target="_blank" rel="noopener">Open de online agenda</a></div>
+  </div>
+</div>
+
+<!-- Productvenster: omschrijving van één product -->
+<div class="book-modal prod-modal" id="prodModal" role="dialog" aria-modal="true" aria-labelledby="prodTitle" aria-hidden="true">
+  <div class="backdrop" data-prod-close></div>
+  <div class="book-sheet">
+    <div class="book-top">
+      <span class="grip" aria-hidden="true"></span>
+      <div><b id="prodTitle">Product</b><span id="prodSub"></span></div>
+      <button class="icon-btn book-close" type="button" data-prod-close aria-label="Sluiten"><svg class="ico"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="prod-body" id="prodBody"></div>
+    <div class="prod-foot">
+      <div><span class="prod-prijs" id="prodPrijs"></span><small>Verkrijgbaar in de praktijk · webshop volgt</small></div>
+      <a class="btn btn-primary" href="behandeling-productadvies.html"><svg class="ico"><use href="#i-chat"/></svg>Productadvies</a>
+    </div>
   </div>
 </div>
 

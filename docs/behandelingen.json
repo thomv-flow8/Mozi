@@ -1216,19 +1216,19 @@
       "paginaKop": "Huidanalyse & *productadvies*",
       "kort": "productadvies",
       "categorie": "Advies",
-      "omschrijving": "Huidanalyse en persoonlijk productadvies bij Huidzorg Mozi in Gorinchem, met Dermaceutic, Renophase en Theraderm. Kosten vervallen bij aankoop.",
+      "omschrijving": "Huidanalyse en persoonlijk productadvies bij Huidzorg Mozi in Gorinchem, met Dermaceutic, Dermasence, Renophase en Theraderm. Kosten vervallen bij aankoop.",
       "intro": "We kijken goed naar je huid en bepalen welke verzorging jouw huid nodig heeft. De kosten van het consult vervallen bij aankoop van producten.",
       "beeld": "../assets/web/dermaceutic-assortiment.jpg",
       "logo": "../assets/logos/dermaceutic.png",
-      "logoTekst": "Dermaceutic, Renophase en Theraderm",
+      "logoTekst": "Dermaceutic, Dermasence, Renophase en Theraderm",
       "feiten": [
         {
           "waarde": "€ 25",
           "label": "vervalt bij aankoop"
         },
         {
-          "waarde": "3 merken",
-          "label": "Dermaceutic, Renophase, Theraderm"
+          "waarde": "4 merken",
+          "label": "medische huidverzorging"
         },
         {
           "waarde": "Persoonlijk",
@@ -1246,7 +1246,7 @@
           "kop": "De juiste *match*",
           "tekst": [
             "Dermaceutic is een van de bekendste namen in chemische peelings en medische huidproducten, ontwikkeld met dermatologen en cosmetisch artsen. Het werkt met een stappenplan, zodat je een persoonlijk verzorgingsplan krijgt.",
-            "Renophase gebruiken we vooral bij de gevoelige huid: het helpt de huid zichzelf te herstellen, op huideigen kracht en tempo. Theraderm is een Zuid-Koreaans merk met organische producten, ook voor de getinte en donkere huid."
+            "Dermasence komt uit Duitsland en werkt met goed verdragen, vegan formules per huidtype, van reiniging tot nachtverzorging. Renophase gebruiken we vooral bij de gevoelige huid: het helpt de huid zichzelf te herstellen, op huideigen kracht en tempo. Theraderm is een Zuid-Koreaans merk met organische producten, ook voor de getinte en donkere huid."
           ],
           "visual": {
             "type": "foto",
@@ -1285,7 +1285,7 @@
         },
         {
           "v": "Welk merk past bij mij?",
-          "a": "Dat hangt af van je huid. Renophase gebruiken we vooral bij de gevoelige huid, Theraderm is geschikt voor de getinte en donkere huid, en Dermaceutic werkt met een stappenplan per huidprobleem."
+          "a": "Dat hangt af van je huid. Renophase gebruiken we vooral bij de gevoelige huid, Theraderm is geschikt voor de getinte en donkere huid, Dermasence heeft lijnen per huidtype zoals de onzuivere of de droge huid, en Dermaceutic werkt met een stappenplan per huidprobleem."
         },
         {
           "v": "Kan ik de producten ook online bestellen?",

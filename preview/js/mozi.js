@@ -8,6 +8,8 @@
   var $ = function(s, r){ return (r || document).querySelector(s); };
   var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Tekst veilig in HTML zetten, ook binnen attributen.
+  var esc = function(s){ return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); };
 
   /* ---------- Salonized-instellingen (uit de huidige site) ---------- */
   var SALONIZED = {
@@ -132,7 +134,6 @@
     var paneel = document.getElementById('bkPanel');
     var chips = document.getElementById('bkChips');
     var rijen = [], view = 'gezicht', zone = null, rijSel = null;
-    var esc = function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); };
   
     function svgVan(v){ return bk.querySelector('svg[data-view="' + v + '"]'); }
     function zonesIn(v){
@@ -296,7 +297,6 @@
       var max = +(revCards.dataset.max || 6);
       // Nieuwste reviews met een inhoudelijke tekst; de lijst staat al op datum (nieuwste eerst).
       var keuze = d.reviews.filter(function(r){ return r.tekst && r.tekst.length >= 45; }).slice(0, max);
-      var esc = function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); };
       revCards.innerHTML = keuze.map(function(r, i){
         return '<figure class="rev-card reveal d' + (i % 3) + '">' +
           '<div class="stars" aria-label="' + r.sterren + ' van 5 sterren">' + new Array(Math.round(r.sterren) + 1).join(ster) + '</div>' +
@@ -460,29 +460,68 @@
     toonCase(0);
   }
 
-  /* ---------- Webshop-teaser (voorbeeldproducten) ---------- */
+  /* ---------- Webshop: producten uit docs/producten.json ---------- */
   var shopGrid = $('#shopGrid');
+  var prodModal = $('#prodModal');
   if (shopGrid){
     var producten = JSON.parse($('#shopData').textContent);
-    function fles(vorm){
-      var s = 'stroke="#1C1B19" stroke-width="1.2" fill="none"';
-      if (vorm === 'tube')  return '<svg viewBox="0 0 80 160" aria-hidden="true"><path d="M18 20h44l-4 120H22z" fill="#FFFFFF" '+s+'/><rect x="26" y="140" width="28" height="14" rx="3" fill="#000"/><rect x="28" y="60" width="24" height="2" fill="#1D1D1D"/><rect x="30" y="68" width="20" height="1.5" fill="#BDB8B5"/></svg>';
-      if (vorm === 'pipet') return '<svg viewBox="0 0 80 160" aria-hidden="true"><rect x="20" y="62" width="40" height="88" rx="8" fill="#E8E3E1" '+s+'/><rect x="30" y="38" width="20" height="24" rx="3" fill="#000"/><path d="M34 14c0-6 12-6 12 0v24H34z" fill="#1C1B19"/><rect x="28" y="96" width="24" height="2" fill="#1D1D1D"/></svg>';
-      if (vorm === 'pomp')  return '<svg viewBox="0 0 80 160" aria-hidden="true"><rect x="18" y="56" width="44" height="96" rx="10" fill="#FFFFFF" '+s+'/><rect x="30" y="40" width="20" height="16" fill="#000"/><path d="M36 40V24h22v6H42v10" fill="#000"/><rect x="28" y="92" width="24" height="2" fill="#1D1D1D"/><rect x="30" y="100" width="20" height="1.5" fill="#BDB8B5"/></svg>';
-      return '<svg viewBox="0 0 80 160" aria-hidden="true"><rect x="12" y="92" width="56" height="52" rx="10" fill="#FFFFFF" '+s+'/><rect x="10" y="74" width="60" height="20" rx="6" fill="#000"/><rect x="28" y="114" width="24" height="2" fill="#1D1D1D"/></svg>';
-    }
     shopGrid.innerHTML = producten.map(function(p, i){
-      return '<a class="product reveal d' + (i % 4) + '" href="#">' +
-        '<div class="img"><span class="tag">' + p.tag + '</span>' + fles(p.vorm) +
-        '<button class="add" type="button" aria-label="' + p.naam + ' in winkelmand"><svg class="ico"><use href="#i-plus"/></svg></button></div>' +
-        '<div class="brand-n">' + p.merk + '</div><div class="name">' + p.naam + '</div><div class="pr">' + p.prijs + '</div></a>';
-    }).join('');
+      return '<a class="product reveal d' + (i % 4) + '" href="#" data-prod="' + i + '">' +
+        '<div class="img">' + (p.tag ? '<span class="tag">' + esc(p.tag) + '</span>' : '') +
+        '<img src="' + esc(p.beeld) + '" alt="' + esc(p.merk + ' ' + p.naam) + '" loading="lazy">' +
+        '<span class="add" aria-hidden="true"><svg class="ico"><use href="#i-arrow"/></svg></span></div>' +
+        '<div class="brand-n">' + esc(p.merk) + '</div>' +
+        '<div class="name">' + esc(p.naam) + '</div>' +
+        '<div class="pr">' + [p.inhoud, p.prijs].filter(Boolean).map(esc).join(' &middot; ') + '</div></a>';
+    }).join('') +
+      '<a class="shop-cta reveal d3" href="behandeling-productadvies.html">' +
+      '<p class="eyebrow">Meer in de praktijk</p>' +
+      '<b>Welke verzorging past bij jouw huid?</b>' +
+      '<p>We werken met vier merken. Tijdens een huidanalyse kiezen we samen wat jouw huid nodig heeft.</p>' +
+      '<span class="link-arrow">Naar productadvies <svg class="ico"><use href="#i-arrow"/></svg></span></a>';
     $$('.reveal', shopGrid).forEach(observe);
-    var mand = 0, teller = $('#cartCount');
+  }
+
+  /* ---------- Productvenster ---------- */
+  if (shopGrid && prodModal){
+    var prodBody = $('#prodBody'), prodFocus = null;
+    function toonProduct(p){
+      $('#prodTitle').textContent = p.merk + ' ' + p.naam;
+      $('#prodSub').textContent = [p.ondertitel, p.inhoud].filter(Boolean).join(' \u00b7 ');
+      $('#prodPrijs').textContent = p.prijs || '';
+      prodBody.innerHTML =
+        (p.beeld ? '<div class="prod-beeld"><img src="' + esc(p.beeld) + '" alt=""></div>' : '') +
+        (p.kort ? '<p>' + esc(p.kort) + '</p>' : '') +
+        (p.punten && p.punten.length ? '<ul class="prod-punten">' + p.punten.map(function(t){
+          return '<li><svg class="ico"><use href="#i-check"/></svg><span>' + esc(t) + '</span></li>';
+        }).join('') + '</ul>' : '') +
+        (p.huidtype ? '<div class="prod-rij"><b>Voor welke huid</b><span>' + esc(p.huidtype) + '</span></div>' : '') +
+        (p.gebruik ? '<div class="prod-rij"><b>Gebruik</b><span>' + esc(p.gebruik) + '</span></div>' : '');
+      prodBody.scrollTop = 0;
+    }
+    function openProduct(p, e){
+      if (e) e.preventDefault();
+      prodFocus = document.activeElement;
+      setMenu(false);
+      toonProduct(p);
+      prodModal.classList.add('open');
+      prodModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      setTimeout(function(){ var c = $('.book-close', prodModal); if (c) c.focus(); }, 50);
+    }
+    function sluitProduct(){
+      prodModal.classList.remove('open');
+      prodModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      if (prodFocus) prodFocus.focus();
+    }
     shopGrid.addEventListener('click', function(e){
-      if (!e.target.closest('.add')) return;
-      e.preventDefault();
-      mand++; teller.textContent = mand; teller.hidden = false;
+      var kaart = e.target.closest('[data-prod]');
+      if (kaart) openProduct(producten[+kaart.getAttribute('data-prod')], e);
+    });
+    $$('[data-prod-close]', prodModal).forEach(function(b){ b.addEventListener('click', sluitProduct); });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && prodModal.classList.contains('open')) sluitProduct();
     });
   }
 

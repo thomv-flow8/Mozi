@@ -1,0 +1,89 @@
+{
+  "_bron": "Merken en producten voor de webshop. Wordt gebruikt op de homepage (blok Webshop). Prijzen nog te bevestigen door Emine.",
+  "merken": [
+    {
+      "id": "dermaceutic",
+      "naam": "Dermaceutic",
+      "logo": "../assets/logos/dermaceutic.png",
+      "tekst": "Medische huidverzorging, ontwikkeld met dermatologen."
+    },
+    {
+      "id": "dermasence",
+      "naam": "Dermasence",
+      "logo": "../assets/logos/dermasence.png",
+      "tekst": "Duitse medische huidverzorging, vegan en dermatologisch getest."
+    },
+    {
+      "id": "renophase",
+      "naam": "Renophase",
+      "logo": "../assets/logos/renophase.png",
+      "hoog": true,
+      "tekst": "Herstel op huideigen kracht, voor de gevoelige huid."
+    },
+    {
+      "id": "theraderm",
+      "naam": "Theraderm",
+      "logo": "../assets/logos/theraderm.png",
+      "tekst": "Organische verzorging, ook voor de getinte en donkere huid."
+    }
+  ],
+  "producten": [
+    {
+      "id": "dermasence-mousse",
+      "merk": "Dermasence",
+      "naam": "Mousse",
+      "ondertitel": "Reinigingsschuim",
+      "inhoud": "200 ml",
+      "prijs": "€ 16,30",
+      "tag": "Onzuivere huid",
+      "beeld": "../assets/web/dermasence-mousse.png",
+      "kort": "Zacht reinigingsschuim met glycolzuur en een salicylzuurderivaat. Reinigt tot diep in de poriën en brengt de zuurmantel van de huid weer in balans.",
+      "punten": [
+        "Reinigt poriëndiep en verfijnt het huidbeeld",
+        "Herstelt de beschermende zuurmantel",
+        "Fijne voorbereiding op een fruitzuurbehandeling",
+        "Vegan, zonder drijfgas, dermatologisch getest"
+      ],
+      "huidtype": "Vette en onzuivere huid",
+      "gebruik": "Twee keer per dag op de gezichtshuid aanbrengen, licht inmasseren en afspoelen met lauwwarm water."
+    },
+    {
+      "id": "dermasence-seborra-serum",
+      "merk": "Dermasence",
+      "naam": "Seborra Skin Clarifying Serum",
+      "ondertitel": "Huidverhelderend serum",
+      "inhoud": "30 ml",
+      "prijs": "€ 23,20",
+      "tag": "Bij acne",
+      "beeld": "../assets/web/dermasence-seborra-serum.png",
+      "kort": "Licht serum met salicylzuur, milde fruitzuren en niacinamide. Pakt verstopte poriën en puistjes aan en remt de talgproductie, zonder de huid uit te drogen.",
+      "punten": [
+        "Verfijnt het huidbeeld en reguleert talg",
+        "Maakt plekjes na een puistje minder zichtbaar",
+        "Plantaardige extracten kalmeren roodheid",
+        "Lichte, verkoelende textuur die snel intrekt"
+      ],
+      "huidtype": "Vette, onzuivere en acnegevoelige huid, vanaf 12 jaar",
+      "gebruik": "Na het reinigen en het gezichtswater aanbrengen op de huid."
+    },
+    {
+      "id": "dermasence-hyalusome-night",
+      "merk": "Dermasence",
+      "naam": "Hyalusome Night",
+      "ondertitel": "Nachtverzorging",
+      "inhoud": "50 ml",
+      "prijs": "€ 29,00",
+      "tag": "Anti-aging",
+      "beeld": "../assets/web/dermasence-hyalusome-night.png",
+      "kort": "Rijke nachtverzorging met hyaluronzuur en teunisbloemolie. Hydrateert tot in de diepere huidlagen en ondersteunt het herstel van de huid tijdens de nacht.",
+      "punten": [
+        "Hydrateert met hyaluronzuur en Aqualin®",
+        "Panthenol en antioxidanten ondersteunen het herstel",
+        "Teunisbloem- en jojoba-olie versterken de huidbarrière",
+        "Kan ook als masker worden gebruikt"
+      ],
+      "huidtype": "Droge en normale huid, en bij huidveroudering",
+      "gebruik": "'s Avonds na het reinigen een hoeveelheid ter grootte van een hazelnoot aanbrengen op gezicht, hals en decolleté. Als masker: één keer per week dik aanbrengen en 10 tot 15 minuten laten intrekken."
+    }
+  ]
+}
