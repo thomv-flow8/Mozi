@@ -38,9 +38,7 @@
             "Acne komt niet alleen in het gezicht voor, maar ook op de hals, borst, rug, schouders en armen. Na de tienerjaren neemt het sterk af, maar bij een deel van de mensen blijft het een rol spelen. Vaak brengt het onzekerheid met zich mee."
           ],
           "visual": {
-            "type": "foto",
-            "src": "../assets/web/acne-close.jpg",
-            "alt": "Huid met acne"
+            "type": "porie"
           }
         },
         {
@@ -325,7 +323,7 @@
           "visual": {
             "type": "foto",
             "src": "../assets/web/peeling-masker.jpg",
-            "alt": "Peelingbehandeling"
+            "alt": "Peelinggel van dichtbij"
           }
         },
         {
@@ -638,7 +636,7 @@
           "visual": {
             "type": "foto",
             "src": "../assets/web/peeling-2.jpg",
-            "alt": "Peeling in de praktijk"
+            "alt": "Serum inmasseren na de behandeling"
           }
         },
         {

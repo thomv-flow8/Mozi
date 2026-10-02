@@ -2,6 +2,7 @@
 // Prijzen komen uit docs/tarieven.json, zodat een prijs maar op één plek staat.
 // Gebruik: node tools/genereer-behandelingen.js
 const { lees, esc, pagina, schrijf } = require('./sjabloon');
+const { svg: porie } = require('./teken-porie');
 const { data: tarieven, rijenHtml } = require('./genereer-tarieven');
 const { svgs: lichaamSvgs } = require('./teken-lichaamskaart');
 const data = JSON.parse(lees('docs/behandelingen.json'));
@@ -63,6 +64,7 @@ const huidlagen = `<svg class="skin" viewBox="0 0 600 420" preserveAspectRatio="
 </svg>`;
 
 function visual(v) {
+  if (v && v.type === 'porie') return `<div class="t-visual reveal d1">${porie}</div>`;
   if (v && v.type === 'huidlagen') return `<div class="t-visual reveal d1" data-play>${huidlagen}</div>`;
   if (v && v.type === 'kaart') return `<div class="t-visual t-card reveal d1">
         <p class="big">${em(v.titel || '')}</p>

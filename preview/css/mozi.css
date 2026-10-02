@@ -549,6 +549,16 @@ footer .wordmark small,footer .wordmark b{color:var(--on-dark)}
 .t-visual > img{width:100%;height:100%;object-fit:cover}
 /* Animatie: huidlagen met microkanaaltjes en nieuw collageen */
 .skin{width:100%;height:100%;display:block}
+.porie{width:100%;height:100%;display:block}
+.porie .lab{font-family:var(--font-label);font-size:13px;letter-spacing:2.6px;fill:var(--ink)}
+.porie .cap{font-family:var(--font-label);font-size:12.5px;fill:var(--ink);opacity:.62}
+.porie .cap-kort{display:none}
+@media (max-width:560px){
+  .porie .lab{font-size:20px;letter-spacing:1.4px}
+  .porie .cap{font-size:18px}
+  .porie .cap-lang{display:none}
+  .porie .cap-kort{display:block}
+}
 .skin .needle{transform:translateY(-100px);transition:transform .9s var(--ease)}
 .skin .chan{opacity:0;transition:opacity .6s}
 .skin .coll{fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-dasharray:160;stroke-dashoffset:160;transition:stroke-dashoffset 1.6s var(--ease)}

@@ -127,8 +127,8 @@ content:
                   - name: type
                     label: Soort
                     type: select
-                    description: "foto = afbeelding, kaart = tekstkaart met punten, huidlagen = animatie (alleen SkinPen)"
-                    options: { values: ["foto", "kaart", "huidlagen"] }
+                    description: "foto = afbeelding, kaart = tekstkaart met punten, huidlagen = animatie (alleen SkinPen), porie = tekening gezonde en verstopte porie"
+                    options: { values: ["foto", "kaart", "huidlagen", "porie"] }
                   - { name: src, label: Foto (bij soort foto), type: image }
                   - { name: alt, label: Beschrijving van de foto, type: string }
                   - name: pas

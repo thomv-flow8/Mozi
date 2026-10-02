@@ -96,3 +96,11 @@ Reviewwidget:
   `wit-naar-transparant.swift`, dat voor logo's is). `swift tools/bijsnijden.swift <in> <uit> [maxBreedte]`
   snijdt de doorzichtige rand weg.
 - **Nog te doen:** webshop koppelen (zie hieronder), productfoto's van de leverancier in hoge resolutie.
+
+## Beeld op de behandelpagina's (2 oktober 2026)
+- Negen te kleine stockfoto's zijn vervangen door gegenereerd beeld van 1600 px breed.
+  Zie `docs/beeld-generatie.md` voor welke, de afspraken, en wat nog echte foto's nodig heeft.
+  De oude foto's staan in `assets/stock/vervangen/`.
+- **Illustratie**: `node tools/teken-porie.js` tekent "gezonde porie naast verstopte porie"
+  in dezelfde lijn als de huidlagen bij SkinPen. Nog niet ingebouwd; preview via
+  `preview/porie.html` en `preview/acne-vergelijk.html`.
