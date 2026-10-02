@@ -1,0 +1,88 @@
+{
+  "_bron": "Teksten gebaseerd op huidzorgmozi.nl (opgehaald 1 oktober 2026), herschreven voor leesbaarheid. Geen nieuwe medische claims toegevoegd. Ontbrekende gegevens staan in 'aanvullen' voor Emine.",
+  "behandelingen": [
+    {
+      "slug": "skinpen",
+      "titel": "SkinPen microneedling",
+      "titelHtml": "SkinPen <em>microneedling</em>",
+      "categorie": "Huidverbetering & verjonging",
+      "omschrijving": "SkinPen microneedling bij Huidzorg Mozi in Gorinchem: het eerste FDA-goedgekeurde microneedlingsysteem, voor acnelittekens, fijne lijntjes en een stevigere huid.",
+      "intro": "De huid in de diepte vernieuwen, zónder oppervlakkige schade en met minimale downtime. We kozen bewust voor SkinPen: het eerste FDA-goedgekeurde medische microneedlingsysteem ter wereld.",
+      "beeld": "../assets/web/skinpen.jpg",
+      "logo": "../assets/logos/skinpen.png",
+      "feiten": [
+        { "waarde": "3–6", "label": "behandelingen" },
+        { "waarde": "4 weken", "label": "tussen sessies" },
+        { "waarde": "Kort", "label": "herstel" },
+        { "waarde": "€ 210", "label": "vanaf, hele gelaat" }
+      ],
+      "secties": [
+        {
+          "id": "wat",
+          "eyebrow": "Wat is het",
+          "kop": "Collageen <em>inductie</em> therapie",
+          "tekst": [
+            "SkinPen Collageen Inductie Therapie (CIT) vernieuwt de huid in de diepte, zonder oppervlakkige schade aan te richten en met minimale downtime.",
+            "SkinPen is het eerste FDA-goedgekeurde medische microneedlingsysteem ter wereld, en het enige systeem dat FDA-goedgekeurd is voor het veilig en effectief behandelen van acnelittekens. Daarnaast verstevigt en egaliseert het de huid, en worden fijne lijntjes en poriën verfijnd."
+          ],
+          "visual": { "type": "foto", "src": "../assets/web/skinpen.jpg", "alt": "SkinPen-apparaat" }
+        },
+        {
+          "id": "hoe",
+          "eyebrow": "Hoe werkt het",
+          "kop": "Je huid herstelt <em>zichzelf</em>",
+          "tekst": [
+            "Hele kleine, steriele naaldjes komen vibrerend op de huid terecht en maken minuscule microkanaaltjes.",
+            "Dat activeert het natuurlijke herstelproces diep in de huid: er wordt nieuw collageen (type 3) en elastine aangemaakt. De huid wordt steviger en voller, de teint egaler, frisser en stralender."
+          ],
+          "visual": { "type": "huidlagen" }
+        }
+      ],
+      "geschiktBij": ["(Acne)littekens", "Fijne lijntjes", "Pigmentvlekjes", "Doffe huid", "Grove huidstructuur", "Striae", "Vergrote poriën", "Verslapte huid"],
+      "waarom": {
+        "kop": "Waarom <em>SkinPen</em>",
+        "punten": [
+          { "titel": "Ingestelde naalddiepte", "tekst": "De diepte wordt op de naald zelf ingesteld en gaat nooit dieper of oppervlakkiger dan bedoeld." },
+          { "titel": "Zuivere microkanaaltjes", "tekst": "Het enige microneedlingsysteem waarmee bewezen zuivere microkanaaltjes worden gemaakt." },
+          { "titel": "FDA-goedgekeurd", "tekst": "Als eerste medisch microneedlingsysteem goedgekeurd, ook voor de behandeling van acnelittekens." }
+        ]
+      },
+      "verloop": {
+        "kop": "Na de <em>behandeling</em>",
+        "stappen": [
+          { "wanneer": "Direct", "tekst": "De huid ziet er wat roder uit en voelt warm of prikkelend aan, afhankelijk van het gebied en de intensiteit." },
+          { "wanneer": "Na enkele uren", "tekst": "Het warme, prikkelende gevoel neemt af. De herstelperiode is kort." },
+          { "wanneer": "Thuis", "tekst": "Je krijgt 2 nazorgproducten mee om het herstel te bevorderen. Die zijn bij de prijs inbegrepen." },
+          { "wanneer": "Traject", "tekst": "Voor een optimaal resultaat zijn 3 tot 6 behandelingen nodig, met 4 weken tussen de sessies." }
+        ]
+      },
+      "resultaten": [
+        { "naam": "Acnelittekens", "voor": "../assets/resultaten/skinpen-2-voor.jpg", "na": "../assets/resultaten/skinpen-2-na.jpg",
+          "info": [["Behandeling", "SkinPen microneedling"], ["Sessies", "2"], ["Cliënt", "Man, 27 jaar"]],
+          "bron": "Klinische foto's van SkinPen / Bellus Medical (Cathy A. Presnick, Melbourne, VS)." },
+        { "naam": "Acne", "voor": "../assets/resultaten/skinpen-4-voor.jpg", "na": "../assets/resultaten/skinpen-4-na.jpg",
+          "info": [["Behandeling", "SkinPen microneedling"], ["Sessies", "6"], ["Cliënt", "Vrouw"]],
+          "bron": "Klinische foto's van SkinPen / Bellus Medical (Cathy A. Presnick, Melbourne, VS)." },
+        { "naam": "Huidveroudering", "voor": "../assets/resultaten/skinpen-7-1-voor.jpg", "na": "../assets/resultaten/skinpen-7-1-na.jpg",
+          "info": [["Behandeling", "SkinPen microneedling"], ["Sessies", "3"], ["Cliënt", "Vrouw, 45 jaar"]],
+          "bron": "Klinische foto's van SkinPen / Bellus Medical (Elizabeth Steigner, Orange, VS)." }
+      ],
+      "tarieven": "skinpen",
+      "tarievenExtra": "Microneedling zit ook in onze combinatiebehandelingen, zoals de Firm Facial en Cosmo Glow.",
+      "vragen": [
+        { "v": "Hoeveel behandelingen heb ik nodig?", "a": "Voor een optimaal resultaat zijn 3 tot 6 behandelingen nodig, met een interval van 4 weken. Tijdens de gratis intake bespreken we wat voor jouw huid realistisch is." },
+        { "v": "Wat kan ik verwachten na de behandeling?", "a": "De huid ziet er na de behandeling wat roder uit en kan warm of prikkelend aanvoelen. Dat neemt na enkele uren af; de herstelperiode is kort. Je krijgt 2 nazorgproducten mee, die bij de prijs zijn inbegrepen." },
+        { "v": "Waarvoor kan SkinPen worden ingezet?", "a": "Onder andere bij (acne)littekens, fijne lijntjes, pigmentvlekjes, een doffe huid, een grove huidstructuur, striae, vergrote poriën en een verslapte huid." },
+        { "v": "Is SkinPen veilig?", "a": "SkinPen is het eerste FDA-goedgekeurde medische microneedlingsysteem. De naalddiepte wordt op de naald zelf ingesteld, zodat er nooit dieper of oppervlakkiger wordt behandeld dan bedoeld." },
+        { "v": "Kan ik eerst advies krijgen?", "a": "Ja. We beginnen altijd met een gratis intakegesprek van 30 minuten, waarin we je huid bekijken en samen een behandelplan maken." }
+      ],
+      "gerelateerd": ["combinatie", "peelings", "acne"],
+      "aanvullen": ["Duur van een behandeling (minuten)", "Of er verdoving wordt gebruikt", "Eigen voor/na-foto's (met schriftelijke toestemming)"]
+    }
+  ],
+  "kaarten": {
+    "combinatie": { "titel": "Combinatiebehandelingen", "tekst": "Peeling en microneedling samen, voor een enorme boost.", "beeld": "../assets/web/masker.jpg", "prijs": "vanaf <b>€ 150</b>", "cat": "Verjonging" },
+    "peelings": { "titel": "Medische peelings", "tekst": "Een vernieuwde, gladdere huid, volledig op maat.", "beeld": "../assets/web/peeling.jpg", "prijs": "vanaf <b>€ 90</b>", "cat": "Verjonging" },
+    "acne": { "titel": "Acnetherapie", "tekst": "Dieptereiniging, peelings en lichttherapie.", "beeld": "../assets/web/acne.jpg", "prijs": "vanaf <b>€ 75</b>", "cat": "Huidproblemen" }
+  }
+}
