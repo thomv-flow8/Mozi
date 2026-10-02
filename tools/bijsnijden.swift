@@ -28,10 +28,11 @@ for y in 0..<h {
 }
 guard maxX >= minX, maxY >= minY else { print("Geen zichtbare pixels gevonden"); exit(1) }
 
-// CoreGraphics tekent van linksonder; cropping gaat per pixelrij van bovenaf.
-let rect = CGRect(x: minX, y: minY, width: maxX - minX + 1, height: maxY - minY + 1)
-guard let bij = img.cropping(to: CGRect(x: rect.minX, y: CGFloat(h) - rect.maxY,
-                                        width: rect.width, height: rect.height)) else {
+// minY/maxY zijn pixelrijen van bovenaf geteld, en cropping() rekent ook van linksboven.
+// Niet omrekenen dus: deed ik dat wel, dan schoof de uitsnede omhoog of omlaag en viel er
+// aan één kant een randje van het onderwerp af.
+guard let bij = img.cropping(to: CGRect(x: minX, y: minY,
+                                        width: maxX - minX + 1, height: maxY - minY + 1)) else {
   print("Bijsnijden mislukt"); exit(1)
 }
 
