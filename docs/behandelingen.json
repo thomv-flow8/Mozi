@@ -127,9 +127,14 @@
             "Couperose is een onschuldig verschijnsel waarbij rode of blauwe bloedvaatjes in het gezicht zichtbaar zijn. Warmte, zonlicht, cosmetica en sommige medicijnen kunnen de klachten verergeren."
           ],
           "visual": {
-            "type": "foto",
-            "src": "../assets/web/rosacea.jpg",
-            "alt": "Huid met roodheid"
+            "type": "kaart",
+            "titel": "De vier *kenmerken*",
+            "punten": [
+              "Roodheid",
+              "Kleine uitgezette vaatjes (couperose)",
+              "Bultjes (papels)",
+              "Puistjes (pustels)"
+            ]
           }
         },
         {
@@ -427,9 +432,13 @@
             "SkinPen is het eerste FDA-goedgekeurde medische microneedlingsysteem ter wereld, en het enige systeem dat FDA-goedgekeurd is voor het veilig en effectief behandelen van acnelittekens. Daarnaast verstevigt en egaliseert het de huid, en worden fijne lijntjes en poriën verfijnd."
           ],
           "visual": {
-            "type": "foto",
-            "src": "../assets/web/skinpen.jpg",
-            "alt": "SkinPen-apparaat"
+            "type": "kaart",
+            "titel": "Het eerste *FDA-goedgekeurde* microneedlingsysteem",
+            "punten": [
+              "Ook goedgekeurd voor acnelittekens",
+              "Naalddiepte ingesteld op de naald zelf",
+              "Minimale downtime"
+            ]
           }
         },
         {
@@ -628,8 +637,8 @@
           ],
           "visual": {
             "type": "foto",
-            "src": "../assets/web/masker.jpg",
-            "alt": "Combinatiebehandeling"
+            "src": "../assets/web/peeling-2.jpg",
+            "alt": "Peeling in de praktijk"
           }
         },
         {
@@ -738,8 +747,8 @@
           ],
           "visual": {
             "type": "foto",
-            "src": "../assets/web/behandeling-apparaat.jpg",
-            "alt": "Behandeling"
+            "src": "../assets/web/clarity-apparaat.jpg",
+            "alt": "Clarity II-laser"
           }
         },
         {
@@ -931,8 +940,8 @@
           ],
           "visual": {
             "type": "foto",
-            "src": "../assets/web/laser.jpg",
-            "alt": "Laserbehandeling"
+            "src": "../assets/web/rosacea.jpg",
+            "alt": "Roodheid in het gezicht"
           }
         },
         {
@@ -1122,9 +1131,13 @@
             "Middeltjes van buitenaf dringen niet door de nagel heen en hebben daardoor vaak weinig resultaat."
           ],
           "visual": {
-            "type": "foto",
-            "src": "../assets/web/schimmelnagels.jpg",
-            "alt": "Voeten"
+            "type": "kaart",
+            "titel": "Een teennagel groeit zo’n *1 mm* per maand",
+            "punten": [
+              "Nagels worden dikker",
+              "Gele, groene of bruine verkleuring",
+              "Crèmes en nagellak dringen niet door de nagel"
+            ]
           }
         },
         {
@@ -1232,8 +1245,8 @@
           ],
           "visual": {
             "type": "foto",
-            "src": "../assets/web/homecare.jpg",
-            "alt": "Dermaceutic homecare"
+            "src": "../assets/web/maskpeel.jpg",
+            "alt": "Dermaceutic Mask Peel"
           }
         },
         {

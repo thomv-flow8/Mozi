@@ -2,7 +2,7 @@
 // Prijzen komen uit docs/tarieven.json, zodat een prijs maar op één plek staat.
 // Gebruik: node tools/genereer-behandelingen.js
 const { lees, esc, pagina, schrijf } = require('./sjabloon');
-const { data: tarieven, rijenHtml } = require('./genereer-tarieven');
+const { data: tarieven } = require('./genereer-tarieven');
 const data = JSON.parse(lees('docs/behandelingen.json'));
 const gebouwd = new Set(data.behandelingen.map(b => b.slug));
 
@@ -30,15 +30,19 @@ const huidlagen = `<svg class="skin" viewBox="0 0 600 420" preserveAspectRatio="
   <g class="needle" style="transition-delay:0.36s"><line x1="400" y1="40" x2="400" y2="208" stroke="#1C1B19" stroke-width="2.5"/></g>
   <g class="needle" style="transition-delay:0.48s"><line x1="460" y1="40" x2="460" y2="208" stroke="#1C1B19" stroke-width="2.5"/></g>
   <rect x="190" y="0" width="300" height="46" rx="12" fill="#1C1B19"/>
-  <rect x="300" y="18" width="80" height="4" rx="2" fill="#D6C89C"/>
-  <text class="lab" x="24" y="158">Opperhuid</text>
-  <text class="lab" x="24" y="216">Lederhuid</text>
-  <text class="lab" x="24" y="384">Onderhuid</text>
+  <rect x="300" y="18" width="80" height="4" rx="2" fill="#FFFFFF"/>
+  <text class="lab" x="56" y="158">Opperhuid</text>
+  <text class="lab" x="56" y="216">Lederhuid</text>
+  <text class="lab" x="56" y="384">Onderhuid</text>
   <text class="lab lab-gold" x="300" y="324">Nieuw collageen &amp; elastine</text>
 </svg>`;
 
 function visual(v) {
   if (v && v.type === 'huidlagen') return `<div class="t-visual reveal d1" data-play>${huidlagen}</div>`;
+  if (v && v.type === 'kaart') return `<div class="t-visual t-card reveal d1">
+        <p class="big">${em(v.titel || '')}</p>
+        <ul>${(v.punten || []).filter(Boolean).map(p => `<li>${ico('check')}<span>${esc(p)}</span></li>`).join('')}</ul>
+      </div>`;
   if (!v || !v.src) return '';
   return `<div class="t-visual reveal d1"><img src="${v.src}" alt="${esc(v.alt || '')}" loading="lazy"></div>`;
 }
@@ -86,7 +90,10 @@ function bouw(b) {
   const verloop = b.verloop || STANDAARD_VERLOOP;
   const groep = b.tarieven ? tarieven.groepen.find(g => g.id === b.tarieven) : null;
   if (b.tarieven && !groep) throw new Error('Tarievengroep niet gevonden: ' + b.tarieven);
-  const prijsRijen = groep ? rijenHtml(groep) : rijenHtml({ rijen: b.tarievenRijen || [{ naam: b.titel, info: '', prijs: 'op aanvraag' }] });
+  const prijsData = groep ? groep.rijen : (b.tarievenRijen || [{ naam: b.titel, info: '', prijs: 'op aanvraag' }]);
+  const amtKlasse = p => /gratis/i.test(p) ? ' free' : /aanvraag/i.test(p) ? ' ask' : '';
+  // Waarschuw als een uitlegfoto dezelfde is als de hoofdfoto.
+  (b.secties || []).forEach(x => { if (x.visual && x.visual.src && x.visual.src === b.beeld) console.warn('  Let op: dubbele foto op ' + b.slug + ' (' + x.id + ')'); });
   const prijsLink = groep ? 'tarieven.html#' + groep.id : 'tarieven.html';
   const sub = [
     ['uitleg', 'Uitleg'], ['geschikt', 'Geschikt bij'], b.resultaten && b.resultaten.length ? ['resultaten', 'Resultaten'] : null,
@@ -168,51 +175,56 @@ function bouw(b) {
 </section>
 
 <section class="section section-alt" id="geschikt">
-  <div class="wrap${b.waarom ? ' t-split' : ''}">
-    <div class="reveal">
-      <p class="eyebrow">Geschikt bij</p>
-      <h2>Waar ${esc(kort)} <em>helpt</em></h2>
-      <div class="chips-static">
-        ${b.geschiktBij.map(c => `<span>${ico('check')}${esc(c)}</span>`).join('\n        ')}
+  <div class="wrap">
+    <div class="section-head split">
+      <div class="reveal">
+        <p class="eyebrow">Geschikt bij</p>
+        <h2>Waar ${esc(kort)} <em>helpt</em></h2>
       </div>
+      <p class="lead reveal d1">Herken je een van deze klachten? Tijdens de gratis intake van 30 minuten bekijken we wat jouw huid nodig heeft.</p>
     </div>
-    ${b.waarom ? `<div class="reveal d1">
-      <h3 style="margin-bottom:18px">${em(b.waarom.kop)}</h3>
-      <div class="why-grid">
-        ${b.waarom.punten.map(p => `<div class="why">${ico('shield')}<div><b>${esc(p.titel)}</b><p>${esc(p.tekst)}</p></div></div>`).join('\n        ')}
+    <div class="fit-grid">
+      ${b.geschiktBij.map((c, i) => `<div class="fit reveal d${i % 4}"><span class="n">${String(i + 1).padStart(2, '0')}</span><b>${esc(c)}</b></div>`).join('\n      ')}
+    </div>
+    ${b.waarom ? `<div class="why-row">
+      <div class="why-head reveal">
+        <h3>${em(b.waarom.kop)}</h3>
+        ${b.logo ? `<img src="${b.logo}" alt="${esc(b.logoTekst || '')}">` : ''}
       </div>
-      ${b.logo ? `<div class="why-logo"><img src="${b.logo}" alt="">${esc(b.logoTekst || '')}</div>` : ''}
+      <div class="why-cards">
+        ${b.waarom.punten.map((p, i) => `<div class="why reveal d${i % 3}"><span class="why-ico">${ico('shield')}</span><b>${esc(p.titel)}</b><p>${esc(p.tekst)}</p></div>`).join('\n        ')}
+      </div>
     </div>` : ''}
   </div>
 </section>
 ${resultaten}
-<section class="section${resultaten ? ' section-alt' : ''}" id="verloop">
-  <div class="wrap t-split">
-    <div class="reveal">
-      <p class="eyebrow">Verloop</p>
+<section class="section steps-band" id="verloop">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Stappenplan</p>
       <h2>${em(verloop.kop)}</h2>
     </div>
-    <ol class="timeline reveal d1">
-      ${verloop.stappen.map(s => `<li><b>${esc(s.wanneer)}</b><p>${esc(s.tekst)}</p></li>`).join('\n      ')}
+    <ol class="stepper" data-play style="--n:${verloop.stappen.length}">
+      ${verloop.stappen.map((x, i) => `<li style="--i:${i}"><span class="dot">${i + 1}</span><b>${esc(x.wanneer)}</b><p>${esc(x.tekst)}</p></li>`).join('\n      ')}
     </ol>
   </div>
 </section>
 
 <section class="section" id="tarieven">
-  <div class="wrap t-split" style="align-items:start">
-    <div class="reveal">
-      <p class="eyebrow">Tarieven</p>
-      <h2>Wat kost <em>${esc(kort)}</em>?</h2>
-      <p class="lead" style="margin-top:20px">Alle tarieven zijn per behandeling. Het intakegesprek van 30 minuten is gratis.</p>
+  <div class="wrap">
+    <div class="section-head split">
+      <div class="reveal">
+        <p class="eyebrow">Tarieven</p>
+        <h2>Wat kost <em>${esc(kort)}</em>?</h2>
+      </div>
+      <p class="lead reveal d1">Alle tarieven zijn per behandeling. Het intakegesprek van 30 minuten is gratis.</p>
     </div>
-    <div class="t-price reveal d1">
-      <div class="rows">
-${prijsRijen}
-      </div>
-      <div class="t-price-foot">
-        <p>${esc(b.tarievenExtra || '')}</p>
-        <a class="link-arrow" href="${prijsLink}">Alle tarieven ${ico('arrow')}</a>
-      </div>
+    <div class="price-cards">
+      ${prijsData.map((r, i) => `<div class="pc reveal d${i % 4}"><b>${esc(r.naam)}</b>${r.info ? `<small>${esc(r.info)}</small>` : ''}<span class="pc-amt${amtKlasse(r.prijs)}">${esc(r.prijs)}</span></div>`).join('\n      ')}
+    </div>
+    <div class="t-price-foot reveal">
+      <p>${esc(b.tarievenExtra || '')}</p>
+      <div class="hero-ctas"><a class="btn btn-outline" href="${prijsLink}">Alle tarieven</a><a class="btn btn-primary" href="#" data-book>${ico('cal')}Afspraak maken</a></div>
     </div>
   </div>
 </section>
@@ -236,7 +248,7 @@ ${prijsRijen}
         <h2>Benieuwd wat <em>${esc(kort)}</em> voor jou doet?</h2>
         <p>Plan een gratis intakegesprek van 30 minuten. We bekijken je huid en maken samen een behandelplan.</p>
       </div>
-      <a class="btn btn-gold" href="#" data-book>${ico('cal')}Plan een gratis intake</a>
+      <a class="btn btn-light" href="#" data-book>${ico('cal')}Plan een gratis intake</a>
     </div>
   </div>
 </section>

@@ -340,10 +340,10 @@
     var producten = JSON.parse($('#shopData').textContent);
     function fles(vorm){
       var s = 'stroke="#1C1B19" stroke-width="1.2" fill="none"';
-      if (vorm === 'tube')  return '<svg viewBox="0 0 80 160" aria-hidden="true"><path d="M18 20h44l-4 120H22z" fill="#FFFFFF" '+s+'/><rect x="26" y="140" width="28" height="14" rx="3" fill="#000"/><rect x="28" y="60" width="24" height="2" fill="#8A7A4E"/><rect x="30" y="68" width="20" height="1.5" fill="#C9C1AF"/></svg>';
-      if (vorm === 'pipet') return '<svg viewBox="0 0 80 160" aria-hidden="true"><rect x="20" y="62" width="40" height="88" rx="8" fill="#EADFC2" '+s+'/><rect x="30" y="38" width="20" height="24" rx="3" fill="#000"/><path d="M34 14c0-6 12-6 12 0v24H34z" fill="#1C1B19"/><rect x="28" y="96" width="24" height="2" fill="#8A7A4E"/></svg>';
-      if (vorm === 'pomp')  return '<svg viewBox="0 0 80 160" aria-hidden="true"><rect x="18" y="56" width="44" height="96" rx="10" fill="#FFFFFF" '+s+'/><rect x="30" y="40" width="20" height="16" fill="#000"/><path d="M36 40V24h22v6H42v10" fill="#000"/><rect x="28" y="92" width="24" height="2" fill="#8A7A4E"/><rect x="30" y="100" width="20" height="1.5" fill="#C9C1AF"/></svg>';
-      return '<svg viewBox="0 0 80 160" aria-hidden="true"><rect x="12" y="92" width="56" height="52" rx="10" fill="#FFFFFF" '+s+'/><rect x="10" y="74" width="60" height="20" rx="6" fill="#000"/><rect x="28" y="114" width="24" height="2" fill="#8A7A4E"/></svg>';
+      if (vorm === 'tube')  return '<svg viewBox="0 0 80 160" aria-hidden="true"><path d="M18 20h44l-4 120H22z" fill="#FFFFFF" '+s+'/><rect x="26" y="140" width="28" height="14" rx="3" fill="#000"/><rect x="28" y="60" width="24" height="2" fill="#1D1D1D"/><rect x="30" y="68" width="20" height="1.5" fill="#BDB8B5"/></svg>';
+      if (vorm === 'pipet') return '<svg viewBox="0 0 80 160" aria-hidden="true"><rect x="20" y="62" width="40" height="88" rx="8" fill="#E8E3E1" '+s+'/><rect x="30" y="38" width="20" height="24" rx="3" fill="#000"/><path d="M34 14c0-6 12-6 12 0v24H34z" fill="#1C1B19"/><rect x="28" y="96" width="24" height="2" fill="#1D1D1D"/></svg>';
+      if (vorm === 'pomp')  return '<svg viewBox="0 0 80 160" aria-hidden="true"><rect x="18" y="56" width="44" height="96" rx="10" fill="#FFFFFF" '+s+'/><rect x="30" y="40" width="20" height="16" fill="#000"/><path d="M36 40V24h22v6H42v10" fill="#000"/><rect x="28" y="92" width="24" height="2" fill="#1D1D1D"/><rect x="30" y="100" width="20" height="1.5" fill="#BDB8B5"/></svg>';
+      return '<svg viewBox="0 0 80 160" aria-hidden="true"><rect x="12" y="92" width="56" height="52" rx="10" fill="#FFFFFF" '+s+'/><rect x="10" y="74" width="60" height="20" rx="6" fill="#000"/><rect x="28" y="114" width="24" height="2" fill="#1D1D1D"/></svg>';
     }
     shopGrid.innerHTML = producten.map(function(p, i){
       return '<a class="product reveal d' + (i % 4) + '" href="#">' +

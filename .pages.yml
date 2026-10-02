@@ -87,9 +87,12 @@ content:
                   - name: type
                     label: Soort
                     type: select
-                    options: { values: ["foto", "huidlagen"] }
-                  - { name: src, label: Foto, type: image }
+                    description: "foto = afbeelding, kaart = tekstkaart met punten, huidlagen = animatie (alleen SkinPen)"
+                    options: { values: ["foto", "kaart", "huidlagen"] }
+                  - { name: src, label: Foto (bij soort foto), type: image }
                   - { name: alt, label: Beschrijving van de foto, type: string }
+                  - { name: titel, label: Kaarttitel (bij soort kaart), type: string, description: "Schuingedrukt tussen sterretjes" }
+                  - { name: punten, label: Kaartpunten, type: string, list: true }
           - { name: geschiktBij, label: Geschikt bij, type: string, list: true }
           - name: waarom
             label: Waarom-blok (optioneel)
