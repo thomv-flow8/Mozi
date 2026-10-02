@@ -468,7 +468,8 @@
     shopGrid.innerHTML = producten.map(function(p, i){
       return '<a class="product reveal d' + (i % 4) + '" href="#" data-prod="' + i + '">' +
         '<div class="img">' + (p.tag ? '<span class="tag">' + esc(p.tag) + '</span>' : '') +
-        '<img src="' + esc(p.beeld) + '" alt="' + esc(p.merk + ' ' + p.naam) + '" loading="lazy">' +
+        '<img src="' + esc(p.beeld) + '" alt="' + esc(p.merk + ' ' + p.naam) + '" loading="lazy"' +
+          (p.schaal ? ' style="--s:' + p.schaal + '"' : '') + '>' +
         '<span class="add" aria-hidden="true"><svg class="ico"><use href="#i-arrow"/></svg></span></div>' +
         '<div class="brand-n">' + esc(p.merk) + '</div>' +
         '<div class="name">' + esc(p.naam) + '</div>' +
