@@ -1,0 +1,72 @@
+{
+  "_toelichting": "OPZET. [[…]] = in te vullen door Emine en juridisch te laten controleren. Alleen de feiten over de website (gebruikte diensten, cookies) zijn al ingevuld; die zijn gecontroleerd op 2 oktober 2026.",
+  "paginas": [
+    {
+      "slug": "privacy",
+      "titel": "Privacyverklaring",
+      "kop": "Privacy*verklaring*",
+      "intro": "Hoe Huidzorg Mozi omgaat met je persoonsgegevens.",
+      "secties": [
+        { "kop": "Wie zijn wij", "tekst": [
+          "Huidzorg Mozi, Gezondheidscentrum Zorglinie, Hoog Dalemseweg 3, 4208 CA Gorinchem. Telefoon 06 27 26 27 31, e-mail info@huidzorgmozi.nl.",
+          "KvK-nummer: [[KvK-nummer]]. Contactpersoon voor privacyvragen: [[naam]]."
+        ]},
+        { "kop": "Welke gegevens we verwerken", "tekst": [
+          "[[Bijvoorbeeld: naam, contactgegevens en afspraakgegevens bij het maken van een afspraak; gegevens die je ons mailt of belt; bestelgegevens bij de webshop.]]",
+          "[[Gezondheidsgegevens in het behandeldossier: welke, waarom, en op welke grondslag.]]"
+        ]},
+        { "kop": "Waarvoor we je gegevens gebruiken", "tekst": [
+          "[[Bijvoorbeeld: afspraken plannen en herinneren, behandelen en het bijhouden van je dossier, bestellingen afhandelen, wettelijke verplichtingen.]]"
+        ]},
+        { "kop": "Diensten van derden op deze website", "tekst": [
+          "Online afspraken en reviews: Salonized. De agenda en het reviewoverzicht worden pas geladen als je op 'Afspraak maken' of 'Lees alle reviews' klikt. Gegevens die je daar invult, worden door Salonized verwerkt. [[Verwijzing naar de verwerkersovereenkomst en privacyverklaring van Salonized.]]",
+          "Lettertypes: deze website laadt lettertypes van Google Fonts. Daarbij wordt je IP-adres aan Google doorgegeven. [[Controleren; eventueel lettertypes zelf hosten, dan vervalt dit.]]",
+          "Hosting: de website wordt gehost via GitHub Pages. [[Controleren welke gegevens de hostingpartij vastlegt.]]",
+          "Webshop: [[Shopify, zodra de webshop live is.]]"
+        ]},
+        { "kop": "Hoe lang we gegevens bewaren", "tekst": [
+          "[[Bewaartermijnen per soort gegevens, volgens de geldende wetgeving.]]"
+        ]},
+        { "kop": "Je rechten", "tekst": [
+          "Je hebt het recht je gegevens in te zien, te laten corrigeren of te laten verwijderen, en bezwaar te maken tegen de verwerking. Neem hiervoor contact op via info@huidzorgmozi.nl.",
+          "Ben je niet tevreden over hoe we met je gegevens omgaan, dan kun je een klacht indienen bij de Autoriteit Persoonsgegevens."
+        ]},
+        { "kop": "Wijzigingen", "tekst": [ "Deze privacyverklaring is voor het laatst gewijzigd op [[datum]]." ]}
+      ]
+    },
+    {
+      "slug": "cookies",
+      "titel": "Cookies",
+      "kop": "Cook*ies*",
+      "intro": "Welke cookies en vergelijkbare technieken deze website gebruikt.",
+      "secties": [
+        { "kop": "Deze website", "tekst": [
+          "De website zelf plaatst geen cookies en slaat niets op in je browser. We gebruiken geen analyse- of advertentiecookies."
+        ]},
+        { "kop": "Diensten van derden", "tekst": [
+          "Afspraken en reviews (Salonized): pas als je op 'Afspraak maken' of 'Lees alle reviews' klikt, wordt de omgeving van Salonized geladen. Salonized kan dan eigen cookies plaatsen. [[Controleren welke cookies dit zijn.]]",
+          "Lettertypes (Google Fonts): plaatst geen cookies, maar je IP-adres wordt aan Google doorgegeven.",
+          "Webshop: [[cookies van Shopify, zodra de webshop live is.]]"
+        ]},
+        { "kop": "Cookiemelding", "tekst": [
+          "Omdat de website zelf geen cookies plaatst, is er nu geen cookiemelding nodig. [[Opnieuw beoordelen zodra er een webshop of analysetool bij komt.]]"
+        ]}
+      ]
+    },
+    {
+      "slug": "algemene-voorwaarden",
+      "titel": "Algemene voorwaarden",
+      "kop": "Algemene *voorwaarden*",
+      "intro": "De voorwaarden voor behandelingen en bestellingen bij Huidzorg Mozi.",
+      "secties": [
+        { "kop": "Toepasselijkheid", "tekst": [ "[[Op welke afspraken, behandelingen en bestellingen deze voorwaarden van toepassing zijn.]]" ]},
+        { "kop": "Afspraken en annuleren", "tekst": [ "[[Annuleringstermijn en wat er gebeurt bij te laat annuleren of niet verschijnen.]]" ]},
+        { "kop": "Tarieven en betaling", "tekst": [ "De actuele tarieven staan op de tarievenpagina. [[Betaalwijze en betaaltermijn.]]" ]},
+        { "kop": "Behandelingen", "tekst": [ "Resultaten verschillen per persoon. [[Afspraken over informatie vooraf, toestemming en nazorg.]]" ]},
+        { "kop": "Webshop", "tekst": [ "[[Levering, verzendkosten, bedenktijd en retourneren — volgens de regels voor online verkoop.]]" ]},
+        { "kop": "Aansprakelijkheid", "tekst": [ "[[In te vullen en juridisch te laten controleren.]]" ]},
+        { "kop": "Klachten", "tekst": [ "[[Klachtenregeling en aangesloten geschilleninstantie voor zorgaanbieders.]]" ]}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "_bron": "Teksten van huidzorgmozi.nl/over-ons en /contact (opgehaald 1 oktober 2026), licht geredigeerd. Niets toegevoegd.",
+  "kop": "Over *Mozi*",
+  "intro": "Huidzorg Mozi is een praktijk voor huidtherapie in Gorinchem. Een persoonlijk behandelplan, eerlijk advies en oprechte aandacht vormen de basis van elk traject.",
+  "naam": "Emine Elmaci-van Rossen",
+  "functie": "Huidtherapeut (hbo) & eigenaar",
+  "citaat": "Toen ik rond mijn dertigste rosacea bleek te hebben, groeide mijn interesse in het beter maken van de huid alleen maar meer.",
+  "verhaalKop": "Van passie naar *praktijk*",
+  "verhaal": [
+    "Ik ben gelukkig één van die mensen die van haar passie haar werk heeft kunnen maken. Ik ben altijd al bezig geweest met het reinigen en herstellen van de onzuivere huid.",
+    "Toen ik rond mijn dertigste rosacea bleek te hebben, is mijn interesse in het beter maken van de huid nog meer gegroeid. Ik ben mij gaan verdiepen in wat ingrediënten van producten met de huid doen en hoe effectief peelings zijn. Deze zoektocht heeft ertoe geleid dat ik besloot de voltijd hbo-opleiding Huidtherapie te doen.",
+    "Na mijn afstuderen heb ik kunnen werken met A-merken op de markt, waar ik heb ervaren hoe effectief de juiste ingrediënten zijn bij het beter maken van de huid. Ik vind het een uitdaging om de juiste match bij de persoon te vinden.",
+    "Ik werk graag met peelings en met laserapparatuur, en combineer graag behandelingen voor het beste resultaat. Bij alles wat ik doe staat de veiligheid van mijn patiënten op de eerste plaats.",
+    "Ik ben erg trots dat ik nu mijn eigen praktijk in mijn geboorteplaats heb, en dat ik met mijn eerlijke advies anderen kan helpen aan een gezonde en stralende huid. Ik help je graag!"
+  ],
+  "waarden": [
+    { "icoon": "shield", "titel": "Gediplomeerde huidtherapeuten", "tekst": "Opgeleid volgens artikel 34 van de wet BIG." },
+    { "icoon": "chat", "titel": "Persoonlijke benadering", "tekst": "Eerlijk advies en een behandelplan op maat." },
+    { "icoon": "h-flesje", "titel": "Bewezen producten", "tekst": "Alleen kwalitatieve producten met bewezen effectiviteit." }
+  ],
+  "aansluitingen": [
+    { "logo": "../assets/logos/nvh.png", "naam": "Nederlandse Vereniging van Huidtherapeuten", "tekst": "De overkoepelende organisatie die de belangen van huidtherapeuten behartigt en na- en bijscholing organiseert." },
+    { "logo": "../assets/logos/kp.png", "naam": "Kwaliteitsregister Paramedici", "tekst": "Registratie dat een paramedicus voldoet aan de opleidingseisen van de wet BIG, met elke vijf jaar een toets op actuele kennis en ervaring." },
+    { "logo": "", "badge": "AGB", "naam": "AGB-geregistreerd", "tekst": "Geregistreerd in het AGB-register voor zorgverleners." },
+    { "logo": "../assets/logos/vvaa-transparant.png", "naam": "Lid van VvAA", "tekst": "Collectief van ruim 130.000 zorgprofessionals." }
+  ],
+  "praktijkKop": "In Gezondheidscentrum *Zorglinie*",
+  "praktijk": [
+    "Sinds 15 april 2024 zijn we gevestigd in het splinternieuwe Gezondheidscentrum Zorglinie in Gorinchem-Oost, niet ver van winkelcentrum Hoog Dalem.",
+    "In het gezondheidscentrum zitten naast Huidzorg Mozi ook huisartsen, tandartsen, fysiotherapie, kraamzorg en een apotheek."
+  ],
+  "adres": "Hoog Dalemseweg 3, 4208 CA Gorinchem",
+  "praktijkBeeld": "../assets/web/peeling-2.jpg"
+}

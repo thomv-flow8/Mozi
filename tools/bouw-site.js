@@ -10,7 +10,7 @@ const root = path.resolve(__dirname, '..');
 const uit = path.join(root, '_site');
 
 // 1. Genereren (zelfde scripts als lokaal)
-for (const s of ['genereer-tarieven.js', 'genereer-behandelingen.js']) {
+for (const s of ['genereer-tarieven.js', 'genereer-behandelingen.js', 'genereer-over.js', 'genereer-juridisch.js']) {
   execFileSync(process.execPath, [path.join(__dirname, s)], { stdio: 'inherit' });
 }
 
@@ -21,7 +21,7 @@ const kopieer = (van, naar) => fs.cpSync(path.join(root, van), path.join(uit, na
 
 // Alleen de pagina's van de site zelf (geen werkbestanden zoals materiaal.html of v1)
 const paginas = fs.readdirSync(path.join(root, 'preview'))
-  .filter(f => f === 'index.html' || f === 'tarieven.html' || /^behandeling-[a-z0-9-]+\.html$/.test(f));
+  .filter(f => ['index.html', 'tarieven.html', 'over-mozi.html', 'privacy.html', 'cookies.html', 'algemene-voorwaarden.html'].includes(f) || /^behandeling-[a-z0-9-]+\.html$/.test(f));
 kopieer('preview/css', 'css');
 kopieer('preview/js', 'js');
 for (const map of ['web', 'logos', 'resultaten', 'bewerkt']) kopieer('assets/' + map, 'assets/' + map);
