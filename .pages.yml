@@ -36,6 +36,8 @@ content:
               - { name: naam, label: Behandeling, type: string, required: true }
               - { name: info, label: Toelichting (optioneel), type: string }
               - { name: prijs, label: Prijs, type: string, required: true, description: "Bijv. € 75, vanaf € 100, gratis of op aanvraag" }
+              - { name: zones, label: Zones op de lichaamskaart (laserontharing), type: string, list: true, hidden: true }
+              - { name: keuze, label: Keuze i.p.v. combinatie, type: boolean, hidden: true }
 
   # ---------------------------------------------------------------- Behandelingen
   - name: behandelingen
@@ -143,6 +145,7 @@ content:
             label: Tarievencategorie
             type: select
             options: { values: ["intake", "acne", "skinpen", "huidverbetering", "laser", "peelings", "combinatie", "electro", "ontharing"] }
+          - { name: lichaamskaart, label: Lichaamskaart tonen bij de tarieven, type: boolean, hidden: true }
           - name: tarievenRijen
             label: Eigen prijsregels (alleen als er geen tarievencategorie is)
             type: object

@@ -2,7 +2,8 @@
 // Prijzen komen uit docs/tarieven.json, zodat een prijs maar op één plek staat.
 // Gebruik: node tools/genereer-behandelingen.js
 const { lees, esc, pagina, schrijf } = require('./sjabloon');
-const { data: tarieven } = require('./genereer-tarieven');
+const { data: tarieven, rijenHtml } = require('./genereer-tarieven');
+const { svgs: lichaamSvgs } = require('./teken-lichaamskaart');
 const data = JSON.parse(lees('docs/behandelingen.json'));
 const gebouwd = new Set(data.behandelingen.map(b => b.slug));
 
@@ -69,6 +70,33 @@ function visual(v) {
       </div>`;
   if (!v || !v.src) return '';
   return `<div class="t-visual reveal d1${v.pas === 'heel' ? ' t-visual--heel' : ''}"><img src="${v.src}" alt="${esc(v.alt || '')}" loading="lazy"></div>`;
+}
+
+// Lichaamskaart: tekeningen met aanklikbare zones; tarieven komen uit dezelfde prijslijst.
+function lichaamskaart(b, groep) {
+  return `<div class="bk reveal" id="bk">
+      <div class="bk-top">
+        <div class="bk-tabs" role="tablist" aria-label="Kies een weergave">
+          <button class="bk-tab" role="tab" data-view="gezicht" aria-selected="true">Gezicht</button>
+          <button class="bk-tab" role="tab" data-view="voorkant" aria-selected="false">Voorkant</button>
+          <button class="bk-tab" role="tab" data-view="achterkant" aria-selected="false">Achterkant</button>
+        </div>
+        <p class="bk-hint">Tik op een zone</p>
+      </div>
+      <div class="bk-grid">
+        <div class="bk-fig">
+          ${lichaamSvgs}
+        </div>
+        <aside class="bk-panel" id="bkPanel" aria-live="polite"></aside>
+      </div>
+      <div class="bk-chips" id="bkChips" aria-label="Zones"></div>
+      <details class="bk-alles">
+        <summary>Alle tarieven ${esc(b.titel.toLowerCase())} <span class="chev">${ico('chev')}</span></summary>
+        <div class="rows" id="bkAlles"></div>
+      </details>
+    </div>
+    <script type="application/json" id="bkData">${JSON.stringify(groep.rijen)}</script>
+`;
 }
 
 function kaart(slug) {
@@ -243,9 +271,10 @@ ${resultaten}
       </div>
       <p class="lead reveal d1">Alle tarieven zijn per behandeling. Het intakegesprek van 30 minuten is gratis.</p>
     </div>
-    <div class="price-cards">
+${b.lichaamskaart ? lichaamskaart(b, groep) : `    <div class="price-cards">
       ${prijsData.map((r, i) => `<div class="pc reveal d${i % 4}"><b>${esc(r.naam)}</b>${r.info ? `<small>${esc(r.info)}</small>` : ''}<span class="pc-amt${amtKlasse(r.prijs)}">${esc(r.prijs)}</span></div>`).join('\n      ')}
     </div>
+    `}
     <div class="t-price-foot reveal">
       <p>${esc(b.tarievenExtra || '')}</p>
       <div class="hero-ctas"><a class="btn btn-outline" href="${prijsLink}">Alle tarieven</a><a class="btn btn-primary" href="#" data-book>${ico('cal')}Afspraak maken</a></div>

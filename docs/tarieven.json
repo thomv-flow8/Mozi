@@ -1,5 +1,5 @@
 {
-  "_bron": "huidzorgmozi.nl/tarieven, opgehaald 1 oktober 2026. Intake gecorrigeerd naar 30 minuten (Thomas). Alle tarieven per behandeling.",
+  "_bron": "huidzorgmozi.nl/tarieven, opgehaald 1 oktober 2026. Intake gecorrigeerd naar 30 minuten (Thomas). Alle tarieven per behandeling. Laserontharing: zones en omschrijvingen toegevoegd voor de lichaamskaart (omschrijvingen: concept, na te kijken door Emine).",
   "groepen": [
     {
       "id": "intake",
@@ -308,128 +308,215 @@
       "rijen": [
         {
           "naam": "Bovenlip",
-          "info": "",
-          "prijs": "€ 60"
+          "info": "Het gebied boven de bovenlip.",
+          "prijs": "€ 60",
+          "zones": [
+            "bovenlip"
+          ]
         },
         {
           "naam": "Kin",
-          "info": "",
-          "prijs": "€ 60"
+          "info": "De kin.",
+          "prijs": "€ 60",
+          "zones": [
+            "kin"
+          ]
         },
         {
           "naam": "Bovenlip + kin",
-          "info": "",
-          "prijs": "€ 100"
+          "info": "Bovenlip en kin in één behandeling.",
+          "prijs": "€ 100",
+          "zones": [
+            "bovenlip",
+            "kin"
+          ]
         },
         {
           "naam": "Tussen de wenkbrauwen",
-          "info": "",
-          "prijs": "€ 30"
+          "info": "De haartjes tussen de wenkbrauwen.",
+          "prijs": "€ 30",
+          "zones": [
+            "wenkbrauwen"
+          ]
         },
         {
           "naam": "Bakkebaarden",
-          "info": "",
-          "prijs": "€ 75"
+          "info": "De bakkebaarden aan beide kanten.",
+          "prijs": "€ 75",
+          "zones": [
+            "bakkebaarden"
+          ]
         },
         {
           "naam": "Hals",
-          "info": "",
-          "prijs": "€ 75"
+          "info": "De hals.",
+          "prijs": "€ 75",
+          "zones": [
+            "hals"
+          ]
         },
         {
           "naam": "Hele gezicht",
-          "info": "",
-          "prijs": "€ 165"
+          "info": "Alle zones van het gezicht in één behandeling.",
+          "prijs": "€ 165",
+          "zones": [
+            "bovenlip",
+            "kin",
+            "wenkbrauwen",
+            "bakkebaarden",
+            "jukbeen"
+          ]
         },
         {
           "naam": "Hele gezicht + hals",
-          "info": "",
-          "prijs": "€ 195"
+          "info": "Het hele gezicht samen met de hals.",
+          "prijs": "€ 195",
+          "zones": [
+            "bovenlip",
+            "kin",
+            "wenkbrauwen",
+            "bakkebaarden",
+            "jukbeen",
+            "hals"
+          ]
         },
         {
           "naam": "Baardlijn jukbeen",
-          "info": "",
-          "prijs": "€ 60"
+          "info": "De baardlijn op de wangen, langs het jukbeen.",
+          "prijs": "€ 60",
+          "zones": [
+            "jukbeen"
+          ]
         },
         {
           "naam": "Baardlijn hals",
-          "info": "",
-          "prijs": "€ 75"
+          "info": "De baardlijn onder de kaak.",
+          "prijs": "€ 75",
+          "zones": [
+            "baardlijn-hals"
+          ]
         },
         {
           "naam": "Oren",
-          "info": "",
-          "prijs": "€ 30"
+          "info": "De haartjes op de oren.",
+          "prijs": "€ 30",
+          "zones": [
+            "oren"
+          ]
         },
         {
           "naam": "Oksels",
-          "info": "",
-          "prijs": "€ 70"
+          "info": "Beide oksels.",
+          "prijs": "€ 70",
+          "zones": [
+            "oksels"
+          ]
         },
         {
           "naam": "Boven- of onderarmen",
-          "info": "",
-          "prijs": "€ 125"
+          "info": "De bovenarmen of de onderarmen.",
+          "prijs": "€ 125",
+          "zones": [
+            "bovenarm",
+            "onderarm"
+          ],
+          "keuze": true
         },
         {
           "naam": "Hele armen",
-          "info": "",
-          "prijs": "€ 195"
+          "info": "Boven- en onderarmen samen.",
+          "prijs": "€ 195",
+          "zones": [
+            "bovenarm",
+            "onderarm"
+          ]
         },
         {
           "naam": "Hele rug",
-          "info": "",
-          "prijs": "€ 225"
+          "info": "De volledige rug.",
+          "prijs": "€ 225",
+          "zones": [
+            "rug"
+          ]
         },
         {
           "naam": "Onderbenen incl. knie",
-          "info": "",
-          "prijs": "€ 175"
+          "info": "Van enkel tot en met de knie.",
+          "prijs": "€ 175",
+          "zones": [
+            "onderbeen"
+          ]
         },
         {
           "naam": "Bovenbenen",
-          "info": "",
-          "prijs": "€ 175"
+          "info": "Van knie tot lies.",
+          "prijs": "€ 175",
+          "zones": [
+            "bovenbeen"
+          ]
         },
         {
           "naam": "Onder- en bovenbenen",
-          "info": "",
-          "prijs": "€ 275"
+          "info": "De hele benen.",
+          "prijs": "€ 275",
+          "zones": [
+            "onderbeen",
+            "bovenbeen"
+          ]
         },
         {
           "naam": "Voeten",
-          "info": "",
-          "prijs": "€ 60"
+          "info": "De voeten en tenen.",
+          "prijs": "€ 60",
+          "zones": [
+            "voeten"
+          ]
         },
         {
           "naam": "Bikinilijn",
-          "info": "",
-          "prijs": "€ 100"
+          "info": "De randen van het bikinigebied.",
+          "prijs": "€ 100",
+          "zones": [
+            "bikini"
+          ]
         },
         {
           "naam": "Bikinilijn uitgebreid",
-          "info": "",
-          "prijs": "€ 150"
+          "info": "Een groter deel van het bikinigebied.",
+          "prijs": "€ 150",
+          "zones": [
+            "bikini"
+          ]
         },
         {
           "naam": "Borst (man)",
-          "info": "",
-          "prijs": "€ 175"
+          "info": "De borst.",
+          "prijs": "€ 175",
+          "zones": [
+            "borst"
+          ]
         },
         {
           "naam": "Buik",
-          "info": "",
-          "prijs": "€ 175"
+          "info": "De buik.",
+          "prijs": "€ 175",
+          "zones": [
+            "buik"
+          ]
         },
         {
           "naam": "Navelstreepje",
-          "info": "",
-          "prijs": "€ 50"
+          "info": "De haarlijn tussen navel en bikinilijn.",
+          "prijs": "€ 50",
+          "zones": [
+            "navel"
+          ]
         },
         {
           "naam": "Overig en combinaties",
           "info": "",
-          "prijs": "op aanvraag"
+          "prijs": "op aanvraag",
+          "zones": []
         }
       ]
     }

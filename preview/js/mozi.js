@@ -115,6 +115,112 @@
   }
   $$('.reveal, [data-play]').forEach(observe);
 
+  /* ---------- Lichaamskaart laserontharing (zones aanklikbaar met tarief) ---------- */
+  (function(){
+    'use strict';
+    // Zones per weergave en hun naam
+    var NAMEN = {
+      bovenlip:'Bovenlip', kin:'Kin', wenkbrauwen:'Tussen de wenkbrauwen', bakkebaarden:'Bakkebaarden',
+      jukbeen:'Baardlijn jukbeen', 'baardlijn-hals':'Baardlijn hals', oren:'Oren', hals:'Hals',
+      oksels:'Oksels', bovenarm:'Bovenarmen', onderarm:'Onderarmen', borst:'Borst', buik:'Buik',
+      navel:'Navelstreepje', bikini:'Bikinilijn', bovenbeen:'Bovenbenen', onderbeen:'Onderbenen',
+      voeten:'Voeten', rug:'Rug'
+    };
+    var WEERGAVE = { gezicht:'Gezicht', voorkant:'Voorkant', achterkant:'Achterkant' };
+    var bk = document.getElementById('bk');
+    if (!bk) return;
+    var paneel = document.getElementById('bkPanel');
+    var chips = document.getElementById('bkChips');
+    var rijen = [], view = 'gezicht', zone = null, rijSel = null;
+    var esc = function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); };
+  
+    function svgVan(v){ return bk.querySelector('svg[data-view="' + v + '"]'); }
+    function zonesIn(v){
+      var s = {}; svgVan(v).querySelectorAll('.z').forEach(function(p){ s[p.dataset.zone] = 1; });
+      return Object.keys(s).sort(function(a, b){ return NAMEN[a].localeCompare(NAMEN[b]); });
+    }
+    function soort(r){ return (r.zones.length > 1 && !r.keuze) ? 'Combinatie' : 'Tarief'; }
+  
+    function markeer(lijst){
+      bk.querySelectorAll('.z, .stip').forEach(function(p){ p.classList.toggle('sel', lijst.indexOf(p.dataset.zone) >= 0); });
+    }
+  
+    function toonPaneel(){
+      if (!zone){
+        paneel.innerHTML = '<div class="bk-leeg"><p class="eyebrow">Laserontharing · Clarity II</p><h3>Kies een zone</h3><p>Tik op de tekening of kies hieronder een zone. Je ziet direct het tarief en voordeligere combinaties.</p></div>';
+        markeer([]);
+        return;
+      }
+      var passend = rijen.filter(function(r){ return r.zones.indexOf(zone) >= 0; });
+      // Eerst losse tarieven, dan combinaties (kleinste eerst)
+      passend.sort(function(a, b){ return (soort(a) === 'Combinatie') - (soort(b) === 'Combinatie') || a.zones.length - b.zones.length; });
+      var buiten = rijSel ? rijSel.zones.filter(function(z){ return !svgVan(view).querySelector('.z[data-zone="' + z + '"]'); }) : [];
+      paneel.innerHTML =
+        '<p class="eyebrow">' + WEERGAVE[view] + '</p><h3>' + esc(NAMEN[zone]) + '</h3>' +
+        '<div class="bk-opties">' + passend.map(function(r, i){
+          return '<button type="button" class="bk-optie' + (rijSel === r ? ' sel' : '') + '" data-i="' + rijen.indexOf(r) + '">' +
+            '<span class="lbl">' + soort(r) + '</span><b>' + esc(r.naam) + '</b><span class="amt">' + esc(r.prijs) + '</span>' +
+            (r.info ? '<small>' + esc(r.info) + '</small>' : '') + '</button>';
+        }).join('') + '</div>' +
+        (buiten.length ? '<p class="bk-noot">Deze combinatie omvat ook: ' + buiten.map(function(z){ return esc(NAMEN[z]); }).join(', ') + '.</p>' : '') +
+        '<p class="bk-noot">Andere combinaties zijn op aanvraag.</p>' +
+        '<a class="btn btn-primary" href="#" data-book><svg class="ico"><use href="#i-cal"/></svg>Afspraak maken</a>';
+      markeer(rijSel ? rijSel.zones : [zone]);
+    }
+  
+    function toonChips(){
+      chips.innerHTML = zonesIn(view).map(function(z){
+        return '<button type="button" class="bk-chip' + (z === zone ? ' on' : '') + '" data-zone="' + z + '">' + esc(NAMEN[z]) + '</button>';
+      }).join('');
+    }
+  
+    function kies(z, scroll){
+      zone = z; rijSel = null;
+      toonPaneel(); toonChips();
+      if (scroll && window.innerWidth < 900) paneel.scrollIntoView({behavior:'smooth', block:'nearest'});
+    }
+  
+    function zetView(v){
+      view = v;
+      bk.querySelectorAll('.bk-tab').forEach(function(t){ t.setAttribute('aria-selected', String(t.dataset.view === v)); });
+      bk.querySelectorAll('.bk-fig svg').forEach(function(s){ s.classList.toggle('on', s.dataset.view === v); });
+      if (zone && zonesIn(v).indexOf(zone) < 0){ zone = null; rijSel = null; }
+      toonPaneel(); toonChips();
+    }
+  
+    // Interactie
+    bk.querySelectorAll('.bk-tab').forEach(function(t){ t.addEventListener('click', function(){ zetView(t.dataset.view); }); });
+    bk.querySelectorAll('.z').forEach(function(p){
+      p.addEventListener('click', function(){ kies(p.dataset.zone, true); });
+      p.addEventListener('mouseenter', function(){ bk.querySelectorAll('.z[data-zone="' + p.dataset.zone + '"]').forEach(function(q){ q.classList.add('hover'); }); });
+      p.addEventListener('mouseleave', function(){ bk.querySelectorAll('.z.hover').forEach(function(q){ q.classList.remove('hover'); }); });
+    });
+    bk.querySelector('.bk-hoofd').addEventListener('click', function(){ zetView('gezicht'); });
+    chips.addEventListener('click', function(e){ var c = e.target.closest('.bk-chip'); if (c) kies(c.dataset.zone, true); });
+    paneel.addEventListener('click', function(e){
+      var o = e.target.closest('.bk-optie'); if (!o) return;
+      var r = rijen[+o.dataset.i];
+      rijSel = (rijSel === r) ? null : r;
+      toonPaneel();
+    });
+  
+    // Gegevens uit de prijslijst (één bron): ingebed door de generator, of opgehaald (preview)
+    var ingebed = document.getElementById('bkData');
+    (ingebed ? Promise.resolve(JSON.parse(ingebed.textContent)) :
+      fetch(bk.dataset.src).then(function(r){ return r.json(); }).then(function(d){
+        return d.groepen.filter(function(x){ return x.id === 'ontharing'; })[0].rijen;
+      })
+    ).then(function(alle){
+      var g = { rijen: alle };
+      rijen = g.rijen.filter(function(r){ return r.zones && r.zones.length; });
+      document.getElementById('bkAlles').innerHTML = g.rijen.map(function(r){
+        var k = /gratis/i.test(r.prijs) ? 'amt free' : /aanvraag/i.test(r.prijs) ? 'amt ask' : 'amt';
+        return '<div class="prow"><b>' + esc(r.naam) + '</b><span class="' + k + '">' + esc(r.prijs) + '</span>' + (r.info ? '<small>' + esc(r.info) + '</small>' : '') + '</div>';
+      }).join('');
+      toonPaneel(); toonChips();
+    });
+  })();
+
   /* ---------- Venster (Salonized): agenda of alle reviews, zonder landingspagina ---------- */
   var VENSTERS = {
     boek: { url: boekUrl, titel: 'Afspraak maken', sub: 'Kies je behandeling en een moment', frameTitel: 'Afspraak maken bij Huidzorg Mozi', nood: 'Laadt de agenda niet?', noodLink: 'Open de online agenda', noodUrl: function(){ return SALONIZED.microsite; } },

@@ -689,3 +689,49 @@ footer .wordmark small,footer .wordmark b{color:var(--on-dark)}
 /* Uitgesneden apparaat/product in zijn geheel tonen, op een zandvlak */
 .t-visual--heel{background:var(--sand);display:grid;place-items:center;padding:clamp(20px,3vw,36px)}
 .t-visual--heel > img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 20px 30px rgba(0,0,0,.12))}
+
+/* ---------- Lichaamskaart (laserontharing): zones aanklikbaar met tarief ---------- */
+.bk{background:var(--surface);border-radius:var(--r-card);padding:clamp(16px,3vw,32px)}
+.bk-top{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;margin-bottom:18px}
+.bk-tabs{display:inline-flex;gap:4px;padding:4px;background:var(--white);border-radius:var(--r-pill)}
+.bk-tab{border:0;background:transparent;min-height:40px;padding:0 18px;border-radius:var(--r-pill);font-size:14px;cursor:pointer;color:var(--ink)}
+.bk-tab[aria-selected="true"]{background:var(--dark);color:var(--white)}
+.bk-hint{font-size:13.5px;color:var(--text);margin:0}
+@media (max-width:400px){.bk-tabs{width:100%}.bk-tab{flex:1;padding:0 8px;font-size:13.5px}.bk-hint{display:none}}
+.bk-grid{display:grid;gap:16px}
+@media (min-width:900px){.bk-grid{grid-template-columns:minmax(0,1fr) 380px;gap:24px;align-items:start}}
+.bk-fig{background:var(--white);border-radius:20px;display:grid;place-items:center;padding:clamp(12px,3vw,28px);min-height:360px}
+.bk-fig svg{width:100%;height:auto;max-height:560px;display:none}
+.bk-fig svg.on{display:block}
+/* Neutraal silhouet zonder kleur; zones pas zichtbaar bij hover/keuze; stipjes tonen wat aanklikbaar is */
+.bk-fig .sil{fill:#EFEDEA;stroke:#8F8B87;stroke-width:1.6;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.bk-fig .lijn{fill:none;stroke:#ABA7A3;stroke-width:1.2;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.bk-fig .z{fill:transparent;cursor:pointer;transition:fill .2s}
+.bk-fig .z.hover{fill:rgba(29,29,29,.12)}
+.bk-fig .z.sel{fill:rgba(29,29,29,.78)}
+.bk-fig .stip{fill:var(--ink);stroke:var(--white);stroke-width:2;pointer-events:none;transition:fill .2s}
+.bk-fig .stip.sel{fill:var(--white);stroke:var(--ink)}
+.bk-fig .bk-hoofd{fill:transparent;cursor:pointer}
+.bk-panel{background:var(--white);border-radius:20px;padding:22px}
+@media (min-width:900px){.bk-panel{position:sticky;top:calc(var(--nav-h) + 24px)}}
+.bk-panel h3{margin:0 0 6px}
+.bk-panel .eyebrow{margin-bottom:10px}
+.bk-leeg p{margin:0;font-size:15px;color:var(--text)}
+.bk-opties{display:grid;gap:8px;margin:16px 0}
+.bk-optie{display:grid;grid-template-columns:1fr auto;gap:2px 16px;width:100%;text-align:left;background:var(--surface);border:1.5px solid transparent;border-radius:16px;padding:14px 16px;cursor:pointer;font:inherit;color:var(--ink);transition:background .2s,border-color .2s}
+.bk-optie:hover{background:var(--surface-2)}
+.bk-optie.sel{border-color:var(--ink)}
+.bk-optie .lbl{grid-column:1/-1;font-family:var(--font-label);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:2px}
+.bk-optie b{font-weight:600;font-size:15px}
+.bk-optie small{grid-column:1;font-size:13.5px;color:var(--text);line-height:1.4}
+.bk-optie .amt{grid-row:2 / span 2;grid-column:2;align-self:center;font-family:var(--font-display);font-size:26px;white-space:nowrap}
+.bk-noot{font-size:13px;color:var(--text);margin:0 0 16px}
+.bk-panel .btn{width:100%}
+.bk-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.bk-chip{min-height:38px;padding:0 14px;border-radius:var(--r-pill);border:1px solid var(--line);background:var(--white);font:inherit;font-size:14px;color:var(--ink);cursor:pointer;transition:background .2s,border-color .2s}
+.bk-chip:hover{border-color:var(--ink)}
+.bk-chip.on{background:var(--dark);border-color:var(--dark);color:var(--white)}
+.bk-alles{margin-top:20px;background:var(--white);border-radius:20px}
+.bk-alles summary{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:18px 22px;cursor:pointer;font-weight:600}
+.bk-alles summary::-webkit-details-marker{display:none}
+.bk-alles .rows{padding:0 22px 12px}

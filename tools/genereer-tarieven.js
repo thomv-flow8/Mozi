@@ -18,7 +18,7 @@ function bouw() {
         <summary><div><h2>${esc(g.naam)}</h2><div class="meta">${esc(g.intro)} · ${g.rijen.length} ${g.rijen.length === 1 ? 'tarief' : 'tarieven'}</div></div><span class="chev"><svg class="ico"><use href="#i-chev"/></svg></span></summary>
         <div class="rows">
 ${rijenHtml(g)}
-          <div class="group-foot"><a class="link-arrow" href="${g.pagina || './#behandelingen'}">Meer over deze behandeling <svg class="ico"><use href="#i-arrow"/></svg></a><a class="btn btn-primary" href="#" data-book><svg class="ico"><use href="#i-cal"/></svg>Afspraak maken</a></div>
+          <div class="group-foot"><a class="link-arrow" href="${g.pagina ? g.pagina + (g.id === 'ontharing' ? '#tarieven' : '') : './#behandelingen'}">${g.id === 'ontharing' ? 'Kies je zone op de lichaamskaart' : 'Meer over deze behandeling'} <svg class="ico"><use href="#i-arrow"/></svg></a><a class="btn btn-primary" href="#" data-book><svg class="ico"><use href="#i-cal"/></svg>Afspraak maken</a></div>
         </div>
       </details>`).join('');
 

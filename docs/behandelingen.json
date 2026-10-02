@@ -900,7 +900,8 @@
         "laser",
         "schimmelnagels",
         "huidverhevenheden"
-      ]
+      ],
+      "lichaamskaart": true
     },
     {
       "slug": "laser",
