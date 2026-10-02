@@ -6,6 +6,9 @@ const { data: tarieven, rijenHtml } = require('./genereer-tarieven');
 const data = JSON.parse(lees('docs/behandelingen.json'));
 const gebouwd = new Set(data.behandelingen.map(b => b.slug));
 
+// Koppen: *woord* wordt schuingedrukt (zo hoeft niemand HTML te typen in het CMS).
+const em = s => esc(s).replace(/\*(.+?)\*/g, '<em>$1</em>');
+
 const ico = (naam, extra) => `<svg class="ico"${extra ? ' ' + extra : ''}><use href="#i-${naam}"/></svg>`;
 
 // Illustratie: huidlagen, microkanaaltjes en nieuw collageen (animeert zodra in beeld).
@@ -35,7 +38,8 @@ const huidlagen = `<svg class="skin" viewBox="0 0 600 420" preserveAspectRatio="
 </svg>`;
 
 function visual(v) {
-  if (v.type === 'huidlagen') return `<div class="t-visual reveal d1" data-play>${huidlagen}</div>`;
+  if (v && v.type === 'huidlagen') return `<div class="t-visual reveal d1" data-play>${huidlagen}</div>`;
+  if (!v || !v.src) return '';
   return `<div class="t-visual reveal d1"><img src="${v.src}" alt="${esc(v.alt || '')}" loading="lazy"></div>`;
 }
 
@@ -51,7 +55,7 @@ function kaart(slug) {
 
 // Algemeen verloop (klopt voor elke behandeling); per behandeling te vervangen door een eigen verloop.
 const STANDAARD_VERLOOP = {
-  kop: 'Zo <em>verloopt</em> het',
+  kop: 'Zo *verloopt* het',
   stappen: [
     { wanneer: 'Intake', tekst: 'Een gratis gesprek van 30 minuten. We bekijken je huid en bespreken je wensen, en wat realistisch is.' },
     { wanneer: 'Plan', tekst: 'Je krijgt een behandelplan op maat, vaak een combinatie van behandelingen voor het beste resultaat.' },
@@ -60,7 +64,24 @@ const STANDAARD_VERLOOP = {
   ]
 };
 
+const vol = a => Array.isArray(a) && a.length > 0;
+function schoon(b) {
+  b = Object.assign({}, b);
+  if (!b.waarom || !vol(b.waarom.punten)) b.waarom = null;
+  if (!b.verloop || !vol(b.verloop.stappen)) b.verloop = null;
+  if (!vol(b.resultaten)) b.resultaten = null;
+  if (!vol(b.tarievenRijen)) b.tarievenRijen = null;
+  if (!b.logo) b.logo = null;
+  b.secties = (b.secties || []).filter(x => x && (x.kop || vol(x.tekst)));
+  b.feiten = (b.feiten || []).filter(x => x && x.waarde);
+  b.geschiktBij = (b.geschiktBij || []).filter(Boolean);
+  b.vragen = (b.vragen || []).filter(x => x && x.v);
+  b.gerelateerd = (b.gerelateerd || []).filter(x => data.kaarten[x]);
+  return b;
+}
+
 function bouw(b) {
+  b = schoon(b);
   const kort = b.kort || b.titel.split(' ')[0];
   const verloop = b.verloop || STANDAARD_VERLOOP;
   const groep = b.tarieven ? tarieven.groepen.find(g => g.id === b.tarieven) : null;
@@ -76,7 +97,7 @@ function bouw(b) {
     <div class="t-split${i % 2 ? ' rev' : ''}"${i === 0 ? '' : ` id="${s.id}"`}>
       <div class="t-text reveal">
         <p class="eyebrow">${esc(s.eyebrow)}</p>
-        <h2>${s.kop}</h2>
+        <h2>${em(s.kop)}</h2>
         ${s.tekst.map(p => `<p>${esc(p)}</p>`).join('\n        ')}
       </div>
       ${visual(s.visual)}
@@ -106,7 +127,7 @@ function bouw(b) {
       <p class="ba-note">${ico('info')}<span><span id="caseCredit"></span> Resultaten verschillen per persoon.</span></p>
     </div>
   </div>
-  <script type="application/json" id="baCases">${JSON.stringify(b.resultaten)}</script>
+  <script type="application/json" id="baCases">${JSON.stringify(b.resultaten.map(r => Object.assign({}, r, { info: r.info.map(i => [i.label, i.waarde]) })))}</script>
 </section>` : '';
 
   const inhoud = `
@@ -119,7 +140,7 @@ function bouw(b) {
     <div class="t-hero-grid">
       <div class="reveal">
         <p class="eyebrow">${esc(b.categorie)}</p>
-        <h1>${b.titelHtml}</h1>
+        <h1>${em(b.paginaKop || b.titel)}</h1>
         <p class="lead">${esc(b.intro)}</p>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="#" data-book>${ico('cal')}Plan een gratis intake</a>
@@ -156,7 +177,7 @@ function bouw(b) {
       </div>
     </div>
     ${b.waarom ? `<div class="reveal d1">
-      <h3 style="margin-bottom:18px">${b.waarom.kop}</h3>
+      <h3 style="margin-bottom:18px">${em(b.waarom.kop)}</h3>
       <div class="why-grid">
         ${b.waarom.punten.map(p => `<div class="why">${ico('shield')}<div><b>${esc(p.titel)}</b><p>${esc(p.tekst)}</p></div></div>`).join('\n        ')}
       </div>
@@ -169,7 +190,7 @@ ${resultaten}
   <div class="wrap t-split">
     <div class="reveal">
       <p class="eyebrow">Verloop</p>
-      <h2>${verloop.kop}</h2>
+      <h2>${em(verloop.kop)}</h2>
     </div>
     <ol class="timeline reveal d1">
       ${verloop.stappen.map(s => `<li><b>${esc(s.wanneer)}</b><p>${esc(s.tekst)}</p></li>`).join('\n      ')}

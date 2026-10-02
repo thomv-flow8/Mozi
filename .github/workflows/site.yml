@@ -1,0 +1,49 @@
+# Bouwt en publiceert de site op GitHub Pages.
+# Draait bij elke wijziging op main (ook wijzigingen via Pages CMS), elke nacht (verse reviews),
+# en handmatig via "Run workflow".
+name: Site bouwen en publiceren
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 4 * * *"   # elke nacht 04:00 UTC: reviews verversen
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  bouwen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Reviews ophalen bij Salonized
+        # Mislukt het ophalen, dan bouwen we met de laatst opgeslagen reviews.
+        continue-on-error: true
+        run: node tools/haal-reviews.js
+      - name: Site bouwen
+        run: node tools/bouw-site.js
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  publiceren:
+    needs: bouwen
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

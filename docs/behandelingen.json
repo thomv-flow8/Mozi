@@ -4,8 +4,8 @@
     {
       "slug": "acne",
       "titel": "Acnetherapie",
+      "paginaKop": "Acne*therapie*",
       "kort": "acnetherapie",
-      "titelHtml": "Acne<em>therapie</em>",
       "categorie": "Huidproblemen",
       "omschrijving": "Acnetherapie bij Huidzorg Mozi in Gorinchem: dieptereiniging, peelings, licht- en lasertherapie, en behandeling van acnelittekens. Gratis intake.",
       "intro": "Geen standaardbehandeling, maar een plan voor jouw huid. Flinke ontstekingen vragen om een andere aanpak dan mee-eters; daarom kijken we eerst goed wat er speelt.",
@@ -32,7 +32,7 @@
         {
           "id": "wat",
           "eyebrow": "Wat is acne",
-          "kop": "Verstopte poriën, <em>ontstoken</em> huid",
+          "kop": "Verstopte poriën, *ontstoken* huid",
           "tekst": [
             "We spreken van acne als poriën met talg, bacteriën en vetzuren verstopt zijn. Die talgophopingen veroorzaken ontstekingen in de omliggende huid: rode bultjes, puistjes en onderhuidse ontstekingen.",
             "Acne komt niet alleen in het gezicht voor, maar ook op de hals, borst, rug, schouders en armen. Na de tienerjaren neemt het sterk af, maar bij een deel van de mensen blijft het een rol spelen. Vaak brengt het onzekerheid met zich mee."
@@ -46,7 +46,7 @@
         {
           "id": "hoe",
           "eyebrow": "De behandeling",
-          "kop": "Ontstekingen onder <em>controle</em>",
+          "kop": "Ontstekingen onder *controle*",
           "tekst": [
             "De behandeling kan onder andere bestaan uit het manueel reinigen van de huid, chemische peelings, rood/blauw lichttherapie en licht- of lasertherapie.",
             "Acnelittekens pakken we aan met chemische peelings, microneedling of lasertherapie. Vaak is een combinatie nodig voor het gewenste resultaat, en we geven altijd advies voor de verzorging thuis."
@@ -91,8 +91,8 @@
     {
       "slug": "rosacea",
       "titel": "Rosacea & couperose",
+      "paginaKop": "Rosacea & *couperose*",
       "kort": "de behandeling",
-      "titelHtml": "Rosacea &amp; <em>couperose</em>",
       "categorie": "Huidproblemen",
       "omschrijving": "Rosacea en couperose behandelen bij Huidzorg Mozi in Gorinchem, met Clearlight IPL, laser en milde peelings. Gratis intake.",
       "intro": "Rosacea is een hardnekkige aandoening, maar gelukkig goed te behandelen. Dat weten we uit persoonlijke ervaring. De behandeling is gericht op het weer rustig krijgen van de huid.",
@@ -121,7 +121,7 @@
         {
           "id": "wat",
           "eyebrow": "Wat is het",
-          "kop": "Rood als een <em>roos</em>",
+          "kop": "Rood als een *roos*",
           "tekst": [
             "Rosacea betekent letterlijk 'rood als een roos'. De belangrijkste kenmerken zijn roodheid, kleine uitgezette bloedvaatjes (couperose), bultjes en puistjes. Het lijkt op acne, maar komt op latere leeftijd voor.",
             "Couperose is een onschuldig verschijnsel waarbij rode of blauwe bloedvaatjes in het gezicht zichtbaar zijn. Warmte, zonlicht, cosmetica en sommige medicijnen kunnen de klachten verergeren."
@@ -135,7 +135,7 @@
         {
           "id": "hoe",
           "eyebrow": "De behandeling",
-          "kop": "De huid weer <em>rustig</em>",
+          "kop": "De huid weer *rustig*",
           "tekst": [
             "We richten ons op het uitdoven van de ontsteking en het herstellen van de huidbarrière. Vaatjes behandelen we met coagulatie of laser; voor de gevoelige huid zetten we producten en milde peelings met melkzuur en amandelzuur in.",
             "Met de krachtige IPL Clearlight zien we de roodheid vervagen en de ontstekingen afnemen: de vaatjes krimpen en de huid oogt rustiger."
@@ -155,7 +155,7 @@
         "Gevoelige huid"
       ],
       "waarom": {
-        "kop": "Waarom <em>Mozi</em>",
+        "kop": "Waarom *Mozi*",
         "punten": [
           {
             "titel": "Uit eigen ervaring",
@@ -196,8 +196,8 @@
     {
       "slug": "huidverhevenheden",
       "titel": "Huidverhevenheden",
+      "paginaKop": "Huid*verhevenheden*",
       "kort": "de behandeling",
-      "titelHtml": "Huid<em>verhevenheden</em>",
       "categorie": "Huidproblemen",
       "omschrijving": "Steelwratjes, ouderdomswratjes en rode vaatjes verwijderen bij Huidzorg Mozi in Gorinchem, met electrocoagulatie of cryotherapie.",
       "intro": "Bultjes, wratjes of kleurverschillen waardoor je huid er ouder of vlekkerig uitziet? Stoor je je eraan, dan laat je ze eenvoudig weghalen door onze huidtherapeuten.",
@@ -224,7 +224,7 @@
         {
           "id": "wat",
           "eyebrow": "Wat is het",
-          "kop": "Bultjes, wratjes en <em>vaatjes</em>",
+          "kop": "Bultjes, wratjes en *vaatjes*",
           "tekst": [
             "Elke huid heeft voelbare bultjes, aanhangsels of verdikkingen, en hoe ouder we worden hoe meer. Denk aan steelwratjes (fibromen), ouderdomswratten (verruca seborrhoica), talgklierhyperplasie en verdikte moedervlekken.",
             "Rond de ogen kunnen xanthelasma en syringomen voorkomen. Rode vaatjes (spider naevi) zitten vaak rond de neus, wangen, hals of decolleté."
@@ -238,7 +238,7 @@
         {
           "id": "hoe",
           "eyebrow": "De behandeling",
-          "kop": "Gericht <em>verwijderd</em>",
+          "kop": "Gericht *verwijderd*",
           "tekst": [
             "Steelwratjes en andere verhevenheden verwijderen we met electrocoagulatie of cryotherapie. Rode vaatjes behandelen we met electrocoagulatie of IPL.",
             "Je betaalt per behandeltijd, van 10 tot 45 minuten, afhankelijk van hoeveel plekjes er behandeld worden."
@@ -282,8 +282,8 @@
     {
       "slug": "peelings",
       "titel": "Medische peelings",
+      "paginaKop": "Medische *peelings*",
       "kort": "een peeling",
-      "titelHtml": "Medische <em>peelings</em>",
       "categorie": "Huidverbetering & verjonging",
       "omschrijving": "Medische peelings van Dermaceutic, Theraderm en Renophase bij Huidzorg Mozi in Gorinchem, voor pigment, acnelittekens, lijntjes en een gladdere huid.",
       "intro": "Een medische peeling laat het bovenste, 'dode' huidlaagje versneld afschilferen. Zo ontstaat een vernieuwde, gladdere huid. Al na één behandeling merk je verschil.",
@@ -312,7 +312,7 @@
         {
           "id": "wat",
           "eyebrow": "Wat is het",
-          "kop": "Een <em>vernieuwde</em> huid",
+          "kop": "Een *vernieuwde* huid",
           "tekst": [
             "Een peeling kan zorgen voor een minimale tot zware afschilfering. Dat hangt af van de sterkte en diepte van de peeling, de voorbereiding en de conditie van de huid.",
             "Er zijn peelings voor (acne)littekens, hyperpigmentatie, melasma, een gevoelige huid, rosacea en fijne lijntjes. Welke peeling we kiezen hangt af van je huid en de gewenste hersteltijd."
@@ -326,7 +326,7 @@
         {
           "id": "hoe",
           "eyebrow": "Onze peelings",
-          "kop": "Van feestpeeling tot <em>TCA</em>",
+          "kop": "Van feestpeeling tot *TCA*",
           "tekst": [
             "De Mask Peel ('feestpeeling', 15 minuten) geeft direct een glow zonder vervelling. De Milk Peel en Crystal Peel (30 minuten) werken op fijne lijntjes, een doffe teint, pigment en milde acne.",
             "De Cosmo Peel met TCA (45 minuten, 3–7 dagen herstel) verbetert lijntjes, rimpels en acnelittekens. De Mela Lightening (60 minuten) pakt melasma aan en kan ook in de zomer."
@@ -348,7 +348,7 @@
         "Gevoelige huid"
       ],
       "verloop": {
-        "kop": "Na de <em>peeling</em>",
+        "kop": "Na de *peeling*",
         "stappen": [
           {
             "wanneer": "Voorbereiden",
@@ -393,7 +393,7 @@
     {
       "slug": "skinpen",
       "titel": "SkinPen microneedling",
-      "titelHtml": "SkinPen <em>microneedling</em>",
+      "paginaKop": "SkinPen *microneedling*",
       "categorie": "Huidverbetering & verjonging",
       "omschrijving": "SkinPen microneedling bij Huidzorg Mozi in Gorinchem: het eerste FDA-goedgekeurde microneedlingsysteem, voor acnelittekens, fijne lijntjes en een stevigere huid.",
       "intro": "De huid in de diepte vernieuwen, zónder oppervlakkige schade en met minimale downtime. We kozen bewust voor SkinPen: het eerste FDA-goedgekeurde medische microneedlingsysteem ter wereld.",
@@ -421,7 +421,7 @@
         {
           "id": "wat",
           "eyebrow": "Wat is het",
-          "kop": "Collageen <em>inductie</em> therapie",
+          "kop": "Collageen *inductie* therapie",
           "tekst": [
             "SkinPen Collageen Inductie Therapie (CIT) vernieuwt de huid in de diepte, zonder oppervlakkige schade aan te richten en met minimale downtime.",
             "SkinPen is het eerste FDA-goedgekeurde medische microneedlingsysteem ter wereld, en het enige systeem dat FDA-goedgekeurd is voor het veilig en effectief behandelen van acnelittekens. Daarnaast verstevigt en egaliseert het de huid, en worden fijne lijntjes en poriën verfijnd."
@@ -435,7 +435,7 @@
         {
           "id": "hoe",
           "eyebrow": "Hoe werkt het",
-          "kop": "Je huid herstelt <em>zichzelf</em>",
+          "kop": "Je huid herstelt *zichzelf*",
           "tekst": [
             "Hele kleine, steriele naaldjes komen vibrerend op de huid terecht en maken minuscule microkanaaltjes.",
             "Dat activeert het natuurlijke herstelproces diep in de huid: er wordt nieuw collageen (type 3) en elastine aangemaakt. De huid wordt steviger en voller, de teint egaler, frisser en stralender."
@@ -456,7 +456,7 @@
         "Verslapte huid"
       ],
       "waarom": {
-        "kop": "Waarom <em>SkinPen</em>",
+        "kop": "Waarom *SkinPen*",
         "punten": [
           {
             "titel": "Ingestelde naalddiepte",
@@ -473,7 +473,7 @@
         ]
       },
       "verloop": {
-        "kop": "Na de <em>behandeling</em>",
+        "kop": "Na de *behandeling*",
         "stappen": [
           {
             "wanneer": "Direct",
@@ -499,18 +499,18 @@
           "voor": "../assets/resultaten/skinpen-2-voor.jpg",
           "na": "../assets/resultaten/skinpen-2-na.jpg",
           "info": [
-            [
-              "Behandeling",
-              "SkinPen microneedling"
-            ],
-            [
-              "Sessies",
-              "2"
-            ],
-            [
-              "Cliënt",
-              "Man, 27 jaar"
-            ]
+            {
+              "label": "Behandeling",
+              "waarde": "SkinPen microneedling"
+            },
+            {
+              "label": "Sessies",
+              "waarde": "2"
+            },
+            {
+              "label": "Cliënt",
+              "waarde": "Man, 27 jaar"
+            }
           ],
           "bron": "Klinische foto's van SkinPen / Bellus Medical (Cathy A. Presnick, Melbourne, VS)."
         },
@@ -519,18 +519,18 @@
           "voor": "../assets/resultaten/skinpen-4-voor.jpg",
           "na": "../assets/resultaten/skinpen-4-na.jpg",
           "info": [
-            [
-              "Behandeling",
-              "SkinPen microneedling"
-            ],
-            [
-              "Sessies",
-              "6"
-            ],
-            [
-              "Cliënt",
-              "Vrouw"
-            ]
+            {
+              "label": "Behandeling",
+              "waarde": "SkinPen microneedling"
+            },
+            {
+              "label": "Sessies",
+              "waarde": "6"
+            },
+            {
+              "label": "Cliënt",
+              "waarde": "Vrouw"
+            }
           ],
           "bron": "Klinische foto's van SkinPen / Bellus Medical (Cathy A. Presnick, Melbourne, VS)."
         },
@@ -539,18 +539,18 @@
           "voor": "../assets/resultaten/skinpen-7-1-voor.jpg",
           "na": "../assets/resultaten/skinpen-7-1-na.jpg",
           "info": [
-            [
-              "Behandeling",
-              "SkinPen microneedling"
-            ],
-            [
-              "Sessies",
-              "3"
-            ],
-            [
-              "Cliënt",
-              "Vrouw, 45 jaar"
-            ]
+            {
+              "label": "Behandeling",
+              "waarde": "SkinPen microneedling"
+            },
+            {
+              "label": "Sessies",
+              "waarde": "3"
+            },
+            {
+              "label": "Cliënt",
+              "waarde": "Vrouw, 45 jaar"
+            }
           ],
           "bron": "Klinische foto's van SkinPen / Bellus Medical (Elizabeth Steigner, Orange, VS)."
         }
@@ -593,8 +593,8 @@
     {
       "slug": "combinatie",
       "titel": "Combinatiebehandelingen",
+      "paginaKop": "Combinatie*behandelingen*",
       "kort": "een combinatie",
-      "titelHtml": "Combinatie<em>behandelingen</em>",
       "categorie": "Huidverbetering & verjonging",
       "omschrijving": "Combinatiebehandelingen bij Huidzorg Mozi in Gorinchem: Firm Facial, Glow Facial, Cosmo Glow en meer. Peeling en microneedling in één behandeling.",
       "intro": "De meeste behandelingen zijn met elkaar te combineren en geven samen meer resultaat. In één behandeling brengen we peeling en microneedling samen.",
@@ -621,7 +621,7 @@
         {
           "id": "wat",
           "eyebrow": "Wat is het",
-          "kop": "Samen <em>sterker</em>",
+          "kop": "Samen *sterker*",
           "tekst": [
             "Bij de Firm Facial combineren we een TCA-peeling met microneedling. De peeling lost de bovenste huidlaag op, waardoor de huidcellen eronder worden aangezet tot vernieuwing. Microneedling stimuleert daarnaast de aanmaak van collageen en elastine.",
             "Door de technieken te combineren krijgt de huid een enorme boost, bij huidveroudering, acnelittekens, een grove huidstructuur en pigmentvlekken."
@@ -635,7 +635,7 @@
         {
           "id": "hoe",
           "eyebrow": "Onze combinaties",
-          "kop": "Voor elke huid een <em>glow</em>",
+          "kop": "Voor elke huid een *glow*",
           "tekst": [
             "De Glow Facial brengt hoog geconcentreerde vitamine C in de huid voor een gehydrateerde, stralende huid. De Cosmo Glow combineert TCA 12% met hyaluron van Emmagen voor hydratatie en minder fijne lijntjes.",
             "De Frisse blik-peeling richt zich op lijntjes, uitdroging en donkere kringen rond de ogen. Voor de gevoelige huid is er de Detox Facial."
@@ -657,7 +657,7 @@
         "Gevoelige huid"
       ],
       "verloop": {
-        "kop": "Voor het beste <em>resultaat</em>",
+        "kop": "Voor het beste *resultaat*",
         "stappen": [
           {
             "wanneer": "Intake",
@@ -701,8 +701,8 @@
     {
       "slug": "huidverbetering",
       "titel": "Huidverbetering",
+      "paginaKop": "Huid*verbetering*",
       "kort": "huidverbetering",
-      "titelHtml": "Huid<em>verbetering</em>",
       "categorie": "Huidverbetering & verjonging",
       "omschrijving": "Huidverbetering en huidverjonging bij Huidzorg Mozi in Gorinchem: Innerlift, Clear en Toning voor collageen, roodheid en pigment.",
       "intro": "Collageen stimuleren, roodheid verminderen en verspreid pigment egaliseren: met Innerlift, Clear en Toning werken we gericht aan een egale, stralende huid.",
@@ -731,7 +731,7 @@
         {
           "id": "wat",
           "eyebrow": "Wat is het",
-          "kop": "Drie doelen, één <em>huid</em>",
+          "kop": "Drie doelen, één *huid*",
           "tekst": [
             "Innerlift stimuleert de aanmaak van collageen. Clear vermindert roodheid. Toning vermindert verspreid pigment. Samen vormen ze een complete aanpak voor een egale huid.",
             "De Clarity II-laser kan helpen bij het verminderen van fijne lijntjes en andere tekenen van veroudering, bij pigmentvlekken en bij het verbeteren van de huidtextuur."
@@ -745,7 +745,7 @@
         {
           "id": "hoe",
           "eyebrow": "Combineren",
-          "kop": "Nog meer <em>effect</em>",
+          "kop": "Nog meer *effect*",
           "tekst": [
             "Kies je voor alle drie, dan combineren we Innerlift, Clear en Pigment in één traject. Een peeling of LED-therapie kun je toevoegen voor extra resultaat.",
             "Bij rosacea kiezen we voor een combinatie van peeling en LED-therapie, gericht op een rustige huid."
@@ -788,8 +788,8 @@
     {
       "slug": "ontharen",
       "titel": "Laserontharing",
+      "paginaKop": "Laser*ontharing*",
       "kort": "laserontharing",
-      "titelHtml": "Laser<em>ontharing</em>",
       "categorie": "Laser & licht",
       "omschrijving": "Laserontharing met de Clarity II bij Huidzorg Mozi in Gorinchem: de krachtigste ontharingslaser, geschikt voor alle huidtinten.",
       "intro": "Op zoek naar een definitieve oplossing voor ongewenste haargroei? We gebruiken de krachtigste ontharingslaser op de markt: de Clarity II.",
@@ -818,7 +818,7 @@
         {
           "id": "wat",
           "eyebrow": "Wat is het",
-          "kop": "Definitief <em>glad</em>",
+          "kop": "Definitief *glad*",
           "tekst": [
             "De Clarity II combineert Nd:YAG- en Alexandrite-technologie. Daardoor kunnen we alle huidtinten veilig behandelen, en zelfs de dunnere haren.",
             "De juiste combinatie van energie en behandeltijd zorgt voor de best haalbare resultaten in een aantal sessies."
@@ -832,7 +832,7 @@
         {
           "id": "hoe",
           "eyebrow": "De behandeling",
-          "kop": "Snel en <em>veilig</em>",
+          "kop": "Snel en *veilig*",
           "tekst": [
             "De laser meet constant de temperatuur van de huid, wat bijdraagt aan een veilige behandeling. De koeling maakt de behandeling vrijwel pijnloos.",
             "Met de IntelliTrak-technologie worden alle haren snel en effectief behandeld."
@@ -854,7 +854,7 @@
         "Alle huidtinten"
       ],
       "waarom": {
-        "kop": "Waarom de <em>Clarity II</em>",
+        "kop": "Waarom de *Clarity II*",
         "punten": [
           {
             "titel": "Krachtigste laser",
@@ -894,8 +894,8 @@
     {
       "slug": "laser",
       "titel": "Laser bij vaatjes & pigment",
+      "paginaKop": "Laser bij vaatjes *& pigment*",
       "kort": "laserbehandeling",
-      "titelHtml": "Laser bij vaatjes <em>&amp; pigment</em>",
       "categorie": "Laser & licht",
       "omschrijving": "Laserbehandeling van roodheid, vaatjes en pigmentvlekken bij Huidzorg Mozi in Gorinchem, van één plek tot het hele gelaat.",
       "intro": "Roodheid, zichtbare vaatjes en pigmentvlekken gericht behandeld, van één plek tot gelaat, hals en decolleté.",
@@ -924,7 +924,7 @@
         {
           "id": "wat",
           "eyebrow": "Wat is het",
-          "kop": "Rust en <em>egaliteit</em>",
+          "kop": "Rust en *egaliteit*",
           "tekst": [
             "Roodheid die continu in het gezicht aanwezig is en steeds opvallender wordt, kan als storend worden ervaren. Vaak is het een uiting van vaatafwijkingen, een ontstekingsreactie of te veel zon.",
             "Pigmentvlekken ontstaan vooral waar de zon gemakkelijk bijkomt: gezicht, decolleté, handen en schouders. Het onderscheid tussen oppervlakkig en dieper pigment bepaalt de beste aanpak."
@@ -938,7 +938,7 @@
         {
           "id": "hoe",
           "eyebrow": "De behandeling",
-          "kop": "Gericht per <em>gebied</em>",
+          "kop": "Gericht per *gebied*",
           "tekst": [
             "De Clarity II-laser behandelt ongewenste bloedvaatjes, couperose en hyperpigmentatie zoals ouderdoms- en zonnevlekken. Met de IPL Clearlight behandelen we vaatjes en roodheid in het gelaat.",
             "Je kiest het gebied: van één plek tot een combinatie van gelaat, hals en decolleté."
@@ -982,8 +982,8 @@
     {
       "slug": "led",
       "titel": "LED-therapie Lumi8",
+      "paginaKop": "LED-therapie *Lumi8*",
       "kort": "LED-therapie",
-      "titelHtml": "LED-therapie <em>Lumi8</em>",
       "categorie": "Laser & licht",
       "omschrijving": "LED-therapie met de Lumi8 bij Huidzorg Mozi in Gorinchem: medisch gecertificeerd licht dat de huid verjongt, herstelt en kalmeert.",
       "intro": "Medisch gecertificeerd LED-licht dat de huid verjongt, herstelt en kalmeert. Geschikt voor alle huidtypen en goed te combineren met andere behandelingen.",
@@ -1010,7 +1010,7 @@
         {
           "id": "wat",
           "eyebrow": "Wat is het",
-          "kop": "Licht als <em>celenergie</em>",
+          "kop": "Licht als *celenergie*",
           "tekst": [
             "LED-licht dringt de huidcellen binnen en wordt omgezet in celenergie. Dat zorgt voor nieuw collageen en elastine, een betere doorbloeding en minder ontstekingen.",
             "De behandeling is niet-invasief en werkt zonder warmte en zonder UVA- of UVB-straling: aangenaam, veilig en zonder herstelperiode."
@@ -1024,7 +1024,7 @@
         {
           "id": "hoe",
           "eyebrow": "De techniek",
-          "kop": "Rood, geel en <em>infrarood</em>",
+          "kop": "Rood, geel en *infrarood*",
           "tekst": [
             "De Lumi8 heeft acht programma's met meer dan 1300 LED's: geel licht (590 nm) voor verjonging en versteviging, rood licht (630 nm) voor herstel, pigment, rosacea en acne, en bijna-infrarood (830 nm).",
             "De gepatenteerde Power Wave Cycle zorgt dat de huid niet aan het licht went, zodat het resultaat na meerdere behandelingen alleen maar beter wordt."
@@ -1086,8 +1086,8 @@
     {
       "slug": "schimmelnagels",
       "titel": "Schimmelnagels",
+      "paginaKop": "Schimmel*nagels*",
       "kort": "de laserbehandeling",
-      "titelHtml": "Schimmel<em>nagels</em>",
       "categorie": "Laser & licht",
       "omschrijving": "Schimmelnagels behandelen met de Clarity II-laser bij Huidzorg Mozi in Gorinchem. Pakt de schimmel bij de kern aan.",
       "intro": "Crèmes, nagellak en huismiddeltjes dringen niet door de nagel heen. Een behandeling met onze Clarity II-laser pakt het probleem wél bij de kern aan.",
@@ -1116,7 +1116,7 @@
         {
           "id": "wat",
           "eyebrow": "Wat is het",
-          "kop": "Een hardnekkig <em>probleem</em>",
+          "kop": "Een hardnekkig *probleem*",
           "tekst": [
             "Schimmelnagels, ook wel kalknagels genoemd, zijn een veelvoorkomend huidprobleem. De teen- of vingernagels worden dikker en krijgen een gele, groene of bruine kleur.",
             "Middeltjes van buitenaf dringen niet door de nagel heen en hebben daardoor vaak weinig resultaat."
@@ -1130,7 +1130,7 @@
         {
           "id": "hoe",
           "eyebrow": "De behandeling",
-          "kop": "Laser tot in de <em>kern</em>",
+          "kop": "Laser tot in de *kern*",
           "tekst": [
             "De laser verhit de nagel en vernietigt de schimmels, zonder de nagel, het nagelbed of de omliggende huid te beschadigen. De celstructuur van de schimmel raakt blijvend beschadigd, zodat de infectie stopt.",
             "Het aangetaste deel groeit uit en maakt plaats voor een gezonde nagel. Teennagels groeien ongeveer één millimeter per maand, dus er zijn meerdere behandelingen en wat geduld nodig."
@@ -1148,7 +1148,7 @@
         "Verkleurde nagels"
       ],
       "waarom": {
-        "kop": "Waarom de <em>Clarity II</em>",
+        "kop": "Waarom de *Clarity II*",
         "punten": [
           {
             "titel": "Gericht",
@@ -1195,8 +1195,8 @@
     {
       "slug": "productadvies",
       "titel": "Huidanalyse & productadvies",
+      "paginaKop": "Huidanalyse & *productadvies*",
       "kort": "productadvies",
-      "titelHtml": "Huidanalyse &amp; <em>productadvies</em>",
       "categorie": "Advies",
       "omschrijving": "Huidanalyse en persoonlijk productadvies bij Huidzorg Mozi in Gorinchem, met Dermaceutic, Renophase en Theraderm. Kosten vervallen bij aankoop.",
       "intro": "We kijken goed naar je huid en bepalen welke verzorging jouw huid nodig heeft. De kosten van het consult vervallen bij aankoop van producten.",
@@ -1225,7 +1225,7 @@
         {
           "id": "wat",
           "eyebrow": "Onze merken",
-          "kop": "De juiste <em>match</em>",
+          "kop": "De juiste *match*",
           "tekst": [
             "Dermaceutic is een van de bekendste namen in chemische peelings en medische huidproducten, ontwikkeld met dermatologen en cosmetisch artsen. Het werkt met een stappenplan, zodat je een persoonlijk verzorgingsplan krijgt.",
             "Renophase gebruiken we vooral bij de gevoelige huid: het helpt de huid zichzelf te herstellen, op huideigen kracht en tempo. Theraderm is een Zuid-Koreaans merk met organische producten, ook voor de getinte en donkere huid."
@@ -1239,7 +1239,7 @@
         {
           "id": "hoe",
           "eyebrow": "Het consult",
-          "kop": "Advies dat <em>werkt</em>",
+          "kop": "Advies dat *werkt*",
           "tekst": [
             "Tijdens het consult analyseren we je huid en bespreken we je huidige verzorging. Je krijgt een advies met producten die passen bij jouw huid en eventuele behandelingen.",
             "Een goede verzorging thuis is net zo belangrijk als de behandeling in de praktijk."

@@ -1,0 +1,185 @@
+# Pages CMS — beheeromgeving voor Emine (https://app.pagescms.org)
+# Elke wijziging wordt een commit op main; GitHub bouwt en publiceert de site daarna automatisch.
+# Schuingedrukt in koppen: zet het woord tussen sterretjes, bijv. "SkinPen *microneedling*".
+
+media:
+  input: assets          # map in de repository
+  output: ../assets      # zo staat het pad in de databestanden
+  path: assets/web       # nieuwe uploads komen hier
+  extensions: [jpg, jpeg, png, webp]
+
+content:
+  # ---------------------------------------------------------------- Tarieven
+  - name: tarieven
+    label: Tarieven
+    description: Alle prijzen. Wijzigingen verschijnen op de tarievenpagina én op de behandelpagina's.
+    type: file
+    path: docs/tarieven.json
+    fields:
+      - { name: _bron, label: Bron, type: string, hidden: true }
+      - name: groepen
+        label: Categorieën
+        type: object
+        list:
+          collapsible: { collapsed: true, summary: "{naam}" }
+        fields:
+          - { name: id, label: ID, type: string, hidden: true }
+          - { name: naam, label: Naam categorie, type: string, required: true }
+          - { name: pagina, label: Behandelpagina, type: string, hidden: true }
+          - { name: intro, label: Korte omschrijving, type: string }
+          - name: rijen
+            label: Tarieven
+            type: object
+            list:
+              collapsible: { collapsed: true, summary: "{naam} — {prijs}" }
+            fields:
+              - { name: naam, label: Behandeling, type: string, required: true }
+              - { name: info, label: Toelichting (optioneel), type: string }
+              - { name: prijs, label: Prijs, type: string, required: true, description: "Bijv. € 75, vanaf € 100, gratis of op aanvraag" }
+
+  # ---------------------------------------------------------------- Behandelingen
+  - name: behandelingen
+    label: Behandelingen
+    description: De twaalf behandelpagina's. Prijzen staan bij Tarieven.
+    type: file
+    path: docs/behandelingen.json
+    fields:
+      - { name: _bron, label: Bron, type: string, hidden: true }
+      - name: behandelingen
+        label: Behandelingen
+        type: object
+        list:
+          collapsible: { collapsed: true, summary: "{titel}" }
+        fields:
+          - { name: slug, label: Adres (niet wijzigen), type: string, hidden: true }
+          - { name: titel, label: Titel, type: string, required: true }
+          - { name: paginaKop, label: Kop bovenaan, type: string, description: "Schuingedrukt deel tussen sterretjes, bijv. SkinPen *microneedling*" }
+          - { name: kort, label: Korte naam in zinnen, type: string, description: "Voor 'Wat kost …?' en 'Waar … helpt'" }
+          - name: categorie
+            label: Categorie
+            type: select
+            options: { values: ["Huidproblemen", "Huidverbetering & verjonging", "Laser & licht", "Advies"] }
+          - { name: omschrijving, label: Omschrijving voor Google, type: text }
+          - { name: intro, label: Intro, type: text }
+          - { name: beeld, label: Hoofdfoto, type: image }
+          - { name: logo, label: Logo merk/apparaat (optioneel), type: image }
+          - { name: logoTekst, label: Tekst bij logo, type: string }
+          - name: feiten
+            label: Kerngegevens (4 blokjes)
+            type: object
+            list: { max: 4, collapsible: { collapsed: true, summary: "{waarde} — {label}" } }
+            fields:
+              - { name: waarde, label: Waarde, type: string }
+              - { name: label, label: Omschrijving, type: string }
+          - name: secties
+            label: Uitleg (blokken met tekst en beeld)
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{eyebrow}" } }
+            fields:
+              - { name: id, label: ID, type: string, hidden: true }
+              - { name: eyebrow, label: Kleine kop, type: string }
+              - { name: kop, label: Kop, type: string, description: "Schuingedrukt tussen sterretjes" }
+              - { name: tekst, label: Alinea's, type: text, list: true }
+              - name: visual
+                label: Beeld
+                type: object
+                fields:
+                  - name: type
+                    label: Soort
+                    type: select
+                    options: { values: ["foto", "huidlagen"] }
+                  - { name: src, label: Foto, type: image }
+                  - { name: alt, label: Beschrijving van de foto, type: string }
+          - { name: geschiktBij, label: Geschikt bij, type: string, list: true }
+          - name: waarom
+            label: Waarom-blok (optioneel)
+            type: object
+            fields:
+              - { name: kop, label: Kop, type: string }
+              - name: punten
+                label: Punten
+                type: object
+                list: { collapsible: { collapsed: true, summary: "{titel}" } }
+                fields:
+                  - { name: titel, label: Titel, type: string }
+                  - { name: tekst, label: Tekst, type: text }
+          - name: verloop
+            label: Verloop (optioneel; leeg = standaard intake → plan → behandeling → thuis)
+            type: object
+            fields:
+              - { name: kop, label: Kop, type: string }
+              - name: stappen
+                label: Stappen
+                type: object
+                list: { collapsible: { collapsed: true, summary: "{wanneer}" } }
+                fields:
+                  - { name: wanneer, label: Moment, type: string }
+                  - { name: tekst, label: Tekst, type: text }
+          - name: resultaten
+            label: Voor/na-resultaten (alleen met schriftelijke toestemming)
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{naam}" } }
+            fields:
+              - { name: naam, label: Naam (tabblad), type: string }
+              - { name: voor, label: Foto voor, type: image }
+              - { name: na, label: Foto na, type: image }
+              - name: info
+                label: Gegevens
+                type: object
+                list: true
+                fields:
+                  - { name: label, label: Label, type: string }
+                  - { name: waarde, label: Waarde, type: string }
+              - { name: bron, label: Bron/toelichting, type: string }
+          - name: tarieven
+            label: Tarievencategorie
+            type: select
+            options: { values: ["intake", "acne", "skinpen", "huidverbetering", "laser", "peelings", "combinatie", "electro", "ontharing"] }
+          - name: tarievenRijen
+            label: Eigen prijsregels (alleen als er geen tarievencategorie is)
+            type: object
+            list: true
+            fields:
+              - { name: naam, label: Behandeling, type: string }
+              - { name: info, label: Toelichting, type: string }
+              - { name: prijs, label: Prijs, type: string }
+          - { name: tarievenExtra, label: Tekst onder de prijzen, type: string }
+          - name: vragen
+            label: Veelgestelde vragen
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{v}" } }
+            fields:
+              - { name: v, label: Vraag, type: string }
+              - { name: a, label: Antwoord, type: text }
+          - name: gerelateerd
+            label: Gerelateerde behandelingen
+            type: select
+            options:
+              multiple: true
+              values: ["acne", "rosacea", "huidverhevenheden", "peelings", "skinpen", "combinatie", "huidverbetering", "ontharen", "laser", "led", "schimmelnagels", "productadvies"]
+          - { name: aanvullen, label: Nog aan te vullen (intern), type: string, list: true }
+      - name: kaarten
+        label: Kaarten bij 'Gerelateerde behandelingen'
+        type: object
+        hidden: true
+        fields:
+          - name: acne
+            label: Acne
+            type: object
+            fields: &kaart
+              - { name: titel, label: Titel, type: string }
+              - { name: tekst, label: Tekst, type: string }
+              - { name: beeld, label: Foto, type: image }
+              - { name: prijs, label: Prijs, type: string }
+              - { name: cat, label: Categorie, type: string }
+          - { name: rosacea, label: Rosacea, type: object, fields: *kaart }
+          - { name: huidverhevenheden, label: Huidverhevenheden, type: object, fields: *kaart }
+          - { name: schimmelnagels, label: Schimmelnagels, type: object, fields: *kaart }
+          - { name: peelings, label: Peelings, type: object, fields: *kaart }
+          - { name: skinpen, label: SkinPen, type: object, fields: *kaart }
+          - { name: combinatie, label: Combinatie, type: object, fields: *kaart }
+          - { name: huidverbetering, label: Huidverbetering, type: object, fields: *kaart }
+          - { name: ontharen, label: Ontharen, type: object, fields: *kaart }
+          - { name: laser, label: Laser, type: object, fields: *kaart }
+          - { name: led, label: LED, type: object, fields: *kaart }
+          - { name: productadvies, label: Productadvies, type: object, fields: *kaart }
