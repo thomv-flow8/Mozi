@@ -363,8 +363,6 @@ em,.it{font-style:italic;font-weight:400}
 .product{text-decoration:none;display:flex;flex-direction:column;cursor:pointer}
 .product .img{aspect-ratio:4/5;border-radius:20px;background:var(--white);box-shadow:inset 0 0 0 1px var(--line);display:grid;place-items:center;position:relative;overflow:hidden;transition:background .3s}
 .product:hover .img{background:var(--surface)}
-.product .img svg{width:44%;height:auto;transition:transform .6s var(--ease)}
-.product:hover .img svg{transform:translateY(-6px) scale(1.03)}
 /* Uitgesneden productfoto: in zijn geheel tonen, met een zachte slagschaduw op het zandvlak */
 /* Absoluut, zodat de hoogte altijd meeschaalt met de tegel; de padding bepaalt de marge eromheen. */
 .product .img > img{position:absolute;inset:0;width:100%;height:100%;padding:7% 18% 8%;object-fit:contain;filter:drop-shadow(0 16px 22px rgba(0,0,0,.13));transform:scale(var(--s,1));transition:transform .6s var(--ease)}
