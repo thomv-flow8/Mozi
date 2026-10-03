@@ -110,8 +110,14 @@ Reviewwidget:
   de werkwijze en de contactgegevens staan in `docs/home.json`. `tools/genereer-home.js` zet ze in
   `preview/index.html` tussen de markeringen `<!-- home:… -->`. Draait als eerste in `bouw-site.js`
   (de aankondigingsbalk staat in de kop van elke pagina).
-- **Deel B nog te doen**: de rij met reviews en logo's, de voor/na-resultaten, het blok over Emine,
-  de logostrook onder de opening en de koppen van de overige blokken.
+- **Deel B (gedaan)**: keurmerken, wisselende sfeerfoto's, huidklachten, de vier fotokaarten in de
+  "Waarom Mozi"-rij, de voor/na-resultaten, de reviewkop, het blok over Emine en de webshopkop.
+  Vast in de pagina blijven: de logotegels in de "Waarom Mozi"-rij, de filterknoppen, de animaties bij
+  de werkwijze. Score en aantal reviews komen uit `docs/reviews.json`.
+- **Markeringen nooit binnen een `<script>`**: daar zijn het geen opmerkingen maar tekst, en dan
+  breekt de JSON (bijna gebeurd bij de voor/na-gegevens). `bouw-site.js` controleert hierop.
+- **Foto's uit andere mappen**: `bouw-site.js` neemt elke foto waarnaar verwezen wordt mee, ook buiten
+  web/logos/resultaten/bewerkt. Kiest Emine in het CMS een aangeleverde foto, dan faalt de bouw niet.
 - **CMS-onderdelen**: Homepage, Tarieven, Merken & producten, Behandelingen, Over Mozi, Privacy/cookies/
   voorwaarden. Pages CMS is gekoppeld (app geïnstalleerd op alleen de repository Mozi).
 - **Controleren na een wijziging aan `.pages.yml`**: valideer met de schemacode van Pages CMS zelf en

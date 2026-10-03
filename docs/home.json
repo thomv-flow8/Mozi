@@ -29,6 +29,58 @@
     "naam": "Emine Elmaci-van Rossen",
     "functie": "Huidtherapeut & eigenaar"
   },
+  "keurmerken": [
+    {
+      "logo": "../assets/logos/nvh.png",
+      "badge": "",
+      "tekst": "Nederlandse Vereniging\nvan Huidtherapeuten"
+    },
+    {
+      "logo": "../assets/logos/kp.png",
+      "badge": "",
+      "tekst": "Kwaliteitsregister\nParamedici"
+    },
+    {
+      "logo": "",
+      "badge": "AGB",
+      "tekst": "AGB-\ngeregistreerd"
+    },
+    {
+      "logo": "../assets/logos/vvaa-transparant.png",
+      "badge": "",
+      "tekst": "Lid van\nVvAA"
+    }
+  ],
+  "film": {
+    "beelden": [
+      "../assets/web/behandeling-apparaat.jpg",
+      "../assets/web/led-rood.jpg",
+      "../assets/web/skinpen.jpg"
+    ],
+    "label": "In de praktijk",
+    "kop": "Specialistische zorg,\n*persoonlijke* aandacht",
+    "tekst": "Van medische peelings tot de Clarity II-laser: in Gezondheidscentrum Zorglinie behandelen we met bewezen techniek, en nemen we de tijd voor jou.",
+    "knopAfspraak": "Plan een gratis intake",
+    "knopBehandelingen": "Bekijk behandelingen"
+  },
+  "klachten": {
+    "label": "Waar heb je last van?",
+    "kop": "Van onrustige huid\nnaar *rust*",
+    "tekst": "Huidproblemen kunnen cosmetisch storend zijn en zelfs je dagelijks leven in de weg zitten. Kies je klacht en zie direct welke behandelingen passen.",
+    "lijst": [
+      "Acne",
+      "Acnelittekens",
+      "Rosacea",
+      "Couperose",
+      "Pigmentvlekken",
+      "Melasma",
+      "Littekens",
+      "Fijne lijntjes",
+      "Ongewenste haargroei",
+      "Steelwratjes",
+      "Schimmelnagels"
+    ]
+  },
   "behandelingen": {
     "label": "Behandelingen",
     "kop": "Zorg op *maat*,\nmet bewezen techniek",
@@ -201,6 +253,100 @@
       }
     ]
   },
+  "bewijs": {
+    "label": "Waarom Mozi",
+    "kop": "Bewezen techniek,\n*persoonlijke* zorg",
+    "tekst": "We werken met merken en apparatuur die hun waarde hebben bewezen, en nemen de tijd die jouw huid verdient.",
+    "kaarten": [
+      {
+        "beeld": "../assets/web/masker.jpg",
+        "tekst": "“Fijn professioneel advies gekregen wat voor mij goed werkt.”",
+        "onderschrift": "Susanne · review"
+      },
+      {
+        "beeld": "../assets/web/peeling.jpg",
+        "tekst": "“Heel deskundig geholpen en een hele fijne huidtherapeute.”",
+        "onderschrift": "Oafa · review"
+      },
+      {
+        "beeld": "../assets/web/led-apparaat.jpg",
+        "tekst": "“Er werd echt de tijd genomen, wat ik erg waardeerde.”",
+        "onderschrift": "Gullu · review"
+      },
+      {
+        "beeld": "../assets/web/led-rood.jpg",
+        "tekst": "Lumi8 LED: medisch gecertificeerd licht.",
+        "onderschrift": "In de praktijk"
+      }
+    ]
+  },
+  "resultaten": {
+    "label": "Resultaten",
+    "kop": "Zie het *verschil*",
+    "tekst": "Sleep de lijn en vergelijk de huid voor en na een behandeltraject met SkinPen microneedling.",
+    "voorbeelden": [
+      {
+        "naam": "Acnelittekens",
+        "voor": "../assets/resultaten/skinpen-2-voor.jpg",
+        "na": "../assets/resultaten/skinpen-2-na.jpg",
+        "info": [
+          {
+            "label": "Behandeling",
+            "waarde": "SkinPen microneedling"
+          },
+          {
+            "label": "Sessies",
+            "waarde": "2"
+          },
+          {
+            "label": "Cliënt",
+            "waarde": "Man, 27 jaar"
+          }
+        ],
+        "bron": "Klinische foto's van SkinPen / Bellus Medical (Cathy A. Presnick, Melbourne, VS)."
+      },
+      {
+        "naam": "Acne",
+        "voor": "../assets/resultaten/skinpen-4-voor.jpg",
+        "na": "../assets/resultaten/skinpen-4-na.jpg",
+        "info": [
+          {
+            "label": "Behandeling",
+            "waarde": "SkinPen microneedling"
+          },
+          {
+            "label": "Sessies",
+            "waarde": "6"
+          },
+          {
+            "label": "Cliënt",
+            "waarde": "Vrouw"
+          }
+        ],
+        "bron": "Klinische foto's van SkinPen / Bellus Medical (Cathy A. Presnick, Melbourne, VS)."
+      },
+      {
+        "naam": "Huidveroudering",
+        "voor": "../assets/resultaten/skinpen-7-1-voor.jpg",
+        "na": "../assets/resultaten/skinpen-7-1-na.jpg",
+        "info": [
+          {
+            "label": "Behandeling",
+            "waarde": "SkinPen microneedling"
+          },
+          {
+            "label": "Sessies",
+            "waarde": "3"
+          },
+          {
+            "label": "Cliënt",
+            "waarde": "Vrouw, 45 jaar"
+          }
+        ],
+        "bron": "Klinische foto's van SkinPen / Bellus Medical (Elizabeth Steigner, Orange, VS)."
+      }
+    ]
+  },
   "werkwijze": {
     "label": "Zo werkt het",
     "kop": "In drie stappen naar\neen *gezonde* huid",
@@ -218,6 +364,29 @@
         "tekst": "We behandelen en geven advies voor thuis, met producten die bij jouw huid passen."
       }
     ]
+  },
+  "reviews": {
+    "label": "Ervaringen",
+    "knop": "Lees alle reviews",
+    "bron": "Verzameld via Salonized · powered by Treatwell"
+  },
+  "over": {
+    "label": "Over Mozi",
+    "citaat": "Toen ik rond mijn dertigste rosacea bleek te hebben, groeide mijn interesse in het beter maken van de huid alleen maar meer.",
+    "portret": "../assets/bewerkt/eigenaresse-portret.png",
+    "naam": "Emine Elmaci-van Rossen",
+    "functie": "Huidtherapeut (hbo) & eigenaar",
+    "punten": [
+      "Beschermde titel huidtherapeut (art. 34 Wet BIG)",
+      "Persoonlijke benadering en eerlijk advies",
+      "Alleen producten met bewezen effectiviteit"
+    ],
+    "knop": "Lees haar verhaal"
+  },
+  "webshop": {
+    "label": "Webshop",
+    "kop": "Thuisverzorging,\n*door ons* gekozen",
+    "tekst": "De merken waarmee we in de praktijk werken. Twijfel je wat bij je huid past? Vraag een productadvies aan, de kosten vervallen bij aankoop."
   },
   "contact": {
     "label": "Afspraak maken",

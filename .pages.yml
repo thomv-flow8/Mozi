@@ -43,6 +43,32 @@ content:
           - { name: portretAlt, label: Beschrijving van het portret, type: string, description: "Voor schermlezers en Google" }
           - { name: naam, label: Naam bij het portret, type: string }
           - { name: functie, label: Functie bij het portret, type: string }
+      - name: keurmerken
+        label: Keurmerken onder de opening
+        type: object
+        list: { max: 6, collapsible: { collapsed: true, summary: "{tekst}" } }
+        fields:
+          - { name: logo, label: Logo, type: image }
+          - { name: badge, label: Tekst in plaats van logo, type: string, description: "Bijv. AGB, als er geen logo is" }
+          - { name: tekst, label: Omschrijving, type: text, description: "Nieuwe regel met Enter" }
+      - name: film
+        label: Wisselende sfeerfoto's
+        type: object
+        fields:
+          - { name: beelden, label: Foto's (wisselen elkaar af), type: image, list: { min: 1, max: 6, collapsible: false } }
+          - { name: label, label: Kleine tekst boven de kop, type: string }
+          - { name: kop, label: Kop, type: text, description: "Schuingedrukt: woord tussen sterretjes. Nieuwe regel: Enter." }
+          - { name: tekst, label: Tekst, type: text }
+          - { name: knopAfspraak, label: Knop afspraak maken, type: string }
+          - { name: knopBehandelingen, label: Knop naar de behandelingen, type: string }
+      - name: klachten
+        label: Waar heb je last van?
+        type: object
+        fields:
+          - { name: label, label: Kleine tekst boven de kop, type: string }
+          - { name: kop, label: Kop, type: text, description: "Schuingedrukt: woord tussen sterretjes. Nieuwe regel: Enter." }
+          - { name: tekst, label: Tekst, type: text }
+          - { name: lijst, label: Huidklachten (knoppen), type: string, list: true, description: "Schrijf ze precies zoals bij de huidklachten van de behandelkaarten, anders vindt het filter niets" }
       - name: behandelingen
         label: Behandelingen
         type: object
@@ -87,6 +113,44 @@ content:
                     - { value: laser, label: "Laser & licht" }
                     - { value: overig, label: Advies }
               - { name: klachten, label: Huidklachten (voor het zoeken op klacht), type: string, list: true }
+      - name: bewijs
+        label: Waarom Mozi (doorschuivende rij)
+        type: object
+        fields:
+          - { name: label, label: Kleine tekst boven de kop, type: string }
+          - { name: kop, label: Kop, type: text, description: "Schuingedrukt: woord tussen sterretjes. Nieuwe regel: Enter." }
+          - { name: tekst, label: Tekst, type: text }
+          - name: kaarten
+            label: Fotokaarten (de logotegels ertussen liggen vast)
+            type: object
+            list: { min: 4, max: 4, collapsible: { collapsed: true, summary: "{onderschrift}" } }
+            fields:
+              - { name: beeld, label: Foto, type: image }
+              - { name: tekst, label: Citaat of tekst, type: text }
+              - { name: onderschrift, label: Onderschrift, type: string, description: "Bijv. Susanne · review" }
+      - name: resultaten
+        label: Resultaten (voor/na)
+        type: object
+        fields:
+          - { name: label, label: Kleine tekst boven de kop, type: string }
+          - { name: kop, label: Kop, type: text, description: "Schuingedrukt: woord tussen sterretjes. Nieuwe regel: Enter." }
+          - { name: tekst, label: Tekst, type: text }
+          - name: voorbeelden
+            label: Voorbeelden (eigen foto's alleen met schriftelijke toestemming)
+            type: object
+            list: { min: 1, collapsible: { collapsed: true, summary: "{naam}" } }
+            fields:
+              - { name: naam, label: Naam (tabblad), type: string }
+              - { name: voor, label: Foto voor, type: image }
+              - { name: na, label: Foto na, type: image }
+              - name: info
+                label: Gegevens
+                type: object
+                list: { collapsible: { collapsed: true, summary: "{label}: {waarde}" } }
+                fields:
+                  - { name: label, label: Label, type: string }
+                  - { name: waarde, label: Waarde, type: string }
+              - { name: bron, label: Bron of toelichting, type: string }
       - name: werkwijze
         label: Zo werkt het
         type: object
@@ -100,6 +164,31 @@ content:
             fields:
               - { name: titel, label: Titel, type: string }
               - { name: tekst, label: Tekst, type: text }
+      - name: reviews
+        label: Ervaringen (score en reviews komen automatisch van Salonized)
+        type: object
+        fields:
+          - { name: label, label: Kleine tekst boven de score, type: string }
+          - { name: knop, label: Knop naar alle reviews, type: string }
+          - { name: bron, label: Bronvermelding, type: string }
+      - name: over
+        label: Over Emine
+        type: object
+        fields:
+          - { name: label, label: Kleine tekst bovenaan, type: string }
+          - { name: citaat, label: Citaat, type: text }
+          - { name: portret, label: Portretje, type: image }
+          - { name: naam, label: Naam, type: string }
+          - { name: functie, label: Functie, type: string }
+          - { name: punten, label: Punten met vinkje, type: string, list: true }
+          - { name: knop, label: Knop naar de pagina Over Mozi, type: string }
+      - name: webshop
+        label: Webshop (merken en producten staan bij Merken & producten)
+        type: object
+        fields:
+          - { name: label, label: Kleine tekst boven de kop, type: string }
+          - { name: kop, label: Kop, type: text, description: "Schuingedrukt: woord tussen sterretjes. Nieuwe regel: Enter." }
+          - { name: tekst, label: Tekst, type: text }
       - name: contact
         label: Contact
         type: object

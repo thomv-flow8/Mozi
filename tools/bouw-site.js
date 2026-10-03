@@ -44,16 +44,34 @@ for (const p of paginas) {
 // Geen Jekyll-verwerking door GitHub Pages
 fs.writeFileSync(path.join(uit, '.nojekyll'), '');
 
-// Controle: bestaat elke verwijzing?
+// Controle: bestaat elke verwijzing? Een foto uit een andere map onder assets/ (bijvoorbeeld een
+// aangeleverde foto die Emine in het CMS kiest) gaat alsnog mee, in plaats van de bouw te laten falen.
 const mis = [];
+let meegenomen = 0;
+function zorgVoor(p, rel) {
+  if (fs.existsSync(path.join(uit, rel))) return;
+  const bron = path.join(root, rel);
+  if (rel.startsWith('assets/') && fs.existsSync(bron)) {
+    fs.mkdirSync(path.dirname(path.join(uit, rel)), { recursive: true });
+    fs.copyFileSync(bron, path.join(uit, rel));
+    meegenomen++;
+    return;
+  }
+  mis.push(p + ' → ' + rel);
+}
 for (const p of paginas) {
   const html = fs.readFileSync(path.join(uit, p), 'utf8');
-  for (const m of html.matchAll(/(?:src|href)="([^"#:?]+\.(?:jpg|png|webp|css|js|html|json))"/g)) {
-    if (!fs.existsSync(path.join(uit, m[1]))) mis.push(p + ' → ' + m[1]);
-  }
-  for (const m of html.matchAll(/"(?:voor|na)":"([^"]+)"/g)) {
-    if (!fs.existsSync(path.join(uit, m[1]))) mis.push(p + ' → ' + m[1]);
+  for (const m of html.matchAll(/(?:src|href)="([^"#:?]+\.(?:jpg|jpeg|png|webp|gif|svg|css|js|html|json))"/g)) zorgVoor(p, m[1]);
+  for (const m of html.matchAll(/"(?:voor|na|beeld)":"([^"]+)"/g)) zorgVoor(p, m[1].replace(/^\.\.\//, ''));
+}
+// Een HTML-opmerking binnen een <script>-blok is daar gewone tekst: de gegevens erin worden dan
+// onleesbaar (zo ging de voor/na-slider bijna stuk). Dat mag nooit ongemerkt live gaan.
+for (const p of paginas) {
+  const html = fs.readFileSync(path.join(uit, p), 'utf8');
+  for (const m of html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/g)) {
+    if (m[1].includes('<!--')) mis.push(p + ' → HTML-opmerking binnen een scriptblok');
   }
 }
+if (meegenomen) console.log(meegenomen + " foto('s) buiten de standaardmappen meegenomen.");
 if (mis.length) throw new Error('Ontbrekende bestanden:\n' + mis.join('\n'));
 console.log(`_site/ gebouwd: ${paginas.length} pagina's, ${telling} paden omgezet, alle verwijzingen gevonden.`);

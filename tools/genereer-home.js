@@ -112,6 +112,117 @@ ${lijst(o.cijfers).map(s => `        <div class="stat"><b>${esc(s.waarde)}</b><s
     </div>`
 };
 
+// --- Deel B -------------------------------------------------------------------------------
+
+// Breedte en hoogte uit het bestand zelf, zodat een nieuw logo vanzelf de juiste maten krijgt.
+function maat(src) {
+  try {
+    const b = fs.readFileSync(path.join(root, 'preview', src));
+    if (b.toString('latin1', 1, 4) === 'PNG') return ` width="${b.readUInt32BE(16)}" height="${b.readUInt32BE(20)}"`;
+    if (b[0] === 0xff && b[1] === 0xd8) {
+      for (let i = 2; i + 9 < b.length;) {
+        if (b[i] !== 0xff) { i++; continue; }
+        const m = b[i + 1];
+        if (m >= 0xc0 && m <= 0xcf && m !== 0xc4 && m !== 0xc8 && m !== 0xcc) return ` width="${b.readUInt16BE(i + 7)}" height="${b.readUInt16BE(i + 5)}"`;
+        i += 2 + b.readUInt16BE(i + 2);
+      }
+    }
+  } catch (e) { /* bestand ontbreekt: wordt hieronder gemeld */ }
+  return '';
+}
+const regels = s => esc(s).replace(/\r?\n/g, '<br>');
+// JSON veilig in een <script>-blok: een "<" kan het blok nooit voortijdig sluiten.
+const J = v => JSON.stringify(v).replace(/</g, '\\u003c');
+
+const f = d.film || {}, kl = d.klachten || {}, bw = d.bewijs || {}, rs = d.resultaten || {}, rv = d.reviews || {}, ov = d.over || {}, ws = d.webshop || {};
+let revData = {};
+try { revData = JSON.parse(fs.readFileSync(path.join(root, 'docs/reviews.json'), 'utf8')); } catch (e) { /* geen reviews: standaardwaarden */ }
+const score = typeof revData.score === 'number' ? revData.score.toFixed(1).replace('.', ',') : '5,0';
+const aantal = typeof revData.aantal === 'number' ? revData.aantal : 71;
+
+Object.assign(blokken, {
+  keurmerken: lijst(d.keurmerken).map(k => `
+    <div class="trust-item">${k.logo ? `<img src="${esc(k.logo)}" alt=""${maat(k.logo)}>` : `<span class="agb">${esc(k.badge)}</span>`}<span>${regels(k.tekst)}</span></div>`).join(''),
+
+  'film-beelden': lijst(f.beelden).filter(Boolean).map(src => `
+      <img class="film-slide" src="${esc(src)}" alt="">`).join(''),
+
+  'film-tekst': `
+        <p class="eyebrow">${esc(f.label)}</p>
+        <h2>${kop(f.kop)}</h2>
+        <p>${esc(f.tekst)}</p>
+        <div class="row">
+          <a class="btn btn-light" href="#" data-book>${ico('cal')}${esc(f.knopAfspraak)}</a>
+          <a class="btn btn-ghost-light" href="#behandelingen">${esc(f.knopBehandelingen)}</a>
+        </div>`,
+
+  klachten: `
+    <div class="reveal">
+      <p class="eyebrow">${esc(kl.label)}</p>
+      <h2>${kop(kl.kop)}</h2>
+    </div>
+    <div class="reveal d1">
+      <p class="lead">${esc(kl.tekst)}</p>
+      <div class="concerns">
+${lijst(kl.lijst).filter(Boolean).map(k => `        <a class="chip" href="#behandelingen" data-concern="${esc(k)}">${esc(k)}</a>`).join('\n')}
+      </div>
+    </div>`,
+
+  'bewijs-kop': `
+    <p class="eyebrow">${esc(bw.label)}</p>
+    <h2 id="proofTitle">${kop(bw.kop)}</h2>
+    <p class="lead">${esc(bw.tekst)}</p>`,
+
+  'resultaten-kop': `
+      <p class="eyebrow">${esc(rs.label)}</p>
+      <h2>${kop(rs.kop)}</h2>
+      <p class="lead" style="margin-top:22px">${esc(rs.tekst)}</p>
+      <div class="tabs" role="tablist" aria-label="Kies een resultaat">
+${lijst(rs.voorbeelden).map((v, i) => `        <button class="tab" role="tab" aria-selected="${i === 0}" data-case="${i}">${esc(v.naam)}</button>`).join('\n')}
+      </div>`,
+
+  // Markeringen staan buiten het scriptblok: daarbinnen zouden ze als tekst meetellen en de
+  // gegevens onleesbaar maken.
+  'resultaten-data': '<script type="application/json" id="baCases">[\n    ' + lijst(rs.voorbeelden).map(v =>
+    `{"naam":${J(v.naam || '')},"voor":${J(v.voor || '')},"na":${J(v.na || '')},\n     "info":${J(lijst(v.info).map(r => [r.label || '', r.waarde || '']))},\n     "bron":${J(v.bron || '')}}`
+  ).join(',\n    ') + '\n  ]</script>',
+
+  reviews: `
+      <p class="eyebrow">${esc(rv.label)}</p>
+      <div class="big" data-rev-score>${score}</div>
+      <div class="stars" aria-label="5 van 5 sterren">${'<svg viewBox="0 0 24 24"><use href="#i-star"/></svg>'.repeat(5)}</div>
+      <p>Gemiddelde score op basis van <b data-rev-count>${aantal}</b> reviews</p>
+      <a class="btn btn-outline" href="#" data-reviews>${esc(rv.knop)}</a>
+      <p class="src"><svg class="ico" style="width:15px;height:15px"><use href="#i-info"/></svg>${esc(rv.bron)}</p>`,
+
+  over: `
+      <p class="eyebrow">${esc(ov.label)}</p>
+      <blockquote>${esc(ov.citaat)}</blockquote>
+      <div class="who">
+        <img src="${esc(ov.portret)}" alt="" width="56" height="56">
+        <div><b>${esc(ov.naam)}</b><span>${esc(ov.functie)}</span></div>
+      </div>
+      <ul>
+${lijst(ov.punten).filter(Boolean).map(p => `        <li>${ico('check')}${esc(p)}</li>`).join('\n')}
+      </ul>
+      <a class="btn btn-light" href="over-mozi.html">${esc(ov.knop)} ${ico('arrow')}</a>`,
+
+  'webshop-kop': `
+      <div class="reveal">
+        <p class="eyebrow">${esc(ws.label)}</p>
+        <h2>${kop(ws.kop)}</h2>
+      </div>
+      <p class="lead reveal d1">${esc(ws.tekst)}</p>`
+});
+
+// De vier fotokaarten in de doorschuivende rij. De logotegels ertussen liggen vast in de pagina,
+// dus er zijn altijd precies vier plekken.
+[1, 2, 3, 4].forEach(i => {
+  const k = lijst(bw.kaarten)[i - 1] || {};
+  blokken['bewijs' + i] = `<figure class="pcard photo" style="margin:0"><img src="${esc(k.beeld)}" alt="" loading="lazy">
+        <figcaption class="q"><p>${esc(k.tekst)}</p><span>${esc(k.onderschrift)}</span></figcaption>`;
+});
+
 // De drie stappen van de werkwijze; de animaties eronder blijven vast in de pagina.
 ['01', '02', '03'].forEach((n, i) => {
   const s = lijst(w.stappen)[i] || {};
@@ -128,8 +239,10 @@ for (const [naam, inhoud] of Object.entries(blokken)) {
 fs.writeFileSync(bestand, html);
 
 // Foto's die het CMS noemt, moeten bestaan.
-for (const f of [o.portret, ...lijst(b.kaarten).map(k => k.beeld)].filter(Boolean)) {
-  if (!fs.existsSync(path.join(root, 'preview', f))) throw new Error('Foto ontbreekt: ' + f);
+const fotos = [o.portret, ...lijst(b.kaarten).map(k => k.beeld), ...lijst(d.keurmerken).map(k => k.logo), ...lijst(f.beelden),
+  ...lijst(bw.kaarten).map(k => k.beeld), ...lijst(rs.voorbeelden).flatMap(v => [v.voor, v.na]), ov.portret];
+for (const x of fotos.filter(Boolean)) {
+  if (!fs.existsSync(path.join(root, 'preview', x))) throw new Error('Foto ontbreekt: ' + x);
 }
 for (const k of lijst(b.kaarten)) {
   if (!CATEGORIE[k.categorie]) throw new Error('Onbekende categorie bij ' + k.titel + ': ' + k.categorie);
