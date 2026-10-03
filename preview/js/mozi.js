@@ -416,10 +416,31 @@
     var imgV = $('.before', ba), imgN = $('.after', ba);
     var info = $('#caseInfo'), credit = $('#caseCredit');
     var cases = JSON.parse($('#baCases').textContent);
+    // Labels: een label vervaagt zodra de schuiflijn eroverheen gaat en is weg als de lijn
+    // er voorbij is. Staat de slider helemaal links, dan zie je alleen "Na"; helemaal
+    // rechts alleen "Voor". Gerekend met de echte maat van de labels, dus op elke breedte.
+    var lblV = $('.lbl.l', ba), lblN = $('.lbl.r', ba), maat = null;
+    function meet(){
+      maat = { w: ba.clientWidth,
+        vL: lblV.offsetLeft, vR: lblV.offsetLeft + lblV.offsetWidth,
+        nL: lblN.offsetLeft, nR: lblN.offsetLeft + lblN.offsetWidth };
+    }
+    function labels(p){
+      if (!lblV || !lblN) return;
+      if (!maat || !maat.w) meet();
+      if (!maat.w) return;                       // nog niet zichtbaar: niets aanpassen
+      var x = p / 100 * maat.w, ruimte = 8;
+      var v = (x - maat.vL) / (maat.vR + ruimte - maat.vL);
+      var n = (maat.nR - x) / (maat.nR - (maat.nL - ruimte));
+      lblV.style.opacity = Math.max(0, Math.min(1, v));
+      lblN.style.opacity = Math.max(0, Math.min(1, n));
+    }
+    window.addEventListener('resize', function(){ maat = null; labels(+range.value); });
     function setPos(p){
       p = Math.max(0, Math.min(100, p));
       ba.style.setProperty('--pos', p + '%');
       range.value = p;
+      labels(p);
     }
     function posFromEvent(e){ var r = ba.getBoundingClientRect(); return (e.clientX - r.left) / r.width * 100; }
     var slepen = false, sx = 0, sy = 0, besloten = false;
