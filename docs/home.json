@@ -1,0 +1,236 @@
+{
+  "_bron": "Teksten en foto's van de homepage. Wordt door tools/genereer-home.js in preview/index.html gezet. In koppen: *woord* wordt schuingedrukt, Enter is een nieuwe regel.",
+  "aankondiging": {
+    "tekst": "Gratis intakegesprek van 30 minuten",
+    "knop": "Plan direct online"
+  },
+  "opening": {
+    "label": "Huidtherapie · Gorinchem",
+    "kop": "Elke huid\nmag *mooi* zijn",
+    "tekst": "Een persoonlijk behandelplan, eerlijk advies en oprechte aandacht. Gediplomeerde huidtherapie voor jong en oud — van acne en rosacea tot pigment en huidverjonging.",
+    "knopAfspraak": "Plan een gratis intake",
+    "knopBehandelingen": "Bekijk behandelingen",
+    "cijfers": [
+      {
+        "waarde": "30 min",
+        "label": "gratis intake"
+      },
+      {
+        "waarde": "KP",
+        "label": "kwaliteitsregister"
+      },
+      {
+        "waarde": "NVH",
+        "label": "aangesloten"
+      }
+    ],
+    "portret": "../assets/bewerkt/eigenaresse-portret.png",
+    "portretAlt": "Emine Elmaci-van Rossen, huidtherapeut en eigenaar van Huidzorg Mozi",
+    "naam": "Emine Elmaci-van Rossen",
+    "functie": "Huidtherapeut & eigenaar"
+  },
+  "behandelingen": {
+    "label": "Behandelingen",
+    "kop": "Zorg op *maat*,\nmet bewezen techniek",
+    "tekst": "We combineren behandelingen voor het beste resultaat en werken met apparatuur als de Clarity II-laser, Clearlight IPL, SkinPen en Lumi8 LED.",
+    "kaarten": [
+      {
+        "pagina": "acne",
+        "categorie": "huidproblemen",
+        "klachten": [
+          "Acne",
+          "Acnelittekens"
+        ],
+        "beeld": "../assets/web/acne.jpg",
+        "uitsnede": "",
+        "titel": "Acnetherapie",
+        "tekst": "Dieptereiniging, peelings en lichttherapie. Geen standaardbehandeling, maar een plan voor jouw huid.",
+        "prijs": "vanaf € 75"
+      },
+      {
+        "pagina": "rosacea",
+        "categorie": "huidproblemen",
+        "klachten": [
+          "Rosacea",
+          "Couperose"
+        ],
+        "beeld": "../assets/web/rosacea.jpg",
+        "uitsnede": "",
+        "titel": "Rosacea & couperose",
+        "tekst": "Je huid weer rustig, met Clearlight IPL, laser en milde peelings. Wij kennen het uit eigen ervaring.",
+        "prijs": "vanaf € 125"
+      },
+      {
+        "pagina": "huidverhevenheden",
+        "categorie": "huidproblemen",
+        "klachten": [
+          "Steelwratjes",
+          "Couperose"
+        ],
+        "beeld": "../assets/web/huidverhevenheden.jpg",
+        "uitsnede": "",
+        "titel": "Huidverhevenheden",
+        "tekst": "Steelwratjes, ouderdomswratjes en rode vaatjes veilig verwijderd met electrocoagulatie of cryotherapie.",
+        "prijs": "vanaf € 50"
+      },
+      {
+        "pagina": "peelings",
+        "categorie": "verjonging",
+        "klachten": [
+          "Pigmentvlekken",
+          "Fijne lijntjes",
+          "Acnelittekens",
+          "Melasma",
+          "Acne"
+        ],
+        "beeld": "../assets/web/peeling.jpg",
+        "uitsnede": "",
+        "titel": "Medische peelings",
+        "tekst": "Een vernieuwde, gladdere huid. Peelings van Dermaceutic, Theraderm en Renophase, volledig op maat.",
+        "prijs": "vanaf € 90"
+      },
+      {
+        "pagina": "skinpen",
+        "categorie": "verjonging",
+        "klachten": [
+          "Acnelittekens",
+          "Littekens",
+          "Fijne lijntjes",
+          "Pigmentvlekken"
+        ],
+        "beeld": "../assets/web/skinpen.jpg",
+        "uitsnede": "",
+        "titel": "SkinPen microneedling",
+        "tekst": "Het eerste FDA-goedgekeurde microneedlingsysteem. Voor littekens, lijntjes en een stevigere huid.",
+        "prijs": "vanaf € 210"
+      },
+      {
+        "pagina": "combinatie",
+        "categorie": "verjonging",
+        "klachten": [
+          "Fijne lijntjes",
+          "Pigmentvlekken",
+          "Melasma",
+          "Acnelittekens"
+        ],
+        "beeld": "../assets/web/masker.jpg",
+        "uitsnede": "",
+        "titel": "Combinatiebehandelingen",
+        "tekst": "Firm Facial, Glow Facial en Cosmo Glow: peeling en microneedling samen, voor een enorme boost.",
+        "prijs": "vanaf € 150"
+      },
+      {
+        "pagina": "huidverbetering",
+        "categorie": "verjonging",
+        "klachten": [
+          "Fijne lijntjes",
+          "Pigmentvlekken",
+          "Couperose"
+        ],
+        "beeld": "../assets/web/behandeling-apparaat.jpg",
+        "uitsnede": "",
+        "titel": "Huidverbetering",
+        "tekst": "Innerlift, Clear en Toning: collageen stimuleren, roodheid verminderen en pigment egaliseren.",
+        "prijs": "vanaf € 150"
+      },
+      {
+        "pagina": "ontharen",
+        "categorie": "laser",
+        "klachten": [
+          "Ongewenste haargroei"
+        ],
+        "beeld": "../assets/web/huidtinten.jpg",
+        "uitsnede": "",
+        "titel": "Laserontharing",
+        "tekst": "Met de Clarity II, de krachtigste ontharingslaser op de markt. Veilig voor alle huidtinten.",
+        "prijs": "vanaf € 30"
+      },
+      {
+        "pagina": "laser",
+        "categorie": "laser",
+        "klachten": [
+          "Couperose",
+          "Rosacea",
+          "Pigmentvlekken"
+        ],
+        "beeld": "../assets/web/laser.jpg",
+        "uitsnede": "",
+        "titel": "Laser bij vaatjes & pigment",
+        "tekst": "Roodheid, zichtbare vaatjes en pigmentvlekken gericht behandeld, van één plek tot het hele gelaat.",
+        "prijs": "vanaf € 75"
+      },
+      {
+        "pagina": "led",
+        "categorie": "laser",
+        "klachten": [
+          "Acne",
+          "Rosacea",
+          "Fijne lijntjes"
+        ],
+        "beeld": "../assets/web/lumi8-behandeling.jpg",
+        "uitsnede": "50% 20%",
+        "titel": "LED-therapie Lumi8",
+        "tekst": "Medisch gecertificeerd licht dat de huid verjongt, herstelt en kalmeert. Zonder herstelperiode.",
+        "prijs": "vanaf € 25"
+      },
+      {
+        "pagina": "schimmelnagels",
+        "categorie": "laser",
+        "klachten": [
+          "Schimmelnagels"
+        ],
+        "beeld": "../assets/web/schimmelnagels.jpg",
+        "uitsnede": "",
+        "titel": "Schimmelnagels",
+        "tekst": "De Clarity II-laser pakt de schimmel bij de kern aan, zonder de nagel of huid te beschadigen.",
+        "prijs": "op aanvraag"
+      },
+      {
+        "pagina": "productadvies",
+        "categorie": "overig",
+        "klachten": [
+          "Acne",
+          "Rosacea",
+          "Pigmentvlekken"
+        ],
+        "beeld": "../assets/web/dermaceutic-assortiment.jpg",
+        "uitsnede": "",
+        "titel": "Huidanalyse & productadvies",
+        "tekst": "We bepalen welke verzorging jouw huid nodig heeft. De kosten vervallen bij aankoop van producten.",
+        "prijs": "€ 25"
+      }
+    ]
+  },
+  "werkwijze": {
+    "label": "Zo werkt het",
+    "kop": "In drie stappen naar\neen *gezonde* huid",
+    "stappen": [
+      {
+        "titel": "Gratis intake",
+        "tekst": "In 30 minuten bekijken we je huid en bespreken we je wensen, en wat realistisch is."
+      },
+      {
+        "titel": "Persoonlijk plan",
+        "tekst": "Je krijgt een behandelplan op maat, vaak een combinatie van behandelingen voor het beste resultaat."
+      },
+      {
+        "titel": "Behandeling & thuiszorg",
+        "tekst": "We behandelen en geven advies voor thuis, met producten die bij jouw huid passen."
+      }
+    ]
+  },
+  "contact": {
+    "label": "Afspraak maken",
+    "kop": "Begin met een *gratis* intakegesprek",
+    "tekst": "Plan direct online een moment dat jou uitkomt. Liever eerst even overleggen? Bel of mail ons gerust.",
+    "knop": "Plan online",
+    "locatie": "Gezondheidscentrum Zorglinie",
+    "adres": "Hoog Dalemseweg 3, 4208 CA Gorinchem",
+    "telefoon": "06 27 26 27 31",
+    "telefoonTekst": "Bellen of WhatsApp",
+    "email": "info@huidzorgmozi.nl",
+    "emailTekst": "We reageren zo snel mogelijk",
+    "instagram": "huidzorg_mozi",
+    "instagramTekst": "Volg ons op Instagram"
+  }
+}

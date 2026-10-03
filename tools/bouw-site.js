@@ -10,8 +10,9 @@ const root = path.resolve(__dirname, '..');
 const uit = path.join(root, '_site');
 
 // 1. Genereren (zelfde scripts als lokaal)
-// genereer-producten.js eerst: dat werkt index.html bij, waar de andere scripts kop en voet uit halen.
-for (const s of ['genereer-producten.js', 'genereer-tarieven.js', 'genereer-behandelingen.js', 'genereer-over.js', 'genereer-juridisch.js']) {
+// genereer-home.js en genereer-producten.js eerst: die werken index.html bij, waar de andere
+// scripts kop en voet uit halen.
+for (const s of ['genereer-home.js', 'genereer-producten.js', 'genereer-tarieven.js', 'genereer-behandelingen.js', 'genereer-over.js', 'genereer-juridisch.js']) {
   execFileSync(process.execPath, [path.join(__dirname, s)], { stdio: 'inherit' });
 }
 

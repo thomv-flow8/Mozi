@@ -9,6 +9,114 @@ media:
   extensions: [jpg, jpeg, png, webp]
 
 content:
+  # ---------------------------------------------------------------- Homepage
+  - name: home
+    label: Homepage
+    description: "Teksten en foto's van de homepage. In koppen wordt een woord tussen sterretjes schuingedrukt en maak je met Enter een nieuwe regel."
+    type: file
+    path: docs/home.json
+    fields:
+      - { name: _bron, label: Bron, type: string, hidden: true }
+      - name: aankondiging
+        label: Balk bovenaan (staat op elke pagina)
+        type: object
+        fields:
+          - { name: tekst, label: Tekst, type: string }
+          - { name: knop, label: Linktekst (opent de agenda), type: string }
+      - name: opening
+        label: Opening
+        type: object
+        fields:
+          - { name: label, label: Kleine tekst boven de kop, type: string }
+          - { name: kop, label: Kop, type: text, description: "Schuingedrukt: woord tussen sterretjes. Nieuwe regel: Enter." }
+          - { name: tekst, label: Tekst, type: text }
+          - { name: knopAfspraak, label: Knop afspraak maken, type: string }
+          - { name: knopBehandelingen, label: Knop naar de behandelingen, type: string }
+          - name: cijfers
+            label: Cijfers onder de knoppen
+            type: object
+            list: { max: 4, collapsible: { collapsed: true, summary: "{waarde} — {label}" } }
+            fields:
+              - { name: waarde, label: Waarde, type: string }
+              - { name: label, label: Omschrijving, type: string }
+          - { name: portret, label: Portret, type: image }
+          - { name: portretAlt, label: Beschrijving van het portret, type: string, description: "Voor schermlezers en Google" }
+          - { name: naam, label: Naam bij het portret, type: string }
+          - { name: functie, label: Functie bij het portret, type: string }
+      - name: behandelingen
+        label: Behandelingen
+        type: object
+        fields:
+          - { name: label, label: Kleine tekst boven de kop, type: string }
+          - { name: kop, label: Kop, type: text, description: "Schuingedrukt: woord tussen sterretjes. Nieuwe regel: Enter." }
+          - { name: tekst, label: Tekst, type: text }
+          - name: kaarten
+            label: Kaarten
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{titel} — {prijs}" } }
+            fields:
+              - { name: titel, label: Titel, type: string, required: true }
+              - { name: tekst, label: Tekst, type: text }
+              - { name: prijs, label: Prijs, type: string, description: "Bijv. vanaf € 75, € 25 of op aanvraag. Met 'vanaf' ervoor wordt alleen het bedrag vet." }
+              - { name: beeld, label: Foto, type: image }
+              - { name: uitsnede, label: Uitsnede van de foto (optioneel), type: string, description: "Leeg = midden van de foto. Bijv. 50% 20% laat meer van de bovenkant zien." }
+              - name: pagina
+                label: Behandelpagina
+                type: select
+                options:
+                  values:
+                    - { value: acne, label: "Acnetherapie" }
+                    - { value: rosacea, label: "Rosacea & couperose" }
+                    - { value: huidverhevenheden, label: "Huidverhevenheden" }
+                    - { value: peelings, label: "Medische peelings" }
+                    - { value: skinpen, label: "SkinPen microneedling" }
+                    - { value: combinatie, label: "Combinatiebehandelingen" }
+                    - { value: huidverbetering, label: "Huidverbetering" }
+                    - { value: ontharen, label: "Laserontharing" }
+                    - { value: laser, label: "Laser bij vaatjes & pigment" }
+                    - { value: led, label: "LED-therapie Lumi8" }
+                    - { value: schimmelnagels, label: "Schimmelnagels" }
+                    - { value: productadvies, label: "Huidanalyse & productadvies" }
+              - name: categorie
+                label: Categorie (voor de filterknoppen)
+                type: select
+                options:
+                  values:
+                    - { value: huidproblemen, label: Huidproblemen }
+                    - { value: verjonging, label: "Huidverbetering & verjonging" }
+                    - { value: laser, label: "Laser & licht" }
+                    - { value: overig, label: Advies }
+              - { name: klachten, label: Huidklachten (voor het zoeken op klacht), type: string, list: true }
+      - name: werkwijze
+        label: Zo werkt het
+        type: object
+        fields:
+          - { name: label, label: Kleine tekst boven de kop, type: string }
+          - { name: kop, label: Kop, type: text, description: "Schuingedrukt: woord tussen sterretjes. Nieuwe regel: Enter." }
+          - name: stappen
+            label: Stappen (de animaties eronder liggen vast)
+            type: object
+            list: { min: 3, max: 3, collapsible: { collapsed: true, summary: "{titel}" } }
+            fields:
+              - { name: titel, label: Titel, type: string }
+              - { name: tekst, label: Tekst, type: text }
+      - name: contact
+        label: Contact
+        type: object
+        fields:
+          - { name: label, label: Kleine tekst boven de kop, type: string }
+          - { name: kop, label: Kop, type: text, description: "Schuingedrukt: woord tussen sterretjes. Nieuwe regel: Enter." }
+          - { name: tekst, label: Tekst, type: text }
+          - { name: knop, label: Knop (opent de agenda), type: string }
+          - { name: locatie, label: Locatie, type: string }
+          - { name: adres, label: Adres, type: string, description: "Wordt ook de link naar Google Maps" }
+          - { name: telefoon, label: Telefoonnummer, type: string, description: "Bijv. 06 27 26 27 31" }
+          - { name: telefoonTekst, label: Tekst onder het telefoonnummer, type: string }
+          - { name: email, label: E-mailadres, type: string }
+          - { name: emailTekst, label: Tekst onder het e-mailadres, type: string }
+          - { name: instagram, label: Instagram-naam (zonder @), type: string }
+          - { name: instagramTekst, label: Tekst onder Instagram, type: string }
+
   # ---------------------------------------------------------------- Tarieven
   - name: tarieven
     label: Tarieven
@@ -305,3 +413,4 @@ content:
             fields:
               - { name: kop, label: Kop, type: string }
               - { name: tekst, label: Alinea's, type: text, list: true, description: "Vervang [[…]] door de juiste gegevens" }
+

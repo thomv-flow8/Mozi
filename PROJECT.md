@@ -104,3 +104,16 @@ Reviewwidget:
 - **Tekeningen**: `tools/illustraties.js` bevat vier doorsneden (porie, haarzakje, licht,
   wratje) in dezelfde lijn als de huidlagen bij SkinPen. Ze zijn beeldtypes in de generator
   en in het CMS. Bekijken: `node tools/illustraties.js` → `preview/illustraties.html`.
+
+## Beheer: homepage in het CMS (3 oktober 2026)
+- **Homepage, deel A**: de aankondigingsbalk, de opening, de 12 behandelkaarten, de drie stappen van
+  de werkwijze en de contactgegevens staan in `docs/home.json`. `tools/genereer-home.js` zet ze in
+  `preview/index.html` tussen de markeringen `<!-- home:… -->`. Draait als eerste in `bouw-site.js`
+  (de aankondigingsbalk staat in de kop van elke pagina).
+- **Deel B nog te doen**: de rij met reviews en logo's, de voor/na-resultaten, het blok over Emine,
+  de logostrook onder de opening en de koppen van de overige blokken.
+- **CMS-onderdelen**: Homepage, Tarieven, Merken & producten, Behandelingen, Over Mozi, Privacy/cookies/
+  voorwaarden. Pages CMS is gekoppeld (app geïnstalleerd op alleen de repository Mozi).
+- **Controleren na een wijziging aan `.pages.yml`**: valideer met de schemacode van Pages CMS zelf en
+  controleer dat elk veld in de data gedeclareerd is (anders gooit het CMS het weg bij opslaan) en dat
+  bestaande waarden in de keuzelijsten passen (anders weigert het CMS op te slaan).
