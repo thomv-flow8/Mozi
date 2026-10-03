@@ -232,3 +232,76 @@ content:
           - { name: laser, label: Laser, type: object, fields: *kaart }
           - { name: led, label: LED, type: object, fields: *kaart }
           - { name: productadvies, label: Productadvies, type: object, fields: *kaart }
+
+  # ---------------------------------------------------------------- Over Mozi
+  - name: over
+    label: Over Mozi
+    description: De pagina Over Mozi. In koppen wordt een woord tussen sterretjes schuingedrukt.
+    type: file
+    path: docs/over.json
+    fields:
+      - { name: _bron, label: Bron, type: string, hidden: true }
+      - { name: kop, label: Kop bovenaan, type: string, description: "Bijv. Over *Mozi*" }
+      - { name: intro, label: Intro, type: text }
+      - { name: naam, label: Naam, type: string }
+      - { name: functie, label: Functie, type: string }
+      - { name: citaat, label: Citaat, type: text }
+      - { name: verhaalKop, label: Kop boven het verhaal, type: string }
+      - { name: verhaal, label: Verhaal (alinea's), type: text, list: true }
+      - name: waarden
+        label: Waarden (blokjes)
+        type: object
+        list: { collapsible: { collapsed: true, summary: "{titel}" } }
+        fields:
+          - name: icoon
+            label: Icoon
+            type: select
+            options:
+              values:
+                - { value: shield, label: Schild }
+                - { value: chat, label: Gesprek }
+                - { value: h-flesje, label: Flesje }
+                - { value: check, label: Vinkje }
+                - { value: star, label: Ster }
+                - { value: clock, label: Klok }
+                - { value: pin, label: Locatie }
+          - { name: titel, label: Titel, type: string }
+          - { name: tekst, label: Tekst, type: string }
+      - name: aansluitingen
+        label: Aansluitingen en registraties
+        type: object
+        list: { collapsible: { collapsed: true, summary: "{naam}" } }
+        fields:
+          - { name: logo, label: Logo, type: image }
+          - { name: badge, label: Tekst in plaats van logo, type: string, description: "Bijv. AGB, als er geen logo is" }
+          - { name: naam, label: Naam, type: string }
+          - { name: tekst, label: Toelichting, type: string }
+      - { name: praktijkKop, label: Kop boven de praktijk, type: string }
+      - { name: praktijk, label: Over de praktijk (alinea's), type: text, list: true }
+      - { name: adres, label: Adres, type: string }
+      - { name: praktijkBeeld, label: Foto van de praktijk, type: image }
+
+  # ---------------------------------------------------------------- Juridisch
+  - name: juridisch
+    label: Privacy, cookies & voorwaarden
+    description: "Plekken met [[…]] moeten nog worden ingevuld. Laat de teksten daarna juridisch controleren."
+    type: file
+    path: docs/juridisch.json
+    fields:
+      - { name: _toelichting, label: Toelichting, type: string, hidden: true }
+      - name: paginas
+        label: Pagina's
+        type: object
+        list: { min: 3, max: 3, collapsible: { collapsed: true, summary: "{titel}" } }
+        fields:
+          - { name: slug, label: Adres (niet wijzigen), type: string, hidden: true }
+          - { name: titel, label: Titel, type: string }
+          - { name: kop, label: Kop, type: string, description: "Schuingedrukt deel tussen sterretjes" }
+          - { name: intro, label: Intro, type: text }
+          - name: secties
+            label: Onderdelen
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{kop}" } }
+            fields:
+              - { name: kop, label: Kop, type: string }
+              - { name: tekst, label: Alinea's, type: text, list: true, description: "Vervang [[…]] door de juiste gegevens" }

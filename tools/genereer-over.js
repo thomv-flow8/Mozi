@@ -2,6 +2,13 @@
 // Gebruik: node tools/genereer-over.js
 const { lees, esc, pagina, schrijf } = require('./sjabloon');
 const d = JSON.parse(lees('docs/over.json'));
+// Lege velden uit het CMS opvangen, zodat de bouw niet vastloopt als Emine iets leegmaakt:
+// een ontbrekende lijst wordt leeg, een ontbrekende tekst ook, lege alinea's vallen weg.
+for (const k of ['verhaal', 'waarden', 'aansluitingen', 'praktijk']) if (!Array.isArray(d[k])) d[k] = [];
+d.verhaal = d.verhaal.filter(Boolean);
+d.praktijk = d.praktijk.filter(Boolean);
+for (const k of ['kop', 'intro', 'naam', 'functie', 'citaat', 'verhaalKop', 'praktijkKop', 'adres', 'praktijkBeeld']) if (d[k] == null) d[k] = '';
+for (const w of d.waarden) if (!w.icoon) w.icoon = 'check';
 const em = s => esc(s).replace(/\*(.+?)\*/g, '<em>$1</em>');
 const ico = naam => `<svg class="ico"><use href="#i-${naam}"/></svg>`;
 
@@ -37,7 +44,7 @@ const inhoud = `
     <div class="story-side reveal">
       <p class="eyebrow">Haar verhaal</p>
       <h2>${em(d.verhaalKop)}</h2>
-      <blockquote class="pull">${esc(d.citaat)}</blockquote>
+      ${d.citaat ? `<blockquote class="pull">${esc(d.citaat)}</blockquote>` : ''}
       <p class="sig"><b>${esc(d.naam)}</b><span>${esc(d.functie)}</span></p>
     </div>
     <div class="story-text reveal d1">
@@ -86,7 +93,7 @@ const inhoud = `
         ${ico('pin')}<div><b>Gezondheidscentrum Zorglinie</b><span>${esc(d.adres)}</span></div>
       </a>
     </div>
-    <div class="t-visual reveal d1"><img src="${d.praktijkBeeld}" alt="Behandeling in de praktijk" loading="lazy"></div>
+    ${d.praktijkBeeld ? `<div class="t-visual reveal d1"><img src="${d.praktijkBeeld}" alt="Behandeling in de praktijk" loading="lazy"></div>` : ''}
   </div>
 </section>
 

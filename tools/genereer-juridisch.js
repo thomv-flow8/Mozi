@@ -3,6 +3,14 @@
 // Gebruik: node tools/genereer-juridisch.js
 const { lees, esc, pagina, schrijf } = require('./sjabloon');
 const d = JSON.parse(lees('docs/juridisch.json'));
+// Lege velden uit het CMS opvangen, zodat de bouw niet vastloopt.
+for (const p of d.paginas) {
+  for (const k of ['titel', 'kop', 'intro']) if (p[k] == null) p[k] = '';
+  p.secties = (Array.isArray(p.secties) ? p.secties : []).map(s => ({
+    kop: s.kop || '',
+    tekst: (Array.isArray(s.tekst) ? s.tekst : []).filter(Boolean)
+  })).filter(s => s.kop || s.tekst.length);
+}
 const em = s => esc(s).replace(/\*(.+?)\*/g, '<em>$1</em>');
 const tekst = s => esc(s).replace(/\[\[(.+?)\]\]/g, '<mark class="todo">$1</mark>');
 
